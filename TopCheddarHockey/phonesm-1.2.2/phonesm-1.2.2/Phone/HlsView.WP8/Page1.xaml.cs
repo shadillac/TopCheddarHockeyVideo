@@ -49,6 +49,13 @@ namespace HlsView
             ApplicationBar.MenuItems.Add(appbarmenuitem);
             ApplicationBar.MenuItems.Add(appbarmenuitem2);
             appbarmenuitem.Click += appbarmenuitem_Click;
+            appbarmenuitem2.Click += appbarmenuitem2_Click;
+        }
+
+        void appbarmenuitem2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("about");
+            NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
         }
 
         void appbarmenuitem_Click(object sender, EventArgs e)
