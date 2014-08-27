@@ -1,0 +1,34 @@
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.Platform.WP8.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.TsParser.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.Extensions.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.Primitives.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.Platform.WP8.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.TsParser.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.Extensions.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.Primitives.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.csprojResolveAssemblyReference.cache
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.Platform.WP8.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.TsParser.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.Extensions.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.Primitives.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.Platform.WP8.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.Media.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\SM.TsParser.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.Extensions.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Debug\System.Net.Http.Primitives.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.csprojResolveAssemblyReference.cache
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Debug\SM.Media.BackgroundAudioStreamingAgent.WP8.pdb

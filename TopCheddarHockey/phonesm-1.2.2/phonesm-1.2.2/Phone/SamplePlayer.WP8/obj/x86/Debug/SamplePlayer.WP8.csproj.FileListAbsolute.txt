@@ -1,0 +1,76 @@
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\ApplicationIcon.png
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SamplePlayer.WP8.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SamplePlayer.WP8.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\AppManifest.xaml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Properties\WMAppManifest.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SamplePlayer.WP8_Debug_x86.xap
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Microsoft.PlayerFramework.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Microsoft.PlayerFramework.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Autofac.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.Builder.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.Platform.WP8.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.TsParser.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.Extensions.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.Primitives.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.Platform.WP8.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.TsParser.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.Builder.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Autofac.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.Extensions.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.Primitives.xml
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.csprojResolveAssemblyReference.cache
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\App.g.cs
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\MainPage.g.cs
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.g.resources
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.Resources.AppResources.resources
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.csproj.GenerateResource.Cache
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.dll
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.pdb
+C:\Users\shmorris\Desktop\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\XapCacheFile.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\ApplicationIcon.png
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SamplePlayer.WP8.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SamplePlayer.WP8.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\AppManifest.xaml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Properties\WMAppManifest.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SamplePlayer.WP8_Debug_x86.xap
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Microsoft.PlayerFramework.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Microsoft.PlayerFramework.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Autofac.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.Builder.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.Platform.WP8.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.TsParser.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.Extensions.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.Primitives.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.Platform.WP8.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.TsParser.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\SM.Media.Builder.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\Autofac.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.Extensions.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\Bin\x86\Debug\System.Net.Http.Primitives.xml
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.csprojResolveAssemblyReference.cache
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\App.g.cs
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\MainPage.g.cs
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.g.resources
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.Resources.AppResources.resources
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.csproj.GenerateResource.Cache
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.dll
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.pdb
+C:\Users\shmorris\Documents\Visual Studio 2013\Projects\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\XapCacheFile.xml

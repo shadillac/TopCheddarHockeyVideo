@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="" />
+  <App xmlns="" ProductID="{cd17aca5-b57b-430a-91ec-0fd54bbce9bd}" Title="BackgroundAudio.Sample.WP7" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="BackgroundAudio.Sample.WP7 author" Description="Sample description" Publisher="BackgroundAudio.Sample.WP7" PublisherID="{03430210-1461-4460-8949-855a60999cdc}">
+    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_GAMERSERVICES" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_LOCATION" />
+      <Capability Name="ID_CAP_MICROPHONE" />
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
+      <Capability Name="ID_CAP_PUSH_NOTIFICATION" />
+      <Capability Name="ID_CAP_SENSORS" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_ISV_CAMERA" />
+      <Capability Name="ID_CAP_CONTACTS" />
+      <Capability Name="ID_CAP_APPOINTMENTS" />
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+      <ExtendedTask Name="BackgroundTask">
+        <BackgroundServiceAgent Specifier="AudioPlayerAgent" Name="SM.BackgroundAudioPlaybackAgent" Source="SM.Media.BackgroundAudioStreamingAgent.WP7" Type="SM.Media.BackgroundAudioStreamingAgent.AudioPlayer" />
+        <BackgroundServiceAgent Specifier="AudioStreamingAgent" Name="SM.BackgroundAudioStreamingAgent" Source="SM.Media.BackgroundAudioStreamingAgent.WP7" Type="SM.Media.BackgroundAudioStreamingAgent.AudioTrackStreamer" />
+      </ExtendedTask>
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="BackgroundAudio.Sample.WP7Token" TaskName="_default">
+        <TemplateFlip>
+          <SmallImageURI IsResource="false" IsRelative="true">Background.png</SmallImageURI>
+          <Count>0</Count>
+          <BackgroundImageURI IsResource="false" IsRelative="true">Background.png</BackgroundImageURI>
+          <Title>BackgroundAudio.Sample.WP7</Title>
+          <BackContent></BackContent>
+          <BackBackgroundImageURI></BackBackgroundImageURI>
+          <BackTitle></BackTitle>
+          <DeviceLockImageURI></DeviceLockImageURI>
+          <HasLarge>false</HasLarge>
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
+  </App>
+</Deployment>
