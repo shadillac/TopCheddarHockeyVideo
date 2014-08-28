@@ -6,30 +6,48 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left" Height="804" VerticalAlignment="Top" Width="517" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="-12,-36,-25,0"/>
+        <!--Pivot Control-->
+        <phone:Pivot Title="TOP CHEDDAR HOCKEY VIDEOS" Loaded="Pivot_Loaded">
+            <!--Pivot item one-->
+            <phone:PivotItem Header="About">
+                <Grid Name="hi" Margin="-10,0,10,0">
+                    <TextBlock Name="tbTitle" Text="Top Cheddar Hockey Videos" Margin="10,0,109,567" Foreground="#FFE6FD00" FontFamily="Sitka Small" FontSize="24" HorizontalAlignment="Center" />
+                    <TextBox Text="By ShadNick (Shad Morris and Nick Ciaravella)" Margin="91,10,0,534" TextChanged="TextBox_TextChanged" FontSize="16" SelectionBackground="{x:Null}" SelectionForeground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"/>
+                    <HyperlinkButton Name="hlbReview" Content="Review Us!" Margin="10,62,10,495" Foreground="#FFE8FF00" FontFamily="Sitka Subheading" FontSize="20" Click="hlbReview_Click" />
+                    <TextBlock HorizontalAlignment="Left" Margin="10,126,0,0" TextWrapping="Wrap" Text="Version 1.0.0.0" VerticalAlignment="Top" FontFamily="Sitka Subheading" Foreground="#FFF0FB00"/>
+                    <HyperlinkButton Name="hlbFeedBack" Content="Feedback?  Issues?" Margin="-2,156,0,0" Foreground="#FFE8FF00" FontFamily="Sitka Subheading" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" Click="hlbFeedBack_Click" />
+                    <TextBlock Foreground="White" Margin="10,187,10,170" Opacity="0.8" FontSize="16" TextWrapping="Wrap">
+                    	<Run Text="This application has been created by two hockey lovers to help and aid in sharing the sport with others.  We both hope that you enjoy the great game of NHL hockey."/>
+                    	<LineBreak/>
+                    	<Run/>
+                    	<LineBreak/>
+                    	<Run Text="Hockey has been a huge part of our lives and we hope that his application aids in your ability to enjoy and share in the great game as well."/>
+                    	<LineBreak/>
+                    	<Run/>
+                    	<LineBreak/>
+                    	<Run Text="All requests and feedback are welcome.  We will always do our best to take feedback from our users and drive it into the app to make a better experience for all."/>
+                    </TextBlock>
+                </Grid>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Top Cheddar Hockey Video" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="About" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
+            </phone:PivotItem>
 
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <!--Pivot item two-->
+            <phone:PivotItem Header="Thanks">
+                <Grid/>
+            </phone:PivotItem>
+        </phone:Pivot>
 
-        </Grid>
+
     </Grid>
 
 </phone:PhoneApplicationPage>
