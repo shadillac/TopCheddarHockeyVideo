@@ -32,11 +32,12 @@
             <Image HorizontalAlignment="Left" Height="787" VerticalAlignment="Top" Width="517" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="-21,-36,-38,0"/>
             <CheckBox x:Name="chkHideScores" Content="Hide Scores" HorizontalAlignment="Left" Margin="23,208,0,0" VerticalAlignment="Top" Checked="chkHideScores_Checked"/>
 
-            <RadioButton x:Name="rdoHighlights" Content="Highlights" HorizontalAlignment="Left" Margin="23,326,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-            <RadioButton x:Name="rdoFullGames" Content="Full Games" HorizontalAlignment="Left" Margin="216,326,0,0" VerticalAlignment="Top" Width="183" Checked="rdoFullGames_Checked"/>
+            <RadioButton x:Name="rdoHighlights" Content="Highlights" HorizontalAlignment="Left" Margin="23,310,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+            <RadioButton x:Name="rdoFullGames" Content="Full Games" HorizontalAlignment="Left" Margin="23,399,0,0" VerticalAlignment="Top" Width="183" Checked="rdoFullGames_Checked"/>
             <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="52,512,0,0" VerticalAlignment="Top" Click="btnSave_Click" Width="157" Height="92"/>
             <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="234,512,0,0" VerticalAlignment="Top" Click="btnCancel_Click" Width="157" Height="92"/>
-            
+            <RadioButton Name="rdoCondensed" Content="Condensed" HorizontalAlignment="Left" Margin="23,354,0,0" VerticalAlignment="Top" Checked="rdoCondensed_Checked"/>
+
         </Grid>
         <UI:AdControl ApplicationId="f0363032-f18e-41f7-a695-f94cf942cf72" AdUnitId="10809601" HorizontalAlignment="Left" Height="80" Margin="0,687,0,0" VerticalAlignment="Top" Width="480"/>
     </Grid>

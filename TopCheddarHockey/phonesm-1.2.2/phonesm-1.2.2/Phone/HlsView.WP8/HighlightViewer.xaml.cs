@@ -27,16 +27,19 @@ namespace HlsView
             string source = "";
             NavigationContext.QueryString.TryGetValue("source", out source);
             mdaHighView.Source = new Uri(source,UriKind.Absolute);
+            btnPlay.IsEnabled = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             mdaHighView.Play();
+            btnPlay.IsEnabled = false;
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             mdaHighView.Stop();
+            btnPlay.IsEnabled = true;
         }
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
@@ -44,6 +47,7 @@ namespace HlsView
             if (mdaHighView.CanPause)
             {
                 mdaHighView.Pause();
+                btnPlay.IsEnabled = true;
             }
         }
 
