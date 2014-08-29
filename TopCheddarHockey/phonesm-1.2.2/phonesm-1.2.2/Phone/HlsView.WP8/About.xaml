@@ -1,4 +1,4 @@
-﻿<phone:PhoneApplicationPage
+﻿<phone:PhoneApplicationPage xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
     x:Class="HlsView.About"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -20,13 +20,13 @@
         <phone:Pivot Title="TOP CHEDDAR HOCKEY VIDEOS" Loaded="Pivot_Loaded">
             <!--Pivot item one-->
             <phone:PivotItem Header="About">
-                <Grid Name="hi" Margin="-10,0,10,0">
+                <Grid Name="AboutGrid" Margin="-10,0,10,0">
                     <TextBlock Name="tbTitle" Text="Top Cheddar Hockey Videos" Margin="10,0,109,567" Foreground="#FFE6FD00" FontFamily="Sitka Small" FontSize="24" HorizontalAlignment="Center" />
                     <TextBox Text="By ShadNick (Shad Morris and Nick Ciaravella)" Margin="91,10,0,534" TextChanged="TextBox_TextChanged" FontSize="16" SelectionBackground="{x:Null}" SelectionForeground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"/>
                     <HyperlinkButton Name="hlbReview" Content="Review Us!" Margin="10,62,10,495" Foreground="#FFE8FF00" FontFamily="Sitka Subheading" FontSize="20" Click="hlbReview_Click" />
                     <TextBlock HorizontalAlignment="Left" Margin="10,126,0,0" TextWrapping="Wrap" Text="Version 1.0.0.0" VerticalAlignment="Top" FontFamily="Sitka Subheading" Foreground="#FFF0FB00"/>
-                    <HyperlinkButton Name="hlbFeedBack" Content="Feedback?  Issues?" Margin="-2,156,0,0" Foreground="#FFE8FF00" FontFamily="Sitka Subheading" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" Click="hlbFeedBack_Click" />
-                    <TextBlock Foreground="White" Margin="10,187,10,170" Opacity="0.8" FontSize="16" TextWrapping="Wrap">
+                    <HyperlinkButton Name="hlbFeedBack" Content="Feedback?  Issues?" Margin="-2,178,0,0" Foreground="#FFE8FF00" FontFamily="Sitka Subheading" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" Click="hlbFeedBack_Click" />
+                    <TextBlock Foreground="White" Margin="10,243,10,114" Opacity="0.8" FontSize="16" TextWrapping="Wrap">
                     	<Run Text="This application has been created by two hockey lovers to help and aid in sharing the sport with others.  We both hope that you enjoy the great game of NHL hockey."/>
                     	<LineBreak/>
                     	<Run/>
@@ -42,12 +42,59 @@
             </phone:PivotItem>
 
             <!--Pivot item two-->
+            <phone:PivotItem Header="Legal">
+                <Grid Name="LegalGrid" Margin="-10,0,10,0">
+                    <TextBlock Foreground="White" Margin="10,35,10,357" Opacity="0.8" FontSize="16" TextWrapping="Wrap">
+                		<Run Text="This app is not affiliated with or endorsed by the NHL.  Any trademarks used in the app are done so under &quot;fair use&quot; with the sole purpose of identifying the respective entities, and remain the property of their respective owners."/>
+                		<LineBreak/>
+                		<Run/>
+                		<LineBreak/>
+                		<Run Text="It is our intention to respect the intellectual property rights of others. In connection with this we will not knowingly post content or other works of authorship that infringe the copyright rights of others.  We're just fans of the game that want to make this content available for users on this platform."/>
+                    </TextBlock>
+                    <TextBlock FontFamily="Sitka Subheading" Foreground="#FFF0FB00" Text="Top Cheddar Hockey Video" Margin="10,261,254,321" FontSize="16"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,3,0,0" TextWrapping="Wrap" Text="Disclaimer:" VerticalAlignment="Top" FontFamily="Sitka Subheading" Foreground="#FFF0FB00"/>
+                    <TextBlock Opacity="0.8" Text="Created by Shad Morris and Nick Ciaravella" Margin="10,281,208,302" FontSize="12"/>
+                    <TextBlock Opacity="0.8" Text="This app uses content that is sourced from the internet without need of special or granted permissions.  We have not in any way circumvented, reverse engineered, deciphered, decompiled, disassembled, decrypted, or otherwise altered or interfered with (or attempted, encouraged, or supported anyone else's attempt to engage in such activities) any of the software comprising or in any way making up a part of the Services. We in no way have used or distributed the use of tools designed for compromising any security (e.g., password guessing programs, cracking tools, or network probing tools)." Margin="10,301,0,158" FontSize="12" TextWrapping="Wrap"/>
+                </Grid>
+            </phone:PivotItem>
+            <!--Pivot item two-->
             <phone:PivotItem Header="Thanks">
-                <Grid/>
+                <Grid Name="ThanksGrid" Margin="-10,0,10,0">
+                    <TextBlock Foreground="#FFF0FB00" Margin="10,10,10,523" FontSize="16" TextWrapping="Wrap" Text="Special thanks goes to all the developers out there that contribute to the open source community and make tools that make Windows Phone better."/>
+                    <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,93,10,467" >
+                    	<Run Text="The Windows Phone Toolkit"/>
+                    	<LineBreak/>
+                    	<Run Text="http://phone.codeplex.com"/>
+                    </TextBlock>
+                    <TextBlock Text="Straight from Microsoft Windows Phone developer platform team - Windows Phone Toolkit provides the developer community with new components, functionality, and an efficient way to help shape product development. WPToolkit releases include open source code, samples &amp; docs, plus design-time support for the Windows Phone platform." Opacity=".75" Margin="10,136,10,381" FontSize="12" TextWrapping="Wrap"/>
+                    <Rectangle Fill="#FFF0FB00" Margin="0,83,-22,517" Height="3" />
+                    <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,228,10,332" >
+                    	<Run Text="Windows Phone Streaming Media"/>
+                    	<LineBreak/>
+                    	<Run Text="http://phonesm.codeplex.com"/>
+                    </TextBlock>
+                    <TextBlock Opacity=".75" Margin="10,271,10,184" FontSize="12" TextWrapping="Wrap">
+                    	<Run Text="HTTP Live Streaming (HLS) and MPEG-2 Transport Stream support for Windows Phone 7, Windows Phone 8, Silverlight, and Windows 8.1."/>
+                    	<LineBreak/>
+                    	<Run/>
+                    	<LineBreak/>
+                    	<Run Text="Copyright (c) 2012 Henric Jungheim"/>
+                    	<LineBreak/>
+                    	<Run/>
+                    	<LineBreak/>
+                    	<Run Text="Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software."/>
+                    </TextBlock>
+                    <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,427,10,133" >
+                    	<Run Text="Stack Overflow"/>
+                    	<LineBreak/>
+                    	<Run Text="http://www.stackoverflow.com"/>
+                    </TextBlock>
+                    <TextBlock Opacity=".75" Margin="10,470,10,96" FontSize="12" TextWrapping="Wrap" Text="A question and answer site for professional and enthusiast programmers.  A big thanks go to all that contribute to this excellent site."/>
+                </Grid>
             </phone:PivotItem>
         </phone:Pivot>
 
-
+        <UI:AdControl ApplicationId="f0363032-f18e-41f7-a695-f94cf942cf72" AdUnitId="10809601" HorizontalAlignment="Left" Height="80" Margin="0,687,0,0" VerticalAlignment="Top" Width="480"/>
     </Grid>
 
 </phone:PhoneApplicationPage>
