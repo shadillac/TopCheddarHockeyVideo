@@ -55,6 +55,7 @@ namespace HlsView
         void appbarmenuitem2_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/About.xaml", UriKind.Relative));
+            MessageBox.Show("hi");
         }
 
         void appbarmenuitem_Click(object sender, EventArgs e)

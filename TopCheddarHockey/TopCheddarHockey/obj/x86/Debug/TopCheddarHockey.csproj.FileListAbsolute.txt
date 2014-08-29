@@ -17,3 +17,22 @@ C:\Users\shmorris\Documents\Visual Studio 2012\Projects\TopCheddarHockey\TopChed
 C:\Users\shmorris\Documents\Visual Studio 2012\Projects\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\TopCheddarHockey.dll
 C:\Users\shmorris\Documents\Visual Studio 2012\Projects\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\TopCheddarHockey.pdb
 C:\Users\shmorris\Documents\Visual Studio 2012\Projects\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\XapCacheFile.xml
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\Assets\ApplicationIcon.png
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\TopCheddarHockey.dll
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\TopCheddarHockey.pdb
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\AppManifest.xaml
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\Properties\WMAppManifest.xml
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\Bin\x86\Debug\TopCheddarHockey_Debug_x86.xap
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\App.g.cs
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\MainPage.g.cs
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\TopCheddarHockey.g.resources
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\TopCheddarHockey.Resources.AppResources.resources
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\TopCheddarHockey.csproj.GenerateResource.Cache
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\TopCheddarHockey.dll
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\TopCheddarHockey.pdb
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\TopCheddarHockey\obj\x86\Debug\XapCacheFile.xml
