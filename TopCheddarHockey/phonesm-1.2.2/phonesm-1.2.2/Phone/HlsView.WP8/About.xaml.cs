@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 
 namespace HlsView
 {
@@ -15,6 +16,32 @@ namespace HlsView
         public About()
         {
             InitializeComponent();
+        }
+
+        private void Pivot_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void hlbReview_Click(object sender, RoutedEventArgs e)
+        {
+            var task = new MarketplaceReviewTask();
+            task.Show();
+        }
+
+        private void hlbFeedBack_Click(object sender, RoutedEventArgs e)
+        {
+            EmailComposeTask ect = new EmailComposeTask
+            {
+                To = "shadnickfeedback@gmail.com",
+                Subject = "Top Cheddar Hockey Feedback",
+            };
+            ect.Show();
         }
     }
 }

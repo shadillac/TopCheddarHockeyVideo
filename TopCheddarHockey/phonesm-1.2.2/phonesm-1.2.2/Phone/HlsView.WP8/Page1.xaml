@@ -27,15 +27,14 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Image HorizontalAlignment="Left" Height="749" VerticalAlignment="Top" Width="490" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="-6,-36,-28,0" Grid.ColumnSpan="4"/>
+            <TextBlock Foreground="#FFF0FB00" Text="Top Cheddar" Margin="29,-36,182,624" FontFamily="Segoe WP Semibold" FontSize="34" Grid.ColumnSpan="4"/>
+            <TextBlock HorizontalAlignment="Left" Margin="9,120,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="40" Width="282" Foreground="White" FontSize="24" Grid.ColumnSpan="4"/>
+            <toolkit:DatePicker x:Name="gameDate" Margin="0,165,0,370" Width="456" Grid.ColumnSpan="4"/>
+            <TextBlock Foreground="#FFF0FB00" HorizontalAlignment="Left" Margin="195,10,0,0" TextWrapping="Wrap" Text="Hockey Video" VerticalAlignment="Top" Height="48" Width="230" FontSize="34"/>
+            <Button x:Name="btnGo" Content="Get me my Top Cheddar videos!" HorizontalAlignment="Left" Margin="0,405,0,0" VerticalAlignment="Top" Height="124" Click="btnGo_Click" Width="456" Grid.ColumnSpan="4"/>
 
-            <Image HorizontalAlignment="Left" Height="749" VerticalAlignment="Top" Width="490" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="-6,-36,-28,0"/>
-            <TextBlock Text="Top Cheddar" Margin="5,-36,206,624" FontFamily="Segoe WP Semibold" FontSize="34"/>
-            <TextBlock HorizontalAlignment="Left" Margin="9,120,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="40" Width="282" Foreground="White" FontSize="24"/>
-            <toolkit:DatePicker x:Name="gameDate" Margin="0,165,0,370" Width="456"/>
-            <TextBlock HorizontalAlignment="Left" Margin="168,10,0,0" TextWrapping="Wrap" Text="Hockey Video" VerticalAlignment="Top" Height="48" Width="230" FontSize="34"/>
-            <Button x:Name="btnGo" Content="Get me my Top Cheddar videos!" HorizontalAlignment="Left" Margin="0,405,0,0" VerticalAlignment="Top" Height="124" Click="btnGo_Click" Width="456"/>
-
-            <UI:AdControl ApplicationId="f0363032-f18e-41f7-a695-f94cf942cf72" AdUnitId="10809601" HorizontalAlignment="Left" Height="80" Margin="-12,564,-12,0" VerticalAlignment="Top" Width="480"/>
+            <UI:AdControl ApplicationId="f0363032-f18e-41f7-a695-f94cf942cf72" AdUnitId="10809601" HorizontalAlignment="Left" Height="80" Margin="-12,564,-12,0" VerticalAlignment="Top" Width="480" Grid.ColumnSpan="4"/>
 
         </Grid>
     </Grid>
