@@ -1,11 +1,12 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="HlsView.Settings"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="HlsView.Settings"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -33,11 +34,10 @@
 
             <RadioButton x:Name="rdoHighlights" Content="Highlights" HorizontalAlignment="Left" Margin="23,326,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
             <RadioButton x:Name="rdoFullGames" Content="Full Games" HorizontalAlignment="Left" Margin="216,326,0,0" VerticalAlignment="Top" Width="183" Checked="rdoFullGames_Checked"/>
-            <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="60,630,0,0" VerticalAlignment="Top" Click="btnSave_Click" Width="157" Height="92"/>
-            <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="242,630,0,0" VerticalAlignment="Top" Click="btnCancel_Click" Width="157" Height="92"/>
-
-
+            <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="52,512,0,0" VerticalAlignment="Top" Click="btnSave_Click" Width="157" Height="92"/>
+            <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="234,512,0,0" VerticalAlignment="Top" Click="btnCancel_Click" Width="157" Height="92"/>
+            
         </Grid>
+        <UI:AdControl ApplicationId="f0363032-f18e-41f7-a695-f94cf942cf72" AdUnitId="10809601" HorizontalAlignment="Left" Height="80" Margin="0,687,0,0" VerticalAlignment="Top" Width="480"/>
     </Grid>
-
 </phone:PhoneApplicationPage>
