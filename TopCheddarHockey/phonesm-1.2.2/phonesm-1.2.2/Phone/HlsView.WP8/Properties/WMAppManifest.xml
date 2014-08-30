@@ -4,7 +4,7 @@
   <Languages xmlns="">
     <Language code="en" />
   </Languages>
-  <App xmlns="" ProductID="{1ece197b-770d-4bab-9fb9-653b84077e87}" Title="Top Cheddar Hockey Videos" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Henric Jungheim" Description="View HLS (.m3u8) files" Publisher="Henric Jungheim" PublisherID="{0895e095-996b-4bf2-92d7-39ed60b12996}">
+  <App xmlns="" ProductID="{1ece197b-770d-4bab-9fb9-653b84077e87}" Title="Top Cheddar Hockey Videos" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Shad Morris and Nick Ciaravella" Description="Top Cheddar Hockey Video plays NHL highlights and full games after they have aired.  You can now use our app to follow your favorite team along with all the other teams in the NHL." Publisher="Shad Morris and Nick Ciaravella" PublisherID="{0895e095-996b-4bf2-92d7-39ed60b12996}">
     <IconPath IsRelative="true" IsResource="false">BadgeLogo.scale-240.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
