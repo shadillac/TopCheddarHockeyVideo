@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    
+
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Image HorizontalAlignment="Left" Height="804" VerticalAlignment="Top" Width="517" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="-12,-36,-25,0"/>
         <!--Pivot Control-->
@@ -66,36 +66,35 @@
             <phone:PivotItem Header="Thanks">
                 <ScrollViewer>
                     <Grid Name="ThanksGrid" Margin="-10,0,10,0">
-                        <TextBlock Foreground="#FFF0FB00" Margin="10,10,10,523" FontSize="16" TextWrapping="Wrap" Text="Special thanks goes to all the developers out there that contribute to the open source community and make tools that make Windows Phone better."/>
-                        <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,93,10,467" >
+                        <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,165,10,395" >
                     	<Run Text="The Windows Phone Toolkit"/>
                     	<LineBreak/>
                     	<Run Text="http://phone.codeplex.com"/>
                         </TextBlock>
-                        <TextBlock Text="Straight from Microsoft Windows Phone developer platform team - Windows Phone Toolkit provides the developer community with new components, functionality, and an efficient way to help shape product development. WPToolkit releases include open source code, samples &amp; docs, plus design-time support for the Windows Phone platform." Opacity=".75" Margin="10,136,10,381" FontSize="12" TextWrapping="Wrap"/>
-                        <Rectangle Fill="#FFF0FB00" Margin="0,83,-22,517" Height="3" />
-                        <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,228,10,332" >
+                        <TextBlock Foreground="#FFF0FB00" Margin="10,74,10,459" FontSize="16" TextWrapping="Wrap" Text="Many thanks go to all the developers out there that contribute to the open source community and make tools that make Windows Phone better."/>
+                        <TextBlock FontSize="16" TextWrapping="Wrap" Margin="10,9,10,551" Text="First and foremost we want to thank the people closest to us Caren Morris and Hannah Han." />
+                        <TextBlock Text="Straight from Microsoft Windows Phone developer platform team - Windows Phone Toolkit provides the developer community with new components, functionality, and an efficient way to help shape product development. WPToolkit releases include open source code, samples &amp; docs, plus design-time support for the Windows Phone platform." Opacity=".75" Margin="10,208,10,309" FontSize="12" TextWrapping="Wrap"/>
+                        <Rectangle Fill="#FFF0FB00" Margin="0,150,-22,455" Height="3" />
+                        <Rectangle Fill="#FFF0FB00" Margin="0,66,-22,539" Height="3" />
+                        <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,302,10,258" >
                     	<Run Text="Windows Phone Streaming Media"/>
                     	<LineBreak/>
                     	<Run Text="http://phonesm.codeplex.com"/>
                         </TextBlock>
-                        <TextBlock Opacity=".75" Margin="10,271,10,184" FontSize="12" TextWrapping="Wrap">
-                    	<Run Text="HTTP Live Streaming (HLS) and MPEG-2 Transport Stream support for Windows Phone 7, Windows Phone 8, Silverlight, and Windows 8.1."/>
-                    	<LineBreak/>
-                    	<Run/>
-                    	<LineBreak/>
-                    	<Run Text="Copyright (c) 2012 Henric Jungheim"/>
-                    	<LineBreak/>
-                    	<Run/>
-                    	<LineBreak/>
-                    	<Run Text="Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software."/>
+                        <TextBlock Opacity=".75" Margin="10,344,10,184" FontSize="12" TextWrapping="Wrap">
+                        	<Run Text="HTTP Live Streaming (HLS) and MPEG-2 Transport Stream support for Windows Phone 7, Windows Phone 8, Silverlight, and Windows 8.1."/>
+                        	<LineBreak/>
+                        	<Run/>
+                        	<LineBreak/>
+                        	<Run Text="Copyright (c) 2012 Henric Jungheim"/>
+                        	<LineBreak/>
                         </TextBlock>
-                        <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,427,10,133" >
+                        <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,421,10,139" >
                     	<Run Text="Stack Overflow"/>
                     	<LineBreak/>
                     	<Run Text="http://www.stackoverflow.com"/>
                         </TextBlock>
-                        <TextBlock Opacity=".75" Margin="10,470,10,96" FontSize="12" TextWrapping="Wrap" Text="A question and answer site for professional and enthusiast programmers.  A big thanks go to all that contribute to this excellent site."/>
+                        <TextBlock Opacity=".75" Margin="10,464,10,102" FontSize="12" TextWrapping="Wrap" Text="A question and answer site for professional and enthusiast programmers.  A big thanks go to all that contribute to this excellent site."/>
                     </Grid>
                 </ScrollViewer>
             </phone:PivotItem>
