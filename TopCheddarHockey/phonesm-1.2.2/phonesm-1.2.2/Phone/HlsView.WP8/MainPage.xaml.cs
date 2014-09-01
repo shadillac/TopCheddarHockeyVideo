@@ -237,8 +237,6 @@ namespace HlsView
             NavigationContext.QueryString.TryGetValue("source", out source);
 
             _mediaStreamFascade.Source = new Uri(
-                //"http://www.nasa.gov/multimedia/nasatv/NTV-Public-IPS.m3u8"
-                //"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
                 source
                 );
 
@@ -419,8 +417,6 @@ namespace HlsView
             NavigationContext.QueryString.TryGetValue("source", out source);
 
             _mediaStreamFascade.Source = new Uri(
-                //"http://www.nasa.gov/multimedia/nasatv/NTV-Public-IPS.m3u8"
-                //"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
                 source
                 );
 

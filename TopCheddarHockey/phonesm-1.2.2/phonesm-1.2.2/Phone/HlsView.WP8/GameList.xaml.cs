@@ -17,6 +17,8 @@ namespace HlsView
     public partial class GameList : PhoneApplicationPage
     {
         private IsolatedStorageSettings userSettings = IsolatedStorageSettings.ApplicationSettings;
+        private string hostBase;
+        private string defaultBase;
 
         public GameList()
         {
@@ -211,12 +213,60 @@ namespace HlsView
 
             if (target.Tag.ToString().EndsWith("m3u8"))
             {
+                //defaultBase = target.Tag.ToString();
+                //GetBandwidth(target.Tag.ToString());
                 NavigationService.Navigate(new Uri("/MainPage.xaml?source=" + target.Tag.ToString(), UriKind.Relative));
             }
             else
             {
                 NavigationService.Navigate(new Uri("/HighlightViewer.xaml?source=" + target.Tag.ToString(), UriKind.Relative));
             }
+            
+        }
+
+        private void GetBandwidth(string url)
+        {
+            WebClient wClient = new WebClient();
+            wClient.DownloadStringCompleted += wClient_DownloadStringCompleted;
+            Uri targetSource = new Uri(url, UriKind.Absolute);
+            hostBase = "http://" + targetSource.Host;
+            for (int s = 0; s < targetSource.Segments.Length - 1; s++)
+            {
+                hostBase = hostBase + targetSource.Segments[s].ToString();
+            }
+            wClient.DownloadStringAsync(targetSource);
+            
+        }
+
+        void wClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+        {
+            string[] returnData = e.Result.Split(new Char[] { ',', '\n' });
+
+            //Search array of bandwidths for proper bandwidth url
+            int strIndex = 0;
+            for (int strNumber = 0; strNumber < returnData.Length; strNumber++)
+            {
+                if (returnData[strNumber] == @"BANDWIDTH=1200000")
+                {
+                    if (strIndex >= 0)
+                    {
+                        strIndex = strNumber;
+                        break;
+                    }
+                    
+                }
+                
+            }
+            hostBase = hostBase + returnData[strIndex + 1].ToString();
+            if (hostBase.EndsWith(".m3u8"))
+            {
+                NavigationService.Navigate(new Uri("/MainPage.xaml?source=" + hostBase, UriKind.Relative));
+            }
+            else
+            {
+                NavigationService.Navigate(new Uri("/MainPage.xaml?source=" + defaultBase, UriKind.Relative));
+            }
+            
             
         }
 

@@ -1,0 +1,42 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TopCheddarHockey_Win8._1"
+    xmlns:common="using:TopCheddarHockey_Win8._1.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    x:Name="pageRoot"
+    x:Class="TopCheddarHockey_Win8._1.HighLightViewer"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0"/>
+
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="10,5,10,-1">
+            <MediaElement x:Name="mdaHighView" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1055" RenderTransformOrigin="0.5,0.5"/>
+            <Button x:Name="btnPlay" Width="200" Content="Play" HorizontalAlignment="Left" Margin="-3,722,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click" />
+            <Button x:Name="btnStop" Width="200" Content="Stop" HorizontalAlignment="Left" Margin="209,722,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnStop_Click" />
+            <Button x:Name="btnPause" Width="200" Content="Pause" HorizontalAlignment="Left" Margin="422,722,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnPause_Click"/>
+            <Button x:Name="btnRew" Width="200" Content="Rewind" HorizontalAlignment="Left" Margin="634,722,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnRew_Click"/>
+            <Button x:Name="btnFF" Width="200" Content="Fast Fwd" HorizontalAlignment="Left" Margin="844,722,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnFF_Click"/>
+            <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1083,10,0,0" VerticalAlignment="Top" Width="250"/>
+
+
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="TopCheddarHockey_Win8._1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TopCheddarHockey_Win8._1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="769" VerticalAlignment="Top" Width="488" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="503,-1,0,0"/>
+        <TextBlock Foreground="Yellow" Text="Top Cheddar Hockey Video" Margin="537,33,416,675" FontFamily="Segoe WP Semibold" FontSize="34"/>
+        <TextBlock HorizontalAlignment="Left" Margin="537,180,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="29" Width="282" Foreground="Yellow" FontSize="24"/>
+        <DatePicker x:Name="gameDate" HorizontalAlignment="Left" Margin="594,214,0,0" VerticalAlignment="Top" Width="321" Height="42"/>
+        <Button x:Name="btnGo" Foreground="Yellow" Content="Get me my Top Cheddar Videos!" HorizontalAlignment="Left" Margin="577,481,0,0" VerticalAlignment="Top" Height="81" Width="363" BorderThickness="3" BorderBrush="Yellow"  Click="btnGo_Click" FontSize="22"/>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Settings..." Click="AppBarButton_Click"/>
+                <AppBarButton Label="About"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

@@ -215,7 +215,6 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\HlsView8.pdb
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\AppManifest.xaml
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\Properties\WMAppManifest.xml
-C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\HlsView8_Debug_x86.xap
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\Autofac.dll
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\Microsoft.Advertising.Mobile.dll
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\microsoft.advertising.mobile.ui.dll
@@ -324,3 +323,5 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\obj\x86\Debug\XapCacheFile.xml
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\obj\x86\Debug\About.g.cs
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\Microsoft.Phone.Controls.dll
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\Bin\x86\Debug\TopCheddar_Debug_x86.xap
