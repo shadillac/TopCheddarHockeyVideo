@@ -9,9 +9,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid Name="ContentPanel">
-        <Image HorizontalAlignment="Left" Height="771" VerticalAlignment="Top" Width="517" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="444,0,0,0"/>
-        <TextBlock Text="Game List" Margin="444,0,451,688" FontFamily="Portable User Interface" FontSize="40" FontWeight="Bold"/>
-    </Grid>
+    <ScrollViewer>
+        <Grid Name="ContentPanel">
+            <Image HorizontalAlignment="Left" Height="771" VerticalAlignment="Top" Width="517" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="444,0,0,0"/>
+            <TextBlock Text="Game List" Margin="444,0,451,688" FontFamily="Portable User Interface" FontSize="40" FontWeight="Bold"/>
+        </Grid>
+    </ScrollViewer>
 </Page>
