@@ -11,8 +11,9 @@
     mc:Ignorable="d">
     <ScrollViewer>
         <Grid Name="ContentPanel">
-            <Image HorizontalAlignment="Left" Height="771" VerticalAlignment="Top" Width="517" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="444,0,0,0"/>
+            <Image HorizontalAlignment="Left" Height="1008" VerticalAlignment="Top" Width="1371" Source="/Assets/Background.png" Opacity="0.15" Margin="0,59,0,-296"/>
             <TextBlock Text="Game List" Margin="444,0,451,688" FontFamily="Portable User Interface" FontSize="40" FontWeight="Bold"/>
+            <Button Content="Back" HorizontalAlignment="Left" Margin="1177,599,-206,-3" VerticalAlignment="Top" Height="129" Width="131" Click="Button_Click"/>
         </Grid>
     </ScrollViewer>
 </Page>

@@ -97,6 +97,8 @@ namespace TopCheddarHockey_Win8._1
         {
             navigationHelper.OnNavigatedTo(e);
             mdaHighView.Source = new Uri(e.Parameter.ToString(), UriKind.Absolute);
+            mdaHighView.Play();
+            btnPlay.IsEnabled = false;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -110,11 +112,13 @@ namespace TopCheddarHockey_Win8._1
         {
             mdaHighView.DefaultPlaybackRate = 1;
             mdaHighView.Play();
+            btnPlay.IsEnabled = false;
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             mdaHighView.Stop();
+            btnPlay.IsEnabled = true;
         }
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
@@ -122,6 +126,7 @@ namespace TopCheddarHockey_Win8._1
             if (mdaHighView.CanPause)
             {
                 mdaHighView.Pause();
+                btnPlay.IsEnabled = true;
             }
         }
 
@@ -146,6 +151,11 @@ namespace TopCheddarHockey_Win8._1
                 return;
             var position = mdaHighView.Position;
             mdaHighView.Position = position + FFStepSize;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
         }
     }
 }

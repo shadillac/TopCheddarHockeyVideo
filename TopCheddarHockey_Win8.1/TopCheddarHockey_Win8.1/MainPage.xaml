@@ -8,12 +8,11 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="769" VerticalAlignment="Top" Width="488" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="503,-1,0,0"/>
-        <TextBlock Foreground="Yellow" Text="Top Cheddar Hockey Video" Margin="537,33,416,675" FontFamily="Segoe WP Semibold" FontSize="34"/>
-        <TextBlock HorizontalAlignment="Left" Margin="537,180,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="29" Width="282" Foreground="Yellow" FontSize="24"/>
-        <DatePicker x:Name="gameDate" HorizontalAlignment="Left" Margin="594,214,0,0" VerticalAlignment="Top" Width="321" Height="42"/>
-        <Button x:Name="btnGo" Foreground="Yellow" Content="Get me my Top Cheddar Videos!" HorizontalAlignment="Left" Margin="577,481,0,0" VerticalAlignment="Top" Height="81" Width="363" BorderThickness="3" BorderBrush="Yellow"  Click="btnGo_Click" FontSize="22"/>
-
+        <Image HorizontalAlignment="Left" Height="1008" VerticalAlignment="Top" Width="1371" Source="/Assets/Background.png" Opacity="0.15" Margin="0,59,0,-296"/>
+        <TextBlock Foreground="Yellow" Text="Top Cheddar Hockey Video" Margin="509,129,444,579" FontFamily="Segoe WP Semibold" FontSize="34"/>
+        <TextBlock HorizontalAlignment="Left" Margin="509,232,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="29" Width="282" Foreground="Yellow" FontSize="24"/>
+        <DatePicker x:Name="gameDate" HorizontalAlignment="Left" Margin="566,266,0,0" VerticalAlignment="Top" Width="321" Height="42"/>
+        <Button x:Name="btnGo" Foreground="Yellow" Content="Get me my Top Cheddar Videos!" HorizontalAlignment="Left" Margin="533,533,0,0" VerticalAlignment="Top" Height="81" Width="363" BorderThickness="3" BorderBrush="Yellow"  Click="btnGo_Click" FontSize="22"/>
     </Grid>
     <Page.BottomAppBar>
         <CommandBar IsSticky="True" x:Name="appBar">

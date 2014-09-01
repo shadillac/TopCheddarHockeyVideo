@@ -43,7 +43,7 @@ namespace TopCheddarHockey_Win8._1
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Settings));
         }
     }
 }

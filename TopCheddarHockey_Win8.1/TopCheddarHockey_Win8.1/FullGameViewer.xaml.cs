@@ -457,5 +457,11 @@ namespace TopCheddarHockey_Win8._1
 
             mediaElement1.Play();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement1.Stop();
+            Frame.GoBack();
+        }
     }
 }

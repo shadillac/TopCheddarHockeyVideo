@@ -132,6 +132,37 @@ namespace TopCheddarHockey_Win8._1
                 int i = 0;
                 int heightMargin = 100;
                 int horizMargin = 500;
+                string gametype;
+                string element;
+
+                try
+                {
+                    gametype = localSettings.Values["GameType"].ToString();
+                }
+                catch (NullReferenceException)
+                {
+                    gametype = "Highlights";
+                }
+                catch (KeyNotFoundException)
+                {
+                    gametype = "Highlights";
+                }
+
+                switch (gametype)
+                {
+                    case "Hightlights":
+                        element = "vod-continuous";
+                        break;
+                    case "FullGame":
+                        element = "vod-whole";
+                        break;
+                    case "Condensed":
+                        element = "vod-condensed";
+                        break;
+                    default:
+                        element = "vod-continuous";
+                        break;
+                }
 
                 foreach (XElement xe in xdoc.Descendants("game"))
                 {
@@ -150,7 +181,7 @@ namespace TopCheddarHockey_Win8._1
                     try
                     {
                         hlinkAway[i] = new Button { Content = xe.Element("away-team").Element("team-abbreviation").Value };
-                        hlinkAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element("vod-continuous").Value;
+                        hlinkAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
                         hlinkAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
                         hlinkAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
                         hlinkAway[i].FontSize = 22.667;
@@ -206,7 +237,7 @@ namespace TopCheddarHockey_Win8._1
                     try
                     {
                         hlinkHome[i] = new Button { Content = xe.Element("home-team").Element("team-abbreviation").Value };
-                        hlinkHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element("vod-whole").Value;
+                        hlinkHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
                         hlinkHome[i].FontSize = 22.667;
                         hlinkHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
                         hlinkHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
@@ -270,6 +301,11 @@ namespace TopCheddarHockey_Win8._1
         {
             MessageDialog msgDia = new MessageDialog(text);
             await msgDia.ShowAsync();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
         }
     }
 }
