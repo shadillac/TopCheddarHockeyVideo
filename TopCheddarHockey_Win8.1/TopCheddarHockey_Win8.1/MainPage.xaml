@@ -1,25 +1,34 @@
 ﻿<Page
-    x:Class="TopCheddarHockey_Win8._1.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TopCheddarHockey_Win8._1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    x:Class="TopCheddarHockey_Win8._1.MainPage"
     mc:Ignorable="d" Loaded="Page_Loaded">
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image HorizontalAlignment="Left" Height="1079" VerticalAlignment="Top" Width="2008" Source="/Assets/hockey-background1.jpg" Opacity="0.15" Margin="0,-79,-642,-232" Grid.RowSpan="2"/>
-        <TextBlock Foreground="Yellow" Text="Top Cheddar Hockey Video" Margin="509,129,444,579" FontFamily="Segoe WP Semibold" FontSize="34"/>
-        <TextBlock HorizontalAlignment="Left" Margin="509,232,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="29" Width="282" Foreground="Yellow" FontSize="24"/>
-        <DatePicker x:Name="gameDate" HorizontalAlignment="Left" Margin="566,266,0,0" VerticalAlignment="Top" Width="321" Height="42"/>
-        <Button x:Name="btnGo" Foreground="Yellow" Content="Get me my Top Cheddar Videos!" HorizontalAlignment="Left" Margin="533,533,0,0" VerticalAlignment="Top" Height="81" Width="363" BorderThickness="3" BorderBrush="Yellow"  Click="btnGo_Click" FontSize="22"/>
-    </Grid>
     <Page.BottomAppBar>
         <CommandBar IsSticky="True" x:Name="appBar">
             <CommandBar.SecondaryCommands>
                 <AppBarButton  Icon="Setting" Label="Settings..." Click="AppBarButton_Click"/>
-                <AppBarButton Icon="People" Label="About"/>
+                <AppBarButton Icon="People" Label="About" Click="AppBarButton_Click_1"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
+    <Viewbox>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="146*"/>
+                <ColumnDefinition Width="1221*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image HorizontalAlignment="Left" Height="847" VerticalAlignment="Top" Width="1366" Source="/Assets/hockey-background1.jpg" Opacity="0.15" Margin="0,-79,0,0" Stretch="Fill" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="pageTitle" Foreground="Yellow" Text="Top Cheddar Hockey Video" Style="{StaticResource HeaderTextBlockStyle}" 
+				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="264.5,114,309,0" Grid.Column="1"/>
+            <TextBlock HorizontalAlignment="Left" Margin="363.5,207,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="54" Width="282" Foreground="Yellow" FontSize="24" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" />
+            <DatePicker x:Name="gameDate" HorizontalAlignment="Left" Margin="420.5,266,0,0" VerticalAlignment="Top" Width="320" Height="42" Grid.Column="1"/>
+            <Button x:Name="btnGo" Foreground="Yellow" Content="Get me my Top Cheddar Videos!" HorizontalAlignment="Left" Margin="403,644,0,0" VerticalAlignment="Top" Height="81" Width="354" BorderThickness="3" BorderBrush="Yellow"  Click="btnGo_Click" FontSize="22" Grid.Column="1"/>
+            <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" Grid.Column="1" HorizontalAlignment="Left" Height="250" Margin="452,344,0,0" VerticalAlignment="Top" Width="250"/>
+        </Grid>
+    </Viewbox>
 </Page>

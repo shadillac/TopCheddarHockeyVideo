@@ -364,17 +364,20 @@ namespace TopCheddarHockey_Win8._1
             Debug.WriteLine("Stop clicked");
 
             if (null != mediaElement1)
-                mediaElement1.Source = null;
+                mediaElement1.Pause();
         }
 
         void wakeButton_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Wake clicked");
+            //Debug.WriteLine("Wake clicked");
 
-            if (Debugger.IsAttached)
-                Debugger.Break();
+            //if (Debugger.IsAttached)
+            //    Debugger.Break();
 
-            mediaElement1_CurrentStateChanged(null, null);
+            //mediaElement1_CurrentStateChanged(null, null);
+
+            if (null != mediaElement1)
+                mediaElement1.Stop();
         }
 
         void plusButton_Click(object sender, RoutedEventArgs e)
