@@ -10,7 +10,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ScrollViewer>
-        <Grid Name="ContentPanel">
+        <Grid Name="ContentPanel" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Image HorizontalAlignment="Left" Height="1079" VerticalAlignment="Top" Width="2008" Source="/Assets/hockey-background1.jpg" Opacity="0.15" Margin="0,-79,-642,-232" Grid.RowSpan="2"/>
             <TextBlock Text="Game List" Margin="444,0,451,688" FontFamily="Portable User Interface" FontSize="40" FontWeight="Bold"/>
             <Button Content="Back" HorizontalAlignment="Left" Margin="1177,599,-206,-3" VerticalAlignment="Top" Height="129" Width="131" Click="Button_Click"/>

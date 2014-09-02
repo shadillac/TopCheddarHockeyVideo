@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Loaded="Page_Loaded">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image HorizontalAlignment="Left" Height="1079" VerticalAlignment="Top" Width="2008" Source="/Assets/hockey-background1.jpg" Opacity="0.15" Margin="0,-79,-642,-232" Grid.RowSpan="2"/>
         <TextBlock Foreground="Yellow" Text="Top Cheddar Hockey Video" Margin="509,129,444,579" FontFamily="Segoe WP Semibold" FontSize="34"/>
         <TextBlock HorizontalAlignment="Left" Margin="509,232,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="29" Width="282" Foreground="Yellow" FontSize="24"/>

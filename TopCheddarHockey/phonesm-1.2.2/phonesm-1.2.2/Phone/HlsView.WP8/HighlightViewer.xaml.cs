@@ -73,5 +73,10 @@ namespace HlsView
             var position = mdaHighView.Position;
             mdaHighView.Position = position + FFStepSize;
         }
+
+        private void mdaHighView_CurrentStateChanged(object sender, RoutedEventArgs e)
+        {
+            tbStatus.Text = mdaHighView.CurrentState.ToString();
+        }
     }
 }

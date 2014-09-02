@@ -11,7 +11,7 @@
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -32,14 +32,14 @@
                 <RowDefinition Height="329*"/>
                 <RowDefinition Height="438*"/>
             </Grid.RowDefinitions>
-            <MediaElement x:Name="mdaHighView" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1091" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"/>
+            <MediaElement x:Name="mdaHighView" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1091" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" CurrentStateChanged="mdaHighView_CurrentStateChanged"/>
             <Button x:Name="btnPlay" Width="200" Content="Play" HorizontalAlignment="Left" Margin="-3,392.714,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click" Grid.Row="1" />
-            <Button x:Name="btnStop" Width="200" Content="Stop" HorizontalAlignment="Left" Margin="209,392.714,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnStop_Click" Grid.Row="1" />
-            <Button x:Name="btnPause" Width="200" Content="Pause" HorizontalAlignment="Left" Margin="422,392.714,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnPause_Click" Grid.Row="1"/>
-            <Button x:Name="btnRew" Width="200" Content="Rewind" HorizontalAlignment="Left" Margin="634,392.714,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnRew_Click" Grid.Row="1"/>
-            <Button x:Name="btnFF" Width="200" Content="Fast Fwd" HorizontalAlignment="Left" Margin="844,392.714,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnFF_Click" Grid.Row="1"/>
+            <Button x:Name="btnPause" Width="200" Content="Pause" HorizontalAlignment="Left" Margin="203,393,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnPause_Click" Grid.Row="1"/>
+            <Button x:Name="btnRew" Width="200" Content="Rewind" HorizontalAlignment="Left" Margin="415,393,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnRew_Click" Grid.Row="1"/>
+            <Button x:Name="btnFF" Width="200" Content="Fast Fwd" HorizontalAlignment="Left" Margin="625,393,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnFF_Click" Grid.Row="1"/>
             <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1096,0,0,0" VerticalAlignment="Top" Width="250"/>
             <Button Content="Back" HorizontalAlignment="Left" Margin="1162,213,0,0" Grid.Row="1" VerticalAlignment="Top" Height="129" Width="131" Click="Button_Click_1"/>
+            <TextBlock x:Name="tbStatus" HorizontalAlignment="Left" Margin="841,397,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="200" FontSize="20"/>
 
 
         </Grid>

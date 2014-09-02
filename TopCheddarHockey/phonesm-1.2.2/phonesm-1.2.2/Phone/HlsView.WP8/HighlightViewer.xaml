@@ -15,7 +15,7 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid Grid.Row="1" x:Name="ContentRoot" Margin="10,5,10,-1">
-        <MediaElement x:Name="mdaHighView" HorizontalAlignment="Left" Height="399.593" VerticalAlignment="Top" Width="754.913" Margin="-117.181,177.711,-177.732,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <MediaElement x:Name="mdaHighView" HorizontalAlignment="Left" Height="399.593" VerticalAlignment="Top" Width="754.913" Margin="-117.181,177.711,-177.732,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" CurrentStateChanged="mdaHighView_CurrentStateChanged">
             <MediaElement.RenderTransform>
                 <CompositeTransform Rotation="90"/>
             </MediaElement.RenderTransform>
@@ -40,6 +40,11 @@
                 <CompositeTransform Rotation="90"/>
             </Button.RenderTransform>
         </Button>
+        <TextBlock x:Name="tbStatus" HorizontalAlignment="Left" Margin="-59.394,480.985,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="41.41" Width="173.367" FontSize="22">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="90"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
     </Grid>
 
 </phone:PhoneApplicationPage>

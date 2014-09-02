@@ -157,5 +157,10 @@ namespace TopCheddarHockey_Win8._1
         {
             Frame.GoBack();
         }
+
+        private void mdaHighView_CurrentStateChanged(object sender, RoutedEventArgs e)
+        {
+            tbStatus.Text = mdaHighView.CurrentState.ToString();
+        }
     }
 }
