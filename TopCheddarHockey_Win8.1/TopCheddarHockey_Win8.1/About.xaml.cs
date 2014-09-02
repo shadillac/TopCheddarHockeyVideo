@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.ApplicationModel;
+using Windows.System;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -105,18 +107,12 @@ namespace TopCheddarHockey_Win8._1
 
         private void hlbReview_Click(object sender, RoutedEventArgs e)
         {
-            //var task = new MarketplaceReviewTask();
-            //task.Show();
+            //await Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + CurrentApp.AppId));
         }
 
-        private void hlbFeedBack_Click(object sender, RoutedEventArgs e)
+        private async void hlbFeedBack_Click(object sender, RoutedEventArgs e)
         {
-            //EmailComposeTask ect = new EmailComposeTask
-            //{
-            //    To = "shadnickfeedback@gmail.com",
-            //    Subject = "Top Cheddar Hockey Feedback",
-            //};
-            //ect.Show();
+            await Launcher.LaunchUriAsync(new Uri("mailto:shadnick@outlook.com?subject=Feedback For Top Cheddar: Windows 8.1"));
         }
     }
 }

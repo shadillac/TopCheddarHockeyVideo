@@ -46,12 +46,12 @@
                         AutomationProperties.ItemType="Navigation Button"/>
                 <TextBlock x:Name="pageTitle" Text="Top Cheddar Hockey Video" Foreground="Yellow" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
-                <Rectangle Fill="#FFF0FB00" HorizontalAlignment="Left" Height="3" Margin="455.867,537.342,0,-400.342" VerticalAlignment="Top" Width="669.104" RenderTransformOrigin="0.5,0.5" Grid.Column="1" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Rectangle Fill="#FFF0FB00" HorizontalAlignment="Left" Height="3" Margin="630.367,485.842,-1070.471,-343.842" VerticalAlignment="Top" Width="560.104" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <Rectangle.RenderTransform>
                         <CompositeTransform Rotation="90"/>
                     </Rectangle.RenderTransform>
                 </Rectangle>
-                <Rectangle Fill="#FFF0FB00" HorizontalAlignment="Left" Height="3" Margin="116.023,537.342,0,-400.342" VerticalAlignment="Top" Width="669.104" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.ColumnSpan="2">
+                <Rectangle Fill="#FFF0FB00" HorizontalAlignment="Left" Height="3" Margin="170.023,486.342,-610.563,-344.342" VerticalAlignment="Top" Width="561.104" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <Rectangle.RenderTransform>
                         <CompositeTransform Rotation="90"/>
                     </Rectangle.RenderTransform>
@@ -75,7 +75,7 @@
                     	<Run Text="All requests and feedback are welcome.  We will always do our best to take feedback from our users and drive it into the app to make a better experience for all."/>
                 </TextBlock>
                 <TextBlock Foreground="White" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" TextWrapping="Wrap" Text="About..." VerticalAlignment="Top" Height="53" Width="428" FontSize="30" FontWeight="Bold" Margin="10,0,0,0"/>
-                <Rectangle Fill="#FFF0FB00" HorizontalAlignment="Left" Height="3" Margin="-101,56,-1034,0" VerticalAlignment="Top" Width="1590"/>
+                <Rectangle Fill="#FFF0FB00" HorizontalAlignment="Left" Height="3" Margin="0,56,-910,0" VerticalAlignment="Top" Width="1365"/>
             </Grid>
 
             <Grid Name="LegalGrid" HorizontalAlignment="Left" Height="618" Margin="455,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="455">
@@ -103,8 +103,8 @@
                 <TextBlock Foreground="#FFF0FB00" Margin="10,153,10,380" FontSize="16" TextWrapping="Wrap" Text="Many thanks go to all the developers out there that contribute to the open source community and make tools that make Windows Phone better."/>
                 <TextBlock FontSize="16" TextWrapping="Wrap" Margin="10,77,10,483" Text="First and foremost we want to thank the people closest to us Caren Morris and Hannah Han." />
                 <TextBlock Text="Straight from Microsoft Windows Phone developer platform team - Windows Phone Toolkit provides the developer community with new components, functionality, and an efficient way to help shape product development. WPToolkit releases include open source code, samples &amp; docs, plus design-time support for the Windows Phone platform." Opacity=".75" Margin="10,276,10,241" FontSize="12" TextWrapping="Wrap"/>
-                <Rectangle Fill="#FFF0FB00" Margin="0,223,-22,392" Height="3" />
-                <Rectangle Fill="#FFF0FB00" Margin="0,139,-22,476" Height="3" />
+                <Rectangle Fill="#FFF0FB00" Margin="0,223,0,392" Height="3" />
+                <Rectangle Fill="#FFF0FB00" Margin="0,139,0,476" Height="3" />
                 <TextBlock FontSize="14" TextWrapping="Wrap" Margin="10,370,10,190" >
                     	<Run Text="Windows Phone Streaming Media"/>
                     	<LineBreak/>

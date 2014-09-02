@@ -34,7 +34,7 @@
             </Grid.RowDefinitions>
 
             <!-- Back button and page title -->
-            <Grid>
+            <Grid Height="126" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="120"/>
                     <ColumnDefinition Width="*"/>
@@ -47,8 +47,8 @@
             <RadioButton x:Name="rdoHighlights" Content="Highlights" HorizontalAlignment="Left" Margin="92,204,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoHighlights_Checked"/>
             <RadioButton x:Name="rdoCondensed" Content="Condensed" HorizontalAlignment="Left" Margin="92,235,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoCondensed_Checked"/>
             <RadioButton x:Name="rdoFullGames" Content="Full Games" HorizontalAlignment="Left" Margin="92,266,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoFullGames_Checked"/>
-            <Button Click="btnSave_Click" x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="810,396,0,0" Grid.Row="1" VerticalAlignment="Top" />
-            <Button Click="btnCancel_Click" x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="954,399,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+            <Button Click="btnSave_Click" x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="872,286,0,0" Grid.Row="1" VerticalAlignment="Top" Height="150" Width="163" />
+            <Button Click="btnCancel_Click" x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="1082,287,0,0" Grid.Row="1" VerticalAlignment="Top" Height="149" Width="163"/>
             <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1069,51,0,0" VerticalAlignment="Top" Width="250" Grid.RowSpan="2"/>
         </Grid>
     </Viewbox>
