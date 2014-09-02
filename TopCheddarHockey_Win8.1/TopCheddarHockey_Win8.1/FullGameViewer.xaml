@@ -83,9 +83,11 @@
 				HorizontalAlignment="Left"
 				VerticalAlignment="Center" />
         </StackPanel>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="1177,556,0,0" VerticalAlignment="Top" Height="129" Width="131" Click="Button_Click" RenderTransformOrigin="1.117,0.536"/>
+        <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1111,10,0,0" VerticalAlignment="Top" Width="250"/>
         <Grid x:Name="ContentPanel"
 			Grid.Row="0"
-			Margin="4,4,265,0.286">
+			Margin="4,4,545,0">
             <TextBlock x:Name="errorBox"
 				Visibility="Collapsed" />
             <MediaElement HorizontalAlignment="Stretch"
@@ -98,7 +100,6 @@
 				BufferingProgressChanged="mediaElement1_BufferingProgressChanged" />
             
         </Grid>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="1177,599,-206,-3" VerticalAlignment="Top" Height="129" Width="131" Click="Button_Click"/>
-        <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1111,10,0,0" VerticalAlignment="Top" Width="250"/>
     </Grid>
+    
 </Page>

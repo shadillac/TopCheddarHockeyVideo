@@ -176,7 +176,7 @@ namespace TopCheddarHockey_Win8._1
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             navigationHelper.OnNavigatedFrom(e);
-            CleanupMediaStream();
+            //CleanupMediaStream();
 
         }
 
