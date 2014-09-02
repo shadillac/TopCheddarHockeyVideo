@@ -130,7 +130,7 @@ namespace TopCheddarHockey_Win8._1
                 TextBlock[] blkHome = new TextBlock[xdoc.Descendants("game").Count()];
                 TextBlock[] homeGoals = new TextBlock[xdoc.Descendants("game").Count()];
                 int i = 0;
-                int heightMargin = 100;
+                int heightMargin = 125;
                 int horizMargin = 500;
                 string gametype;
                 string element;
