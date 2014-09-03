@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopCheddarHockey", "TopCheddarHockey\TopCheddarHockey.csproj", "{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{71E4789C-71B8-4F64-9B0B-5D2A5A8210DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Media.MediaPlayer.WP8", "phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.MediaPlayer.WP8\SM.Media.MediaPlayer.WP8.csproj", "{AE37D97C-019F-4DD4-AD15-F6923E55176E}"
@@ -29,30 +27,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|ARM.ActiveCfg = Debug|ARM
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|ARM.Build.0 = Debug|ARM
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|ARM.Deploy.0 = Debug|ARM
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|x86.ActiveCfg = Debug|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|x86.Build.0 = Debug|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Debug|x86.Deploy.0 = Debug|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|ARM.ActiveCfg = Release|ARM
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|ARM.Build.0 = Release|ARM
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|ARM.Deploy.0 = Release|ARM
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|Mixed Platforms.Build.0 = Release|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|Mixed Platforms.Deploy.0 = Release|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|x86.ActiveCfg = Release|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|x86.Build.0 = Release|x86
-		{7EF8BE3F-D847-42F5-BCE6-13C46B77DCE0}.Release|x86.Deploy.0 = Release|x86
 		{AE37D97C-019F-4DD4-AD15-F6923E55176E}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{AE37D97C-019F-4DD4-AD15-F6923E55176E}.Debug|ARM.ActiveCfg = Debug|ARM
 		{AE37D97C-019F-4DD4-AD15-F6923E55176E}.Debug|ARM.Build.0 = Debug|ARM

@@ -57,7 +57,6 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\Bin\x86\Debug\System.Net.Http.Primitives.xml
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\Bin\x86\Debug\SM.Media.pdb
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\Bin\x86\Debug\SM.TsParser.pdb
-C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Debug\BackgroundAudio.Sample.WP8.csprojResolveAssemblyReference.cache
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Debug\App.g.cs
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Debug\MainPage.g.cs
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Debug\BackgroundAudio.Sample.WP8.g.resources
@@ -66,3 +65,4 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Debug\BackgroundAudio.Sample.WP8.dll
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Debug\BackgroundAudio.Sample.WP8.pdb
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Debug\XapCacheFile.xml
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Debug\BackgroundAudio.Sample.WP8.csprojResolveAssemblyReference.cache
