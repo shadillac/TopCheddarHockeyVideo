@@ -93,17 +93,15 @@ namespace HlsView
                     imgAway[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(xe.Element("away-team").Element("logo-40px").Value) };
                     imgAway[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
                     imgAway[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                    imgAway[i].Margin = new Thickness(horizMargin+0, heightMargin-6, 0, 0);
+                    imgAway[i].Margin = new Thickness(horizMargin + 0, heightMargin - 6, 0, 0);
                     imgAway[i].Height = 45;
                     imgAway[i].Width = 60;
                     imgAway[i].Stretch = Stretch.Fill;
-                    imgAway[i].Tag = xe.Element("streams").Element("iphone").Element("away").Element(element).Value.ToString();
-                    imgAway[i].Tap += GameList_Click;
                     ContentPanel.Children.Add(imgAway[i]);
-
                     //Set Away Team Properties
                     try
                     {
+
                         hlinkAway[i] = new Button { Content = xe.Element("away-team").Element("team-abbreviation").Value };
                         hlinkAway[i].Tag = xe.Element("streams").Element("iphone").Element("away").Element(element).Value.ToString();
                         //hlinkAway[i].TargetName = "_blank";
@@ -192,8 +190,6 @@ namespace HlsView
                     imgHome[i].Height = 45;
                     imgHome[i].Width = 60;
                     imgHome[i].Stretch = Stretch.Fill;
-                    imgHome[i].Tag = xe.Element("streams").Element("iphone").Element("home").Element(element).Value.ToString();
-                    imgHome[i].Tap += GameList_Click;
                     ContentPanel.Children.Add(imgHome[i]);
 
                     heightMargin = heightMargin + 55;
@@ -214,34 +210,18 @@ namespace HlsView
 
         void GameList_Click(object sender, RoutedEventArgs e)
         {
-            if (sender.ToString() == "System.Windows.Controls.Image")
+            Button target = sender as Button;
+            if (target.Tag.ToString().EndsWith("m3u8"))
             {
-                Image target = sender as Image;
-                if (target.Tag.ToString().EndsWith("m3u8"))
-                {
-                    //defaultBase = target.Tag.ToString();
-                    //GetBandwidth(target.Tag.ToString());
-                    NavigationService.Navigate(new Uri("/MainPage.xaml?source=" + target.Tag.ToString(), UriKind.Relative));
-                }
-                else
-                {
-                    NavigationService.Navigate(new Uri("/HighlightViewer.xaml?source=" + target.Tag.ToString(), UriKind.Relative));
-                }
+                //defaultBase = target.Tag.ToString();
+                //GetBandwidth(target.Tag.ToString());
+                NavigationService.Navigate(new Uri("/MainPage.xaml?source=" + target.Tag.ToString(), UriKind.Relative));
             }
             else
             {
-                Button target = sender as Button;
-                if (target.Tag.ToString().EndsWith("m3u8"))
-                {
-                    //defaultBase = target.Tag.ToString();
-                    //GetBandwidth(target.Tag.ToString());
-                    NavigationService.Navigate(new Uri("/MainPage.xaml?source=" + target.Tag.ToString(), UriKind.Relative));
-                }
-                else
-                {
-                    NavigationService.Navigate(new Uri("/HighlightViewer.xaml?source=" + target.Tag.ToString(), UriKind.Relative));
-                }
-            } 
+                NavigationService.Navigate(new Uri("/HighlightViewer.xaml?source=" + target.Tag.ToString(), UriKind.Relative));
+            }
+
         }
 
         //FOR BANDWIDTH SELECTION SUPPORT

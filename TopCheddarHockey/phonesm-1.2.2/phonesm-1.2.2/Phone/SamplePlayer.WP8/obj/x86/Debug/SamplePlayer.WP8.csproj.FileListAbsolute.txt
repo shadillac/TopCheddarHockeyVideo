@@ -111,3 +111,4 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.dll
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.pdb
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\XapCacheFile.xml
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\obj\x86\Debug\SamplePlayer.WP8.csprojResolveAssemblyReference.cache
