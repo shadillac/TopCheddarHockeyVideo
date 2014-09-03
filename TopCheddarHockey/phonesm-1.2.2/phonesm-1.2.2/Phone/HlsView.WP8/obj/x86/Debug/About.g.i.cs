@@ -61,7 +61,7 @@ namespace HlsView {
                 return;
             }
             _contentLoaded = true;
-            System.Windows.Application.LoadComponent(this, new System.Uri("/HlsView8;component/About.xaml", System.UriKind.Relative));
+            System.Windows.Application.LoadComponent(this, new System.Uri("/TopCheddarHockey;component/About.xaml", System.UriKind.Relative));
             this.LayoutRoot = ((System.Windows.Controls.Grid)(this.FindName("LayoutRoot")));
             this.AboutGrid = ((System.Windows.Controls.Grid)(this.FindName("AboutGrid")));
             this.tbTitle = ((System.Windows.Controls.TextBlock)(this.FindName("tbTitle")));

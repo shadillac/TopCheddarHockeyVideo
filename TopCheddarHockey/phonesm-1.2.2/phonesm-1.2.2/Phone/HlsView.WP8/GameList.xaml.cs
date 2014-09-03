@@ -73,7 +73,7 @@ namespace HlsView
 
                 switch (gametype)
                 {
-                    case "Hightlights":
+                    case "Highlights":
                         element = "vod-continuous";
                         break;
                     case "FullGame":
