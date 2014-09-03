@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SHADHOMEX1</Machine>
+    <WindowsUser>shmorris</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>dad17004-74ef-47be-88c1-618394d060eb</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>49EE05666EC43803BB6713A8AD1100D7F60442ADCA98EC4A293206D87531BC4C</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>dad17004-74ef-47be-88c1-618394d060eb_1.0.0.0_x86__w45pkrs2nrh9t</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>dad17004-74ef-47be-88c1-618394d060eb_w45pkrs2nrh9t!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>dad17004-74ef-47be-88c1-618394d060eb</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=phonesm</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-01T16:36:01.301</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\bin\x86\Debug\HlsView.Win81.exe">
+      <PackagePath>HlsView.Win81.exe</PackagePath>
+      <Modified>2014-09-01T16:36:00.613</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Autofac.3.3.0\lib\portable-win+net40+sl50+wp8\Autofac.dll">
+      <PackagePath>Autofac.dll</PackagePath>
+      <Modified>2014-08-30T21:32:43.242</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\SM.Media.Builder.dll">
+      <PackagePath>SM.Media.Builder.dll</PackagePath>
+      <Modified>2014-08-30T21:32:41.823</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\SM.Media.dll">
+      <PackagePath>SM.Media.dll</PackagePath>
+      <Modified>2014-08-30T21:32:41.934</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\WinRT\x86\SM.Media.Platform.Win81.dll">
+      <PackagePath>SM.Media.Platform.Win81.dll</PackagePath>
+      <Modified>2014-08-30T21:32:42.369</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\SM.TsParser.dll">
+      <PackagePath>SM.TsParser.dll</PackagePath>
+      <Modified>2014-08-30T21:32:42.043</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Microsoft.Net.Http.2.2.18\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2014-08-30T21:32:45.923</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Microsoft.Net.Http.2.2.18\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2014-08-30T21:32:45.962</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-30T21:32:37.787</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-30T21:32:37.788</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-30T21:32:37.790</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-30T21:32:37.790</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-09-01T16:36:00.370</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-09-01T16:36:00.372</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\bin\x86\Debug\HlsView.Win81.xr.xml">
+      <PackagePath>HlsView.Win81.xr.xml</PackagePath>
+      <Modified>2014-09-01T16:36:00.311</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\App\WinRT\HlsView.Win81\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-09-01T16:36:01.143</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

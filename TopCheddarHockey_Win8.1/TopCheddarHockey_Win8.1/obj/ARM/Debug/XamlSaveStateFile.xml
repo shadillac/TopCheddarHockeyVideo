@@ -1,0 +1,14 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey_win8.1\topcheddarhockey_win8.1\obj\arm\debug\intermediatexaml\topcheddarhockey_win8.1.exe" HashGuid="1cb642df-38b0-318d-5b54-3b7b82ecd54b" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\msadvertisingxaml\8.1\references\commonconfiguration\neutral\microsoft.advertising.winrt.ui.winmd" HashGuid="e2e1868b-6ac9-03b1-ca83-3c4740a6cdfb" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\msadvertisingxaml\8.1\references\commonconfiguration\neutral\microsoftadvertising.winmd" HashGuid="ff7acc79-1a32-fd80-27f3-998d24e2b25e" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\packages\autofac.3.3.0\lib\portable-win+net40+sl50+wp8\autofac.dll" HashGuid="9fa8d990-209a-d3cb-ddf5-316f77b39637" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\debug\sm.media.builder.dll" HashGuid="fe4542ef-102d-8957-5084-b5c0b65bb4cc" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\debug\sm.media.dll" HashGuid="a01cc4e5-3021-690e-a77c-d113cd9d4281" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\debug\winrt\x86\sm.media.platform.win81.dll" HashGuid="c9085a4b-781c-81f7-073d-bd78d575d02a" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\debug\sm.tsparser.dll" HashGuid="3d98474a-2a17-b92a-c3a3-2a7449a0b271" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\packages\microsoft.net.http.2.2.18\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\packages\microsoft.net.http.2.2.18\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
