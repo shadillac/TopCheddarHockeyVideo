@@ -112,7 +112,7 @@ namespace TopCheddarHockey_Win8._1
 
         private async void hlbFeedBack_Click(object sender, RoutedEventArgs e)
         {
-            await Launcher.LaunchUriAsync(new Uri("mailto:shadnick@outlook.com?subject=Feedback For Top Cheddar: Windows 8.1"));
+            await Launcher.LaunchUriAsync(new Uri("mailto:shadnickapps@outlook.com?subject=Feedback For Top Cheddar: Windows 8.1"));
         }
     }
 }
