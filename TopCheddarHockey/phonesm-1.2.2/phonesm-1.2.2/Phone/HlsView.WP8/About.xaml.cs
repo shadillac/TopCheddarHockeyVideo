@@ -38,8 +38,8 @@ namespace HlsView
         {
             EmailComposeTask ect = new EmailComposeTask
             {
-                To = "shadnickfeedback@gmail.com",
-                Subject = "Top Cheddar Hockey Feedback",
+                To = "shadnickapps@outlook.com",
+                Subject = "Top Cheddar Hockey Feedback : Windows Phone",
             };
             ect.Show();
         }

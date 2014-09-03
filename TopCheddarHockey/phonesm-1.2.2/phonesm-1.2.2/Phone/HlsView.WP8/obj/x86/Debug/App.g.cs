@@ -46,7 +46,7 @@ namespace HlsView {
                 return;
             }
             _contentLoaded = true;
-            System.Windows.Application.LoadComponent(this, new System.Uri("/HlsView8;component/App.xaml", System.UriKind.Relative));
+            System.Windows.Application.LoadComponent(this, new System.Uri("/TopCheddarHockey;component/App.xaml", System.UriKind.Relative));
         }
     }
 }

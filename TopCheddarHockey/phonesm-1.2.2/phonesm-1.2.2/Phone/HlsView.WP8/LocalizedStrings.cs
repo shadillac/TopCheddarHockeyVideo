@@ -24,7 +24,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-using HlsView.Resources;
+using TopCheddarHockey.Resources;
 
 namespace HlsView
 {

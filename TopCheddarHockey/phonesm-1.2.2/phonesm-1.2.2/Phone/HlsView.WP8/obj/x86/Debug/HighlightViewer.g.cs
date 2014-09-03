@@ -61,7 +61,7 @@ namespace HlsView {
                 return;
             }
             _contentLoaded = true;
-            System.Windows.Application.LoadComponent(this, new System.Uri("/HlsView8;component/HighlightViewer.xaml", System.UriKind.Relative));
+            System.Windows.Application.LoadComponent(this, new System.Uri("/TopCheddarHockey;component/HighlightViewer.xaml", System.UriKind.Relative));
             this.ContentRoot = ((System.Windows.Controls.Grid)(this.FindName("ContentRoot")));
             this.mdaHighView = ((System.Windows.Controls.MediaElement)(this.FindName("mdaHighView")));
             this.btnPlay = ((System.Windows.Controls.Button)(this.FindName("btnPlay")));

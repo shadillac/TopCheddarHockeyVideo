@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Media.BackgroundAudioStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplePlayer.WP8", "phonesm-1.2.2\phonesm-1.2.2\Phone\SamplePlayer.WP8\SamplePlayer.WP8.csproj", "{2D377FFD-DFB4-4767-B8C2-F87D0C453A9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HlsView.WP8", "phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\HlsView.WP8.csproj", "{1ECE197B-770D-4BAB-9FB9-653B84077E87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopCheddar.WP8", "phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\TopCheddar.WP8.csproj", "{1ECE197B-770D-4BAB-9FB9-653B84077E87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundAudio.Sample.WP8", "phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\BackgroundAudio.Sample.WP8.csproj", "{1B07629E-B64F-44A7-8B40-AAF5FF427571}"
 EndProject
