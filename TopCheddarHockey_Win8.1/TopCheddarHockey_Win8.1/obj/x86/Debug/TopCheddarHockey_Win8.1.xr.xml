@@ -61,7 +61,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Source" />
       <RootProperty Name="Opacity" />
-      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Foreground" />

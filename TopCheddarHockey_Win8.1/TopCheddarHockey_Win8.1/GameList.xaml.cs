@@ -175,8 +175,14 @@ namespace TopCheddarHockey_Win8._1
                     imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
                     imgAway[i].Height = 30;
                     imgAway[i].Width = 60;
-                    imgAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
-                    imgAway[i].Tapped += GameList_Click;
+                    try
+                    {
+                        imgAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
+                        imgAway[i].Tapped += GameList_Click;
+                    }
+                    catch (Exception)
+                    { }
+                    
                     ContentPanel.Children.Add(imgAway[i]);
 
                     //Set Away Team Properties
@@ -271,8 +277,14 @@ namespace TopCheddarHockey_Win8._1
                     imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
                     imgHome[i].Height = 30;
                     imgHome[i].Width = 60;
-                    imgHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
-                    imgHome[i].Tapped += GameList_Click;
+                    try
+                    {
+                        imgHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
+                        imgHome[i].Tapped += GameList_Click;
+                    }
+                    catch (Exception)
+                    { }
+                    
                     ContentPanel.Children.Add(imgHome[i]);
 
                     heightMargin = heightMargin + 42;
