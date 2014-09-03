@@ -15,7 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TopCheddarHockey_Win8._1.App">
-      <m2:VisualElements DisplayName="Top Cheddar" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Top Cheddar Hockey Video" ForegroundText="light" BackgroundColor="#464646">
+      <m2:VisualElements DisplayName="Top Cheddar" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Top Cheddar Hockey Video" ForegroundText="light" BackgroundColor="#000000">
+        <m2:DefaultTile ShortName="Top Cheddar">
+        </m2:DefaultTile>
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
         <m2:InitialRotationPreference>
           <m2:Rotation Preference="landscape" />
