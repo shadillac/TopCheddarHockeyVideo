@@ -20,11 +20,19 @@
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>-->
                 <TextBlock x:Name="pageTitle" Text="Game List" Foreground="Yellow" Style="{StaticResource HeaderTextBlockStyle}" 
-					IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="132,46,61,0"/>
+					IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="571,44,521,0"/>
                 <Image HorizontalAlignment="Left" Height="753" Stretch="Fill" VerticalAlignment="Top" Width="1351" Source="/Assets/hockey-background1.jpg" Opacity="0.15"/>
                 <Button Content="Back" HorizontalAlignment="Left" Margin="1177,599,-206,-3" VerticalAlignment="Top" Height="129" Width="131" Click="Button_Click"/>
                 <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1067,44,0,0" VerticalAlignment="Top" Width="250"/>
             </Grid>
         </ScrollViewer>
     </Viewbox>
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton  Icon="Setting" Label="Settings..." Click="AppBarButton_Click_1"/>
+                <AppBarButton Icon="People" Label="About" Click="AppBarButton_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

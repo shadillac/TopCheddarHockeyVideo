@@ -17,6 +17,7 @@
     <PackageCertificateKeyFile>TopCheddarHockey_Win8.1_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <AppxPackageDir>D:\app\</AppxPackageDir>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -185,7 +186,7 @@
     <Reference Include="SM.Media.Builder">
       <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\SM.Media.Builder.dll</HintPath>
     </Reference>
-    <Reference Include="SM.Media.Platform.Win81, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=x86">
+    <Reference Include="SM.Media.Platform.Win81, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=ARM">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\WinRT\x86\SM.Media.Platform.Win81.dll</HintPath>
     </Reference>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="b4859045-6560-4f26-a510-69cdc984c330" Publisher="CN=shmorris" Version="1.0.0.2" />
+  <Identity Name="b4859045-6560-4f26-a510-69cdc984c330" Publisher="CN=shmorris" Version="1.0.0.3" />
   <Properties>
     <DisplayName>TopCheddarHockey_Win8.1</DisplayName>
     <PublisherDisplayName>shmorris</PublisherDisplayName>

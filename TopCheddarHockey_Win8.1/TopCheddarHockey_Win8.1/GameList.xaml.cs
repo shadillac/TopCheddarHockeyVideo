@@ -175,6 +175,8 @@ namespace TopCheddarHockey_Win8._1
                     imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
                     imgAway[i].Height = 30;
                     imgAway[i].Width = 60;
+                    imgAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
+                    imgAway[i].Tapped += GameList_Click;
                     ContentPanel.Children.Add(imgAway[i]);
 
                     //Set Away Team Properties
@@ -269,6 +271,8 @@ namespace TopCheddarHockey_Win8._1
                     imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
                     imgHome[i].Height = 30;
                     imgHome[i].Width = 60;
+                    imgHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
+                    imgHome[i].Tapped += GameList_Click;
                     ContentPanel.Children.Add(imgHome[i]);
 
                     heightMargin = heightMargin + 42;
@@ -284,17 +288,30 @@ namespace TopCheddarHockey_Win8._1
         }
         void GameList_Click(object sender, RoutedEventArgs e)
         {
-            Button target = sender as Button;
-            if (target.Tag.ToString().EndsWith("m3u8"))
+            if (sender.ToString() == "Windows.UI.Xaml.Controls.Image")
             {
-                Frame.Navigate(typeof(FullGameViewer), target.Tag.ToString());
+                Image target = sender as Image;
+                if (target.Tag.ToString().EndsWith("m3u8"))
+                {
+                    Frame.Navigate(typeof(FullGameViewer), target.Tag.ToString());
+                }
+                else
+                {
+                    Frame.Navigate(typeof(HighLightViewer), target.Tag.ToString());
+                }
             }
             else
             {
-                Frame.Navigate(typeof(HighLightViewer), target.Tag.ToString());
+                Button target = sender as Button;
+                if (target.Tag.ToString().EndsWith("m3u8"))
+                {
+                    Frame.Navigate(typeof(FullGameViewer), target.Tag.ToString());
+                }
+                else
+                {
+                    Frame.Navigate(typeof(HighLightViewer), target.Tag.ToString());
+                }
             }
-            
-
         }
 
         private async void ShowMessageBox(string text)
@@ -306,6 +323,16 @@ namespace TopCheddarHockey_Win8._1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Frame.GoBack();
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(About));
+        }
+
+        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Settings));
         }
     }
 }

@@ -27,8 +27,8 @@
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="264.5,114,309,0" Grid.Column="1"/>
             <TextBlock HorizontalAlignment="Left" Margin="363.5,207,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="54" Width="282" Foreground="Yellow" FontSize="24" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" />
             <DatePicker x:Name="gameDate" HorizontalAlignment="Left" Margin="420.5,266,0,0" VerticalAlignment="Top" Width="320" Height="42" Grid.Column="1"/>
-            <Button x:Name="btnGo" Foreground="Yellow" Content="Get me my Top Cheddar Videos!" HorizontalAlignment="Left" Margin="403,644,0,0" VerticalAlignment="Top" Height="81" Width="354" BorderThickness="3" BorderBrush="Yellow"  Click="btnGo_Click" FontSize="22" Grid.Column="1"/>
-            <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" Grid.Column="1" HorizontalAlignment="Left" Height="250" Margin="452,344,0,0" VerticalAlignment="Top" Width="250"/>
+            <Button x:Name="btnGo" Foreground="Yellow" Content="Get me my Top Cheddar Videos!" HorizontalAlignment="Left" Margin="400,376,0,0" VerticalAlignment="Top" Height="81" Width="363" BorderThickness="3" BorderBrush="Yellow"  Click="btnGo_Click" FontSize="22" Grid.Column="1"/>
+            <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" Grid.Column="1" HorizontalAlignment="Left" Height="250" Margin="461,486,0,0" VerticalAlignment="Top" Width="250"/>
         </Grid>
     </Viewbox>
 </Page>
