@@ -14,10 +14,11 @@
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>TopCheddarHockey_Win8.1_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>TopCheddarHockey_Win8.1_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
-    <AppxPackageDir>C:\Users\shmorris\Pictures\App\</AppxPackageDir>
+    <AppxPackageDir>C:\Users\shmorris\Pictures\App\TCHV\</AppxPackageDir>
+    <PackageCertificateThumbprint>69AA69F20D839E789A526735E3D9639D7E9B5713</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -136,6 +137,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="TopCheddarHockey_Win8.1_StoreKey.pfx" />
     <None Include="TopCheddarHockey_Win8.1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +147,7 @@
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\Background.png" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
