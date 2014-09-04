@@ -557,14 +557,6 @@
             <param name="uri">url to expand to if specified</param>
             <param name="expandProperties">properties for the expand (whether to show background, it's colour etc)</param>
         </member>
-        <member name="M:Microsoft.Advertising.WinRT.UI.IAdvertisingWebBrowser.Expand(System.Uri,Microsoft.Advertising.WinRT.UI.ExpandProperties,System.Boolean)">
-            <summary>
-            method passed as a delegate to WP7TaskInvoker to handle expand operation
-            </summary>
-            <param name="uri">url to expand to if specified</param>
-            <param name="expandProperties">properties for the expand (whether to show background, it's colour etc)</param>
-            <param name="isLegacy">whether or not this is a legacy ad calling ormma.expand instead of mraid.expand</param>
-        </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.IAdvertisingWebBrowser.Resize(System.Double,System.Double)">
             <summary>
             method passed as a delegate to the WP7TaskInvoked to handle the expand operation
@@ -604,11 +596,6 @@
             the webbrowser control responsible for rendering content
             </summary>
         </member>
-        <member name="F:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.adControlElement">
-            <summary>
-            Parent Ad Control -- for viewability checks
-            </summary>
-        </member>
         <member name="F:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.ormma">
             <summary>
             the Ormma handler
@@ -627,16 +614,6 @@
         <member name="F:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.prmJson">
             <summary>
             prm json blob to pass into the renderer
-            </summary>
-        </member>
-        <member name="F:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.htmlPayload">
-            <summary>
-            htmlPayload to load into the WebView
-            </summary>
-        </member>
-        <member name="F:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.adType">
-            <summary>
-            Whether the ad is first or third-party
             </summary>
         </member>
         <member name="F:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.rendererOptions">
@@ -731,7 +708,7 @@
             AdvertisingWebBrowser constructor
             </summary>
         </member>
-        <member name="M:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.#ctor(System.String,System.String,System.String,System.String,Microsoft.Advertising.WinRT.UI.WebViewBrushUsage,Windows.UI.Xaml.FrameworkElement)">
+        <member name="M:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.#ctor(System.String,System.String,System.String,System.String,Microsoft.Advertising.WinRT.UI.WebViewBrushUsage)">
             <summary>
             constuctor
             </summary>
@@ -739,8 +716,7 @@
             <param name="adJsonBlob">ad data to pass to the renderer</param>
             <param name="prmJsonBlob">payload params to pass to the renderer</param>
             <param name="rendererOptions">publisher provided renderer options</param>
-            <param name="wvbUsage">if and how WebViewBrush should be used to work around numerous issues in the WebView control</param>     
-            <param name="adControl">the framework element of the parent ad control -- needed for viewability checks</param>
+            <param name="wvbUsage">if and how WebViewBrush should be used to work around numerous issues in the WebView control</param>
         </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.#ctor(System.Uri)">
             <summary>
@@ -750,18 +726,10 @@
         </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.Expand(System.Uri,Microsoft.Advertising.WinRT.UI.ExpandProperties)">
             <summary>
-            method passed as a delegate to handle expand operation
+            method passed as a delegate to WP7TaskInvoker to handle expand operation
             </summary>
             <param name="uri">url to expand to if specified</param>
             <param name="expandProperties">properties for the expand (whether to show background, it's colour etc)</param>
-        </member>
-        <member name="M:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.Expand(System.Uri,Microsoft.Advertising.WinRT.UI.ExpandProperties,System.Boolean)">
-            <summary>
-            method passed as a delegate to handle expand operation
-            </summary>
-            <param name="uri">url to expand to if specified</param>
-            <param name="expandProperties">properties for the expand (whether to show background, it's colour etc)</param>
-            <param name="isLegacyAd">whether this ad called expand using MRAID.expand </param>
         </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.GetOrmmaAdInstanceData">
             <summary>
@@ -833,14 +801,6 @@
             Handles ScriptNotify events containing ORMMA actions.
             </summary>
             <param name="actionInfo"></param>
-        </member>
-        <member name="M:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.NavigationStarting(Windows.UI.Xaml.Controls.WebView,Windows.UI.Xaml.Controls.WebViewNavigationStartingEventArgs)">
-            <summary>
-            Fired when the web view is navigating away form its current source. 
-            Will redirect the call to Ormma.open and cancel the navigation on the current web view.
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
         </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.AdvertisingWebBrowser.WebBrowserUnloaded(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
             <summary>
@@ -1263,12 +1223,6 @@
             renderer that a user is interacting with the ad.
             </summary>
         </member>
-        <member name="M:Microsoft.Advertising.WinRT.UI.OrmmaImpl.BrowseToUrl(System.Collections.Generic.IDictionary{System.String,System.String})">
-            <summary>
-            Initiates a WebBrowserTask with data from the rich media ad.
-            </summary>
-            <param name="parameters">Dictionary containing required parameters (url) for browsing.</param>
-        </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.OrmmaImpl.ProcessAdError(System.Collections.Generic.IDictionary{System.String,System.String})">
             <summary>
             processes the ad error message sent from ormma and raises the 
@@ -1342,6 +1296,12 @@
             Initiates EmailComposeTask with data from the rich media ad.
             </summary>
             <param name="parameters">Dictionary containing required parameters (recipient,subject,body) for sending an email.</param>
+        </member>
+        <member name="M:Microsoft.Advertising.WinRT.UI.OrmmaImpl.BrowseToUrl(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initiates a WebBrowserTask with data from the rich media ad.
+            </summary>
+            <param name="parameters">Dictionary containing required parameters (url) for browsing.</param>
         </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.OrmmaImpl.PlayMedia(System.Collections.Generic.IDictionary{System.String,System.String})">
             <summary>
@@ -1541,14 +1501,9 @@
             unique path to the ormma.js resource
             </summary>
         </member>
-        <member name="F:Microsoft.Advertising.WinRT.UI.ResourceCache.RendererBootstrapKey">
+        <member name="F:Microsoft.Advertising.WinRT.UI.ResourceCache.BootstrapKey">
             <summary>
-            unique path to the bootstrap resource which relies on the renderer to display the ad -- no html payload
-            </summary>
-        </member>
-        <member name="F:Microsoft.Advertising.WinRT.UI.ResourceCache.HtmlBootstrapKey">
-            <summary>
-            unique path to the bootstrap resource which relies on a html payload to display the ad -- no renderer
+            unique path to the bootstrap.html resource
             </summary>
         </member>
         <member name="F:Microsoft.Advertising.WinRT.UI.ResourceCache.instance">
@@ -1757,15 +1712,14 @@
             <summary>
             constructor
             </summary>
-            <param name="wv">WebView for invoking script commands on</param>
+            <param name="wv">WebView for invokeing script commands on</param>
         </member>
-        <member name="M:Microsoft.Advertising.WinRT.UI.Win8TaskInvoker.#ctor(Windows.UI.Xaml.Controls.WebView,Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.FrameworkElement)">
+        <member name="M:Microsoft.Advertising.WinRT.UI.Win8TaskInvoker.#ctor(Windows.UI.Xaml.Controls.WebView,Windows.UI.Xaml.FrameworkElement)">
             <summary>
             constructor
             </summary>
             <param name="wv">WebView for invokeing script commands on</param>
-            <param name="isOnScreenCheckEl">element to use for checking if webview is on screen</param>
-            <param name="adControlElement">ad control element for checking is ad control is on screen</param>
+            <param name="isOnScreenCheckEl">element to use for checking if ad control is on screen</param>
         </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.Win8TaskInvoker.SendSms(System.String,System.String)">
             <summary>
@@ -1901,13 +1855,6 @@
             stops monitoring the viewable state of the ad
             </summary>
         </member>
-        <member name="M:Microsoft.Advertising.WinRT.UI.Win8TaskInvoker.IsAdOnScreen">
-            <summary>
-            Checks if both the ad control and the webview elements are on screen
-            This is needed because the ad control is not necessarily in the hierarchy of the webview, and the webview may have a different size fomr the ad control
-            </summary>
-            <returns>true if the visible ad is on screen</returns>
-        </member>
         <member name="M:Microsoft.Advertising.WinRT.UI.Win8TaskInvoker.PageOrientationAsInt">
             <summary>
             returns the orientation of the phone in the ormma definition
@@ -1959,51 +1906,50 @@
             <param name="sender">sender</param>
         </member>
     </members>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>V9lwYbM7flvjYvhpUbfanAIkJg8=</DigestValue></Reference></SignedInfo><SignatureValue>
-    D+qbG8Mfbuc9ATfUzfpfs63WNbTfRRgCZsL0GsAeVQILEXy3tSLcj+wiGiE8G+o40ZJ9BEAc
-    VXiujKeQ/pIuH49UaNLgeCEPv+RpC3sQOTR7pR/HGm3xcHkfEcI1DAYYnRSn/3auEesLWBxn
-    4KWuEPFynjZIHN2n1ji+9tZLuI0H/HiFx0rGAzgXjbA/Xqbecri8qS2/VyhNiEFugCrYvwJ6
-    uz6mnmjnP+MSSgHoiq80TU1LZ7zz8ExLF1hacrEX0uwOWF2Ff7Ll9vkfigqa2i5yEvsgW5Er
-    3fZ/hhimD+/hT+Q7mShWYICClbubZkicbEFjb313hmR+ME6wpKD7zQ==
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>C6efxnHgoYszuxOjlAUXHUj5w6A=</DigestValue></Reference></SignedInfo><SignatureValue>
+    nrUjRYVFLsoZDX/rOvhv1t56poFqT1tcDxITZ9ttNEuKqE8Mhw1dlc+txyXQohSbhhwfbotE
+    XXie2AlOs8poMPs/evv/kWZBaEL2g/t8WcBFsHvL60tFmsoMw7F2dC4ZPBPg/p2oQ2YR072Z
+    FptPfXYMgEaxq/31ZB0TlASlG+OFNBbPiuQZQkNPHyJ/O37a7ItJdH/5pSNUDxRLeLCR0I/t
+    3HYblBNsFFRmu0x2DMvfOMIAY8IrtVLg0RNGe7Zl7CYfbmbvgJ8VkrT64+jSSVO4cpT+OoVS
+    5mpjbsDiM62CZYmE7L0pIpGo2kVIsAN/gVMtNiNefOOhrLfSYTdp7A==
   </SignatureValue><KeyInfo>
       <KeyValue>
         <RSAKeyValue>
           <Modulus>
-            lnFd7QZG+oTLnVu3Rsew4bQROQOtsRVzYJzrp7ZuGjw//2XjNPGmpSFeVplsWOSSoQpcwtPc
-            Ui8MZZogYUBTMZxsjyF9uvn+E1BSYJU6W7lYpXRhQamU4K0mTkyhl3BJJ158Z8pPHnGERrwd
-            S7biD8XGJ8kH5noKpRcAGUxwRTgtgbRQqsVn0fp5vMXMoXKb9CU0mPhU3xI5OBIvpGulmn7H
-            YtHcz+09NPi53zUwuux5MqnhqaxVTUx/TFbDEwt28Qf5zEes+4jVUqUeKPo9Lc/PhJiGcWUR
-            z4XJCUSG4W/nsfysQESlqYsjP4JJndWWWVATWRhz/0MMrSvUfzBAZw==
+            s3R00II8h6ea1I6yBEKAlyUu5EHOk2M2XxPytHiYgMYofsyKE+89N4w7CaDYFMVcXtipHX8B
+            wbOYG1B37P7qfEXPf+EhDsWEyp8Pa7MJOLd0xFcevvBIqHla3w6bHJqovMhStQxpj4TOcVV7
+            /wkgv0B3NyEwdFuV33fLoOXBchIGPfLIVWyvwftqFifI9bNh49nOGw8e9OTNTDRsPkcR5wIr
+            XxR6BAf11z2L22d9Vz41622NAUCNGoeW4g93TIm6OJz7jgKR2yIP5dA2qbg3RdAq/JaNwWBx
+            M6WIsfbCBDCHW8PXL7J5EdiLZWKiihFmXX5/BXpzih96heXNKBDRPQ==
           </Modulus>
           <Exponent>AQAB</Exponent>
         </RSAKeyValue>
       </KeyValue>
       <X509Data>
         <X509Certificate>
-          MIIE7DCCA9SgAwIBAgITMwAAAMps1TISNcThVQABAAAAyjANBgkqhkiG9w0BAQUFADB5MQsw
+          MIIEqTCCA5GgAwIBAgITMwAAAIhZDjxRH+JqZwABAAAAiDANBgkqhkiG9w0BAQUFADB5MQsw
           CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwG
           A1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMSMwIQYDVQQDExpNaWNyb3NvZnQgQ29kZSBT
-          aWduaW5nIFBDQTAeFw0xNDA0MjIxNzM5MDBaFw0xNTA3MjIxNzM5MDBaMIGDMQswCQYDVQQG
+          aWduaW5nIFBDQTAeFw0xMjA3MjYyMDUwNDFaFw0xMzEwMjYyMDUwNDFaMIGDMQswCQYDVQQG
           EwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMV
           TWljcm9zb2Z0IENvcnBvcmF0aW9uMQ0wCwYDVQQLEwRNT1BSMR4wHAYDVQQDExVNaWNyb3Nv
-          ZnQgQ29ycG9yYXRpb24wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCWcV3tBkb6
-          hMudW7dGx7DhtBE5A62xFXNgnOuntm4aPD//ZeM08aalIV5WmWxY5JKhClzC09xSLwxlmiBh
-          QFMxnGyPIX26+f4TUFJglTpbuVildGFBqZTgrSZOTKGXcEknXnxnyk8ecYRGvB1LtuIPxcYn
-          yQfmegqlFwAZTHBFOC2BtFCqxWfR+nm8xcyhcpv0JTSY+FTfEjk4Ei+ka6Wafsdi0dzP7T00
-          +LnfNTC67HkyqeGprFVNTH9MVsMTC3bxB/nMR6z7iNVSpR4o+j0tz8+EmIZxZRHPhckJRIbh
-          b+ex/KxARKWpiyM/gkmd1ZZZUBNZGHP/QwytK9R/MEBnAgMBAAGjggFgMIIBXDATBgNVHSUE
-          DDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUH17iXVCNVoa+SjzPBOinh7XLv4MwUQYDVR0RBEow
-          SKRGMEQxDTALBgNVBAsTBE1PUFIxMzAxBgNVBAUTKjMxNTk1K2I0MjE4ZjEzLTZmY2EtNDkw
-          Zi05YzQ3LTNmYzU1N2RmYzQ0MDAfBgNVHSMEGDAWgBTLEejK0rQWWAHJNy4zFha5TJoKHzBW
-          BgNVHR8ETzBNMEugSaBHhkVodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpL2NybC9wcm9k
-          dWN0cy9NaWNDb2RTaWdQQ0FfMDgtMzEtMjAxMC5jcmwwWgYIKwYBBQUHAQEETjBMMEoGCCsG
-          AQUFBzAChj5odHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpL2NlcnRzL01pY0NvZFNpZ1BD
-          QV8wOC0zMS0yMDEwLmNydDANBgkqhkiG9w0BAQUFAAOCAQEAd1zr15E9zb17g9mFqbBDnXN8
-          F8kP7Tbbx7UsG177VAU6g3FAgQmit3EmXtZ9tmw7yapfXQMYKh0nfgfpxWUftc8Nt1THKDha
-          iOd7wRm2VjK64szLk9uvbg9dRPXUsO8b1U7Brw7vIJvy4f4nXejF/2H2GdIoCiKd381wgp4Y
-          ctgjzHosQ+7/6sDg5h2qnpczAFJvB7jTiGzepAY1p8JThmURdwmPNVm52IaoAP74MX0s9IwF
-          ncDB1XdybOlNWSaD8cKyiFeTNQB8UCu8Wfz+HCk4gtPeUpdFKRhOlludul8bo/EnUOoHleht
-          NA04V9w3KDWVOjic1O1qhV0OIhFeew==
+          ZnQgQ29ycG9yYXRpb24wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCzdHTQgjyH
+          p5rUjrIEQoCXJS7kQc6TYzZfE/K0eJiAxih+zIoT7z03jDsJoNgUxVxe2KkdfwHBs5gbUHfs
+          /up8Rc9/4SEOxYTKnw9rswk4t3TEVx6+8EioeVrfDpscmqi8yFK1DGmPhM5xVXv/CSC/QHc3
+          ITB0W5Xfd8ug5cFyEgY98shVbK/B+2oWJ8j1s2Hj2c4bDx705M1MNGw+RxHnAitfFHoEB/XX
+          PYvbZ31XPjXrbY0BQI0ah5biD3dMibo4nPuOApHbIg/l0DapuDdF0Cr8lo3BYHEzpYix9sIE
+          MIdbw9cvsnkR2ItlYqKKEWZdfn8FenOKH3qF5c0oENE9AgMBAAGjggEdMIIBGTATBgNVHSUE
+          DDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUJls+W12WX+L3d4h/XkVTWKguW7gwDgYDVR0PAQH/
+          BAQDAgeAMB8GA1UdIwQYMBaAFMsR6MrStBZYAck3LjMWFrlMmgofMFYGA1UdHwRPME0wS6BJ
+          oEeGRWh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2kvY3JsL3Byb2R1Y3RzL01pY0NvZFNp
+          Z1BDQV8wOC0zMS0yMDEwLmNybDBaBggrBgEFBQcBAQROMEwwSgYIKwYBBQUHMAKGPmh0dHA6
+          Ly93d3cubWljcm9zb2Z0LmNvbS9wa2kvY2VydHMvTWljQ29kU2lnUENBXzA4LTMxLTIwMTAu
+          Y3J0MA0GCSqGSIb3DQEBBQUAA4IBAQAP3kBJiJHRMTejRDhpsmor1JH7aIWuWLseDI9W+pnX
+          ypcnTOiFjnlpLOS9lj/lcGaXlTBlKa3Gyqz1D3moZ79p9A+X4woPv+6WdimyItAzxv+LSa2u
+          sv2/JervJ1DA6xn4GmRqoOEXWa/xz+yBqInosdIUBuNqbXRSZNqWlCpcaWsf7QWZGtzoZaqI
+          GxWVGtOkUZb9VZX4Y42fFAyxnn9KBP/DZq0Kr66k3mP68OrDs7Lrh9vFOK22c9J4ZOrsIVtr
+          O9ZEIvSBUqUrQymLDKEqcYJCy6sbftSlp6333vdGms5DOegqU+3PQOR3iEK/RxbgpTZq76ca
+          jTo9MwT2JSAj
         </X509Certificate>
       </X509Data>
       <X509Data>
@@ -2069,28 +2015,28 @@
           aZuW4hCoELQ3UAjWwz0=
         </X509Certificate>
       </X509Data>
-    </KeyInfo><Object id="ts-countersig"><X509Data><X509Certificate>MIIEwzCCA6ugAwIBAgITMwAAADUo7mFTkiJhkQAAAAAANTANBgkqhkiG9w0BAQUFADB3MQswCQYD
+    </KeyInfo><Object id="ts-countersig"><X509Data><X509Certificate>MIIEwzCCA6ugAwIBAgITMwAAADaeewBVssNdLAAAAAAANjANBgkqhkiG9w0BAQUFADB3MQswCQYD
 VQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMV
 TWljcm9zb2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3NvZnQgVGltZS1TdGFtcCBQQ0Ew
-HhcNMTMwMzI3MjAwODI2WhcNMTQwNjI3MjAwODI2WjCBszELMAkGA1UEBhMCVVMxEzARBgNVBAgT
+HhcNMTMwMzI3MjAwODI4WhcNMTQwNjI3MjAwODI4WjCBszELMAkGA1UEBhMCVVMxEzARBgNVBAgT
 Cldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3Jh
-dGlvbjENMAsGA1UECxMETU9QUjEnMCUGA1UECxMebkNpcGhlciBEU0UgRVNOOjMxQzUtMzBCQS03
-QzkxMSUwIwYDVQQDExxNaWNyb3NvZnQgVGltZS1TdGFtcCBTZXJ2aWNlMIIBIjANBgkqhkiG9w0B
-AQEFAAOCAQ8AMIIBCgKCAQEAm9vWEfGEH1m0kUedzTgvsolxQaJbPc6WtX2a9wqAK0ICg8R8//f2
-6pcftWw4XkuVVOjsk9K5TeT3KyaHr7vrG+hNHCFDF/igM5qRsYFNOIEkUwKxdnlaLqz7y4xcXTub
-XKU7NoBsI3S2xnffQyfNOpmouBP65aqjt8VzhFbsjsFIMwGJMa8nNq07LQDicQQxvva3dLFnP1rl
-hLUBJpB4iYAlPj5CHFJKZCcCaM6iBr7QtT5EF4CZiImcwLkP1fI5lcM1FLsJEEW56m5frIDLh3xF
-ZAImCU+adqVmvhBJKKO57P+y+mFb+WPqknL1SurKOz0TkYw7/TnWSTwC7nod4QIDAQABo4IBCTCC
-AQUwHQYDVR0OBBYEFLkUVdsQ7WBr1Q2DdA3Oc3OVImUcMB8GA1UdIwQYMBaAFCM0+NlSRnAK7UD7
+dGlvbjENMAsGA1UECxMETU9QUjEnMCUGA1UECxMebkNpcGhlciBEU0UgRVNOOkJCRUMtMzBDQS0y
+REJFMSUwIwYDVQQDExxNaWNyb3NvZnQgVGltZS1TdGFtcCBTZXJ2aWNlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAvBmYmWSq9tq9TdEuQs9m7Ncr2HJUyU3z+i4JBkTQEzAtoukQKnUb
+P1Zcd7f66bz41enN9MiOmyvwwBGa8Ve4bL0GjdbBYY/WMOEmqQom0XbagJXqfzAD3A/A1k2Gq7ra
+Hn51pQLb4TCzQQedDDDfugtCawe9Q8lyj9UZDl3j9fsx7XFsiK7nO3ro+G4X3cv2B/j+IQjpIDoQ
+4fNJMWfp0jOWwRFXy4v7KnDPO/G73m61dLk9U70D5NzKsvcWvdmac8I+yUdiQlfFCsiYycRYKd4O
+6/J8GPvEq9cLl7UZpgtJODqwUwSIBg6iirll6g5svVqt0Hue0XoyR/Ie0SNuNQIDAQABo4IBCTCC
+AQUwHQYDVR0OBBYEFMwfZPc12efmJAP0En8Ep94vGr5hMB8GA1UdIwQYMBaAFCM0+NlSRnAK7UD7
 dvuzK7DDNbMPMFQGA1UdHwRNMEswSaBHoEWGQ2h0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2kv
 Y3JsL3Byb2R1Y3RzL01pY3Jvc29mdFRpbWVTdGFtcFBDQS5jcmwwWAYIKwYBBQUHAQEETDBKMEgG
 CCsGAQUFBzAChjxodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpL2NlcnRzL01pY3Jvc29mdFRp
-bWVTdGFtcFBDQS5jcnQwEwYDVR0lBAwwCgYIKwYBBQUHAwgwDQYJKoZIhvcNAQEFBQADggEBAJaV
-lxhREadlaCDXqFbP6lUQVKjx5/JsbwouUz8YgQjPN/Y1ymKKoJBe4u9HzqrHBZj93hq26BKkmrnK
-pWKvyOY+ODJcA9PzaPlgnMeyJdykTGuPBsvYtsFYIn6E1Wu56PE+L3n28vpsaOjKAl8BvrGgbPmP
-Rbm4SwZfxJSO9+3r1yFauFZbeGfcQAl82pKj27zQmh2O5snaz1Iff7+W3owsX20ilqNJ+acaIl7/
-6cpyJUC487hUHlrIV1CyiyLmEOyt7aUQlFLU7VtXgskXVPZ03lGrVDTglUY63lUwGhdwL5f2CgYi
-pvqCjochior3gYxSN0w6jQRbNcvzG4N1vl0=</X509Certificate></X509Data><X509Data><X509Certificate>MIIGBzCCA++gAwIBAgIKYRZoNAAAAAAAHDANBgkqhkiG9w0BAQUFADBfMRMwEQYKCZImiZPyLGQB
+bWVTdGFtcFBDQS5jcnQwEwYDVR0lBAwwCgYIKwYBBQUHAwgwDQYJKoZIhvcNAQEFBQADggEBAFsH
+cVX7PnDXFDRFUmUNen+e7t7n+WMlVp3qsYH318h82rXpTd6wCRG7bLcMMjUSAOCOn7il2jt68y2G
+kZ6QRIz3NGE2UOZoj1wNCED4Cw2r1Q9FSftgR7r5wENBsu5oIGIWtaaf1lNZx7tQoLR8kElP01X2
+7HxYUR7eEtfbfjv8cEa+ZQ6ER/tJWAi7eE2Lx8G2nKhFQiAkwQdyfwhXdZ9SlE8UYzkFzK0xA4EH
+EHqRfzqK2r871svWmnJj/BHgkVIR5Ul/age2xSK+pVTouRQEZLAuWB9H32XIlA0rJTRinaHQhiO1
+6llZ8Oo61VIvwHLHCIUlQPbc4RXEUNTz0uk=</X509Certificate></X509Data><X509Data><X509Certificate>MIIGBzCCA++gAwIBAgIKYRZoNAAAAAAAHDANBgkqhkiG9w0BAQUFADBfMRMwEQYKCZImiZPyLGQB
 GRYDY29tMRkwFwYKCZImiZPyLGQBGRYJbWljcm9zb2Z0MS0wKwYDVQQDEyRNaWNyb3NvZnQgUm9v
 dCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMDcwNDAzMTI1MzA5WhcNMjEwNDAzMTMwMzA5WjB3
 MQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwG
@@ -2118,33 +2064,33 @@ zCzU2DKATCYqSCRfWupW76bemZ3KOm+9gSd0BhHudiG/m4LBJ1S2sWo9iaF2YbRuoROmv6pH8BJv
 /YoybLL+31HIjCPJZr2dHYcSZAI9La9Zj7jkIeW1sMpjtHhUBdRBLlCslLCleKuzoJZ1GtmShxN1
 Ii8yqAhuoFuMJb+g74TKIdbrHk/Jmu5J4PcBZW+JC33Iacjmbuqnl84xKf8OxVtc2E0bodj6L54/
 LlUWa8kTo/0=</X509Certificate></X509Data><CounterSignature xmlns="http://schemas.microsoft.com/xmldsig/timestamp/2003" ts-format="cms-timestamp-message">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
-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
+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
-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
+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
-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
+U291cmNlIE1hc3RlciBDbG9jazANBgkqhkiG9w0BAQUFAAIFANXdw8owIhgPMjAxMzA5MTMxNzAz
+MDZaGA8yMDEzMDkxNDE3MDMwNlowdDA6BgorBgEEAYRZCgQBMSwwKjAKAgUA1d3DygIBADAHAgEA
+AgIewTAHAgEAAgIXKDAKAgUA1d8VSgIBADA2BgorBgEEAYRZCgQCMSgwJjAMBgorBgEEAYRZCgMB
+oAowCAIBAAIDFuNgoQowCAIBAAIDB6EgMA0GCSqGSIb3DQEBBQUAA4IBAQCnbbxlKtW8i+YoYhMy
+BkI0JgqzjT0XlO0t1r9vt7Utg6HHFsKk9S6YE06yE4WuNufowccN0g+xMjgRL3YIDMYdmbBoAJzF
+vTaZ2oTr6BtMY5QWWVLMB/RSeCw64gyzSOdpSfT57EZX0HKpDu9iMvKNJudOpFmxiXBP+upg3Z+e
+1kuKgs28FziLXzmLGTeVWKEB/SaTy6w5rIK0uq5IfupOznYSw91v0swCZgYpYyYguKrdnsgYfuup
+Maqf9JSrb/TzLd1maL+HlX3S5drPWPubqZrBhhj8yQB6fXHXH9W0BXLD5HE8iih3Rm6tdqHl38dC
+lgodvhHGtySUy5wjAWqKMYICFTCCAhECAQEwgY4wdzELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldh
 c2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlv
-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
+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
-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</CounterSignature></Object></Signature></doc>
+MzA5MTMxODQ2MThaMCMGCSqGSIb3DQEJBDEWBBQ7HwHCK7cEa7gicqnQGy6QIYy5aDANBgkqhkiG
+9w0BAQUFAASCAQAj7U2ypueuykv4Fjq0GN8nidgv02UB2RINueDbVudunA21q+IeeUonMhsMmLpS
+ynW/VH/xOcFkHV2lJ5xTaQU9rIkXsL8RoBgyOUcKLmDEZ2R+MN31Rm1aUY1ppRqqLyVp47B4yaPk
+O5ciO6vWFwUU2zClWYVdC8OZX/r+3GOzLNw2pXh/Hbp9Z4sT4LPTWBgWYdjCFdzSEo0lTLo0Wt9n
+STAiqDK5LO48AjoKZBZeZfyI1l8+UrY1UBtpI3l8YGwhngVQ849fFWWA0Qjq880N85Ni0DPrK0y2
+iheZjH38bvRSU/ddbIGotN2C4w5HpRgaLyHamoEG14svN7FwsR7a</CounterSignature></Object></Signature></doc>

@@ -28,7 +28,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="363.5,207,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="54" Width="282" Foreground="Yellow" FontSize="24" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" />
             <DatePicker x:Name="gameDate" HorizontalAlignment="Left" Margin="420.5,266,0,0" VerticalAlignment="Top" Width="320" Height="42" Grid.Column="1"/>
             <Button x:Name="btnGo" Foreground="Yellow" Content="Get me my Top Cheddar Videos!" HorizontalAlignment="Left" Margin="400,376,0,0" VerticalAlignment="Top" Height="81" Width="363" BorderThickness="3" BorderBrush="Yellow"  Click="btnGo_Click" FontSize="22" Grid.Column="1"/>
-            <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" Grid.Column="1" HorizontalAlignment="Left" Height="250" Margin="461,486,0,0" VerticalAlignment="Top" Width="250"/>
+            <UI:AdControl ApplicationId="4a2094c3-4ab0-412a-b479-f28b2b487275" AdUnitId="188424" Grid.Column="1" HorizontalAlignment="Left" Height="90" Margin="224,564,0,0" VerticalAlignment="Top" Width="728"/>
         </Grid>
     </Viewbox>
 </Page>

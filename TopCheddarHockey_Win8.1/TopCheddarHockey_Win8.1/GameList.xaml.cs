@@ -207,7 +207,7 @@ namespace TopCheddarHockey_Win8._1
                         blkAway[i].FontSize = 22.667;
                         blkAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
                         blkAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        blkAway[i].Margin = new Thickness(horizMargin + 95, heightMargin, 0, 0);
+                        blkAway[i].Margin = new Thickness(horizMargin + 100, heightMargin+5, 0, 0);
                         blkAway[i].FontSize = 22.667;
                         ContentPanel.Children.Add(blkAway[i]);
                     }
@@ -263,7 +263,7 @@ namespace TopCheddarHockey_Win8._1
                         blkHome[i].FontSize = 22.667;
                         blkHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
                         blkHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        blkHome[i].Margin = new Thickness(horizMargin + 211, heightMargin, 0, 0);
+                        blkHome[i].Margin = new Thickness(horizMargin + 216, heightMargin+5, 0, 0);
                         blkHome[i].FontSize = 22.667;
                         ContentPanel.Children.Add(blkHome[i]);
                     }

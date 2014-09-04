@@ -166,11 +166,6 @@
             Initial size of request string buffer.
             </summary>
         </member>
-        <member name="F:MicrosoftAdvertising.Shared.AdRequestFactory.LocalTestUrl">
-            <summary>
-            Request to the local web server running inside certification app for local test
-            </summary>
-        </member>
         <member name="M:MicrosoftAdvertising.Shared.AdRequestFactory.#ctor(MicrosoftAdvertising.Shared.AdPlacement)">
             <summary>
             Constructor.
@@ -483,24 +478,6 @@
             <param name="isOptional">whether the property is optional</param>
             <returns>string property value</returns>
         </member>
-        <member name="M:MicrosoftAdvertising.Shared.IJSONWrapper.ExtractBooleanPropertyValue(System.Object,System.String,System.Boolean)">
-            <summary>
-            Extract named string property value from a json node
-            </summary>
-            <param name="jsonNode">json data node</param>
-            <param name="keyName">name of array</param>
-            <param name="isOptional">whether the property is optional</param>
-            <returns>boolean property value</returns>
-        </member>
-        <member name="M:MicrosoftAdvertising.Shared.IJSONWrapper.ExtractNumberPropertyValue(System.Object,System.String,System.Boolean)">
-            <summary>
-            Extract named number property value from a json node
-            </summary>
-            <param name="jsonNode">json data node</param>
-            <param name="keyName">name of array</param>
-            <param name="isOptional">whether the property is optional</param>
-            <returns>number property value</returns>
-        </member>
         <member name="M:MicrosoftAdvertising.Shared.IJSONWrapper.Parse(System.String)">
             <summary>
             Parse json object from json data string
@@ -538,15 +515,6 @@
             <returns>Value of the key.</returns>
         </member>
         <member name="M:MicrosoftAdvertising.Shared.JSONWrapper.ExtractNumberPropertyValue(System.Object,System.String,System.Boolean)">
-            <summary>
-            Retrieves the number value from jsonNode. 
-            </summary>
-            <param name="jsonNode">JSON object node to retrieve the value from.</param>
-            <param name="keyName">Key for the value.</param>
-            <param name="isOptional">If the requested value is supposed to be optional or mandatory.</param>
-            <returns>Value of the key.</returns>
-        </member>
-        <member name="M:MicrosoftAdvertising.Shared.JSONWrapper.ExtractBooleanPropertyValue(System.Object,System.String,System.Boolean)">
             <summary>
             Retrieves the number value from jsonNode. 
             </summary>
@@ -812,11 +780,6 @@
             The AdPlacement class represents an ad placement within an application
             </summary>
         </member>
-        <member name="F:MicrosoftAdvertising.Shared.AdPlacement.LocalTestApplicationId">
-            <summary>
-            Used for checking if request is from the certification app
-            </summary>
-        </member>
         <member name="F:MicrosoftAdvertising.Shared.AdPlacement.DeviceIdFileName">
             <summary>
             File name for storing unique device Id
@@ -1059,11 +1022,13 @@
             Close the advertisement to free its resources.
             </summary>
         </member>
-        <member name="M:MicrosoftAdvertising.Shared.IAdvertisement.SetResponseData(System.Object)">
+        <member name="M:MicrosoftAdvertising.Shared.IAdvertisement.SetResponseData(System.Object,System.String,System.String)">
             <summary>
             Set response data received from network.
             </summary>
             <param name="adResponseNode">The adrsp node in the JSON response from server.</param>
+            <param name="adNodeString">The extracted "ad" node as a string.</param>
+            <param name="prmNodeString">The extracted "prm" node as a string.</param>
         </member>
         <member name="P:MicrosoftAdvertising.Shared.IAdvertisement.AdType">
             <summary>
@@ -1115,11 +1080,13 @@
             Default constructor
             </summary>
         </member>
-        <member name="M:MicrosoftAdvertising.Shared.Advertisement.SetResponseData(System.Object)">
+        <member name="M:MicrosoftAdvertising.Shared.Advertisement.SetResponseData(System.Object,System.String,System.String)">
             <summary>
             Deserialize from parsed json data
             </summary>
             <param name="adResponseNode">The adrsp node in the JSON response from server.</param>
+            <param name="adNodeString">The extracted "ad" node as a string.</param>
+            <param name="prmNodeString">The extracted "prm" node as a string.</param>
         </member>
         <member name="M:MicrosoftAdvertising.Shared.Advertisement.Close">
             <summary>
@@ -1353,11 +1320,13 @@
             <param name="adParameters">The ad parameters which are inputs to the renderer.</param>
             <param name="prmParameters">The prm parameters which are inputs to the renderer.</param>
         </member>
-        <member name="M:MicrosoftAdvertising.Shared.PolymorphicAd.SetResponseData(System.Object)">
+        <member name="M:MicrosoftAdvertising.Shared.PolymorphicAd.SetResponseData(System.Object,System.String,System.String)">
             <summary>
             Deserialize from parsed json data
             </summary>
             <param name="adResponseNode">The adrsp node in the JSON response from server.</param>
+            <param name="adNodeString">The extracted "ad" node as a string.</param>
+            <param name="prmNodeString">The extracted "prm" (parameters) node as a string.</param>
         </member>
         <member name="P:MicrosoftAdvertising.Shared.PolymorphicAd.RendererUrl">
             <summary>
@@ -1644,51 +1613,50 @@
             <PublicAPI file="..\IntelliSense\[CULTURE]\ErrorCode.xml" tag="ErrorCode_RefreshNotAllowed"/>
         </member>
     </members>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>c00u0sWsxQYG3tak1ndOOGSkiQY=</DigestValue></Reference></SignedInfo><SignatureValue>
-    KocHPeoeBVRmtPHPvi/UlVsHXy6kiHdxjbkaVtYd6NG9I8u1yHY9WQSx2a5bP47vzFUnoVRS
-    aIdc+qZs5IODRRS/Yy7VxdH45+BFVFEm66enLQnHpXJnfBq0AWOiR7/X5wGIbxijlNdZCRNa
-    U3Hp+OMrB/QSotliZVqIPta0jRiOjzneTGuDPZ0eT67CjW8P4WfP+Cgn3np1j+UEbXinhVIT
-    RsoeGh9XuRxhIpbKqGpchpYksMW73bq0ZiwoEf0dMScepJkmsGR3yNCBvEGXChumjcklAWrx
-    IfYj1NxoIRXVId+xbYyh2bjWFxihyv5JZeeme+xpGdkhxdE62FT54A==
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>PX4BVmpEEgTmfQDwp2S3PdbTLT0=</DigestValue></Reference></SignedInfo><SignatureValue>
+    m+hfanPZUFth/uIbYU/Mq+4FcDaQRegzBi0adrmLAk734MQoovfPfEwC8BxklHbauXVKHcyJ
+    B8VpzXEFjRa4Va2wxUgm3FSHRP/HE1XGhDvBnEAYlg/uwDzA4bID3noQYtauTHL53tofmLsQ
+    pg+NZCXw1M8+u4QvapAXcBfXC5WoLIIvmuKORmIfDkbVfvOHy0+Fl/sJi5B45rMjNXaay2EM
+    djV8GwalUyXc1tzlGN4+5pPi3FEpV+NZTmvVP7E3Vzk6lS1vgwxf+2fEghZ6WJVS36GY6ro0
+    2TbWZRvwkWgPvbAHuJFUgl/OOc1t3U6MQPh0QfE7IKNZokBBmX8PcQ==
   </SignatureValue><KeyInfo>
       <KeyValue>
         <RSAKeyValue>
           <Modulus>
-            lnFd7QZG+oTLnVu3Rsew4bQROQOtsRVzYJzrp7ZuGjw//2XjNPGmpSFeVplsWOSSoQpcwtPc
-            Ui8MZZogYUBTMZxsjyF9uvn+E1BSYJU6W7lYpXRhQamU4K0mTkyhl3BJJ158Z8pPHnGERrwd
-            S7biD8XGJ8kH5noKpRcAGUxwRTgtgbRQqsVn0fp5vMXMoXKb9CU0mPhU3xI5OBIvpGulmn7H
-            YtHcz+09NPi53zUwuux5MqnhqaxVTUx/TFbDEwt28Qf5zEes+4jVUqUeKPo9Lc/PhJiGcWUR
-            z4XJCUSG4W/nsfysQESlqYsjP4JJndWWWVATWRhz/0MMrSvUfzBAZw==
+            s3R00II8h6ea1I6yBEKAlyUu5EHOk2M2XxPytHiYgMYofsyKE+89N4w7CaDYFMVcXtipHX8B
+            wbOYG1B37P7qfEXPf+EhDsWEyp8Pa7MJOLd0xFcevvBIqHla3w6bHJqovMhStQxpj4TOcVV7
+            /wkgv0B3NyEwdFuV33fLoOXBchIGPfLIVWyvwftqFifI9bNh49nOGw8e9OTNTDRsPkcR5wIr
+            XxR6BAf11z2L22d9Vz41622NAUCNGoeW4g93TIm6OJz7jgKR2yIP5dA2qbg3RdAq/JaNwWBx
+            M6WIsfbCBDCHW8PXL7J5EdiLZWKiihFmXX5/BXpzih96heXNKBDRPQ==
           </Modulus>
           <Exponent>AQAB</Exponent>
         </RSAKeyValue>
       </KeyValue>
       <X509Data>
         <X509Certificate>
-          MIIE7DCCA9SgAwIBAgITMwAAAMps1TISNcThVQABAAAAyjANBgkqhkiG9w0BAQUFADB5MQsw
+          MIIEqTCCA5GgAwIBAgITMwAAAIhZDjxRH+JqZwABAAAAiDANBgkqhkiG9w0BAQUFADB5MQsw
           CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwG
           A1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMSMwIQYDVQQDExpNaWNyb3NvZnQgQ29kZSBT
-          aWduaW5nIFBDQTAeFw0xNDA0MjIxNzM5MDBaFw0xNTA3MjIxNzM5MDBaMIGDMQswCQYDVQQG
+          aWduaW5nIFBDQTAeFw0xMjA3MjYyMDUwNDFaFw0xMzEwMjYyMDUwNDFaMIGDMQswCQYDVQQG
           EwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMV
           TWljcm9zb2Z0IENvcnBvcmF0aW9uMQ0wCwYDVQQLEwRNT1BSMR4wHAYDVQQDExVNaWNyb3Nv
-          ZnQgQ29ycG9yYXRpb24wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCWcV3tBkb6
-          hMudW7dGx7DhtBE5A62xFXNgnOuntm4aPD//ZeM08aalIV5WmWxY5JKhClzC09xSLwxlmiBh
-          QFMxnGyPIX26+f4TUFJglTpbuVildGFBqZTgrSZOTKGXcEknXnxnyk8ecYRGvB1LtuIPxcYn
-          yQfmegqlFwAZTHBFOC2BtFCqxWfR+nm8xcyhcpv0JTSY+FTfEjk4Ei+ka6Wafsdi0dzP7T00
-          +LnfNTC67HkyqeGprFVNTH9MVsMTC3bxB/nMR6z7iNVSpR4o+j0tz8+EmIZxZRHPhckJRIbh
-          b+ex/KxARKWpiyM/gkmd1ZZZUBNZGHP/QwytK9R/MEBnAgMBAAGjggFgMIIBXDATBgNVHSUE
-          DDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUH17iXVCNVoa+SjzPBOinh7XLv4MwUQYDVR0RBEow
-          SKRGMEQxDTALBgNVBAsTBE1PUFIxMzAxBgNVBAUTKjMxNTk1K2I0MjE4ZjEzLTZmY2EtNDkw
-          Zi05YzQ3LTNmYzU1N2RmYzQ0MDAfBgNVHSMEGDAWgBTLEejK0rQWWAHJNy4zFha5TJoKHzBW
-          BgNVHR8ETzBNMEugSaBHhkVodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpL2NybC9wcm9k
-          dWN0cy9NaWNDb2RTaWdQQ0FfMDgtMzEtMjAxMC5jcmwwWgYIKwYBBQUHAQEETjBMMEoGCCsG
-          AQUFBzAChj5odHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpL2NlcnRzL01pY0NvZFNpZ1BD
-          QV8wOC0zMS0yMDEwLmNydDANBgkqhkiG9w0BAQUFAAOCAQEAd1zr15E9zb17g9mFqbBDnXN8
-          F8kP7Tbbx7UsG177VAU6g3FAgQmit3EmXtZ9tmw7yapfXQMYKh0nfgfpxWUftc8Nt1THKDha
-          iOd7wRm2VjK64szLk9uvbg9dRPXUsO8b1U7Brw7vIJvy4f4nXejF/2H2GdIoCiKd381wgp4Y
-          ctgjzHosQ+7/6sDg5h2qnpczAFJvB7jTiGzepAY1p8JThmURdwmPNVm52IaoAP74MX0s9IwF
-          ncDB1XdybOlNWSaD8cKyiFeTNQB8UCu8Wfz+HCk4gtPeUpdFKRhOlludul8bo/EnUOoHleht
-          NA04V9w3KDWVOjic1O1qhV0OIhFeew==
+          ZnQgQ29ycG9yYXRpb24wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCzdHTQgjyH
+          p5rUjrIEQoCXJS7kQc6TYzZfE/K0eJiAxih+zIoT7z03jDsJoNgUxVxe2KkdfwHBs5gbUHfs
+          /up8Rc9/4SEOxYTKnw9rswk4t3TEVx6+8EioeVrfDpscmqi8yFK1DGmPhM5xVXv/CSC/QHc3
+          ITB0W5Xfd8ug5cFyEgY98shVbK/B+2oWJ8j1s2Hj2c4bDx705M1MNGw+RxHnAitfFHoEB/XX
+          PYvbZ31XPjXrbY0BQI0ah5biD3dMibo4nPuOApHbIg/l0DapuDdF0Cr8lo3BYHEzpYix9sIE
+          MIdbw9cvsnkR2ItlYqKKEWZdfn8FenOKH3qF5c0oENE9AgMBAAGjggEdMIIBGTATBgNVHSUE
+          DDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUJls+W12WX+L3d4h/XkVTWKguW7gwDgYDVR0PAQH/
+          BAQDAgeAMB8GA1UdIwQYMBaAFMsR6MrStBZYAck3LjMWFrlMmgofMFYGA1UdHwRPME0wS6BJ
+          oEeGRWh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2kvY3JsL3Byb2R1Y3RzL01pY0NvZFNp
+          Z1BDQV8wOC0zMS0yMDEwLmNybDBaBggrBgEFBQcBAQROMEwwSgYIKwYBBQUHMAKGPmh0dHA6
+          Ly93d3cubWljcm9zb2Z0LmNvbS9wa2kvY2VydHMvTWljQ29kU2lnUENBXzA4LTMxLTIwMTAu
+          Y3J0MA0GCSqGSIb3DQEBBQUAA4IBAQAP3kBJiJHRMTejRDhpsmor1JH7aIWuWLseDI9W+pnX
+          ypcnTOiFjnlpLOS9lj/lcGaXlTBlKa3Gyqz1D3moZ79p9A+X4woPv+6WdimyItAzxv+LSa2u
+          sv2/JervJ1DA6xn4GmRqoOEXWa/xz+yBqInosdIUBuNqbXRSZNqWlCpcaWsf7QWZGtzoZaqI
+          GxWVGtOkUZb9VZX4Y42fFAyxnn9KBP/DZq0Kr66k3mP68OrDs7Lrh9vFOK22c9J4ZOrsIVtr
+          O9ZEIvSBUqUrQymLDKEqcYJCy6sbftSlp6333vdGms5DOegqU+3PQOR3iEK/RxbgpTZq76ca
+          jTo9MwT2JSAj
         </X509Certificate>
       </X509Data>
       <X509Data>
@@ -1754,28 +1722,28 @@
           aZuW4hCoELQ3UAjWwz0=
         </X509Certificate>
       </X509Data>
-    </KeyInfo><Object id="ts-countersig"><X509Data><X509Certificate>MIIEwzCCA6ugAwIBAgITMwAAADUo7mFTkiJhkQAAAAAANTANBgkqhkiG9w0BAQUFADB3MQswCQYD
+    </KeyInfo><Object id="ts-countersig"><X509Data><X509Certificate>MIIEwzCCA6ugAwIBAgITMwAAADaeewBVssNdLAAAAAAANjANBgkqhkiG9w0BAQUFADB3MQswCQYD
 VQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMV
 TWljcm9zb2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3NvZnQgVGltZS1TdGFtcCBQQ0Ew
-HhcNMTMwMzI3MjAwODI2WhcNMTQwNjI3MjAwODI2WjCBszELMAkGA1UEBhMCVVMxEzARBgNVBAgT
+HhcNMTMwMzI3MjAwODI4WhcNMTQwNjI3MjAwODI4WjCBszELMAkGA1UEBhMCVVMxEzARBgNVBAgT
 Cldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3Jh
-dGlvbjENMAsGA1UECxMETU9QUjEnMCUGA1UECxMebkNpcGhlciBEU0UgRVNOOjMxQzUtMzBCQS03
-QzkxMSUwIwYDVQQDExxNaWNyb3NvZnQgVGltZS1TdGFtcCBTZXJ2aWNlMIIBIjANBgkqhkiG9w0B
-AQEFAAOCAQ8AMIIBCgKCAQEAm9vWEfGEH1m0kUedzTgvsolxQaJbPc6WtX2a9wqAK0ICg8R8//f2
-6pcftWw4XkuVVOjsk9K5TeT3KyaHr7vrG+hNHCFDF/igM5qRsYFNOIEkUwKxdnlaLqz7y4xcXTub
-XKU7NoBsI3S2xnffQyfNOpmouBP65aqjt8VzhFbsjsFIMwGJMa8nNq07LQDicQQxvva3dLFnP1rl
-hLUBJpB4iYAlPj5CHFJKZCcCaM6iBr7QtT5EF4CZiImcwLkP1fI5lcM1FLsJEEW56m5frIDLh3xF
-ZAImCU+adqVmvhBJKKO57P+y+mFb+WPqknL1SurKOz0TkYw7/TnWSTwC7nod4QIDAQABo4IBCTCC
-AQUwHQYDVR0OBBYEFLkUVdsQ7WBr1Q2DdA3Oc3OVImUcMB8GA1UdIwQYMBaAFCM0+NlSRnAK7UD7
+dGlvbjENMAsGA1UECxMETU9QUjEnMCUGA1UECxMebkNpcGhlciBEU0UgRVNOOkJCRUMtMzBDQS0y
+REJFMSUwIwYDVQQDExxNaWNyb3NvZnQgVGltZS1TdGFtcCBTZXJ2aWNlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAvBmYmWSq9tq9TdEuQs9m7Ncr2HJUyU3z+i4JBkTQEzAtoukQKnUb
+P1Zcd7f66bz41enN9MiOmyvwwBGa8Ve4bL0GjdbBYY/WMOEmqQom0XbagJXqfzAD3A/A1k2Gq7ra
+Hn51pQLb4TCzQQedDDDfugtCawe9Q8lyj9UZDl3j9fsx7XFsiK7nO3ro+G4X3cv2B/j+IQjpIDoQ
+4fNJMWfp0jOWwRFXy4v7KnDPO/G73m61dLk9U70D5NzKsvcWvdmac8I+yUdiQlfFCsiYycRYKd4O
+6/J8GPvEq9cLl7UZpgtJODqwUwSIBg6iirll6g5svVqt0Hue0XoyR/Ie0SNuNQIDAQABo4IBCTCC
+AQUwHQYDVR0OBBYEFMwfZPc12efmJAP0En8Ep94vGr5hMB8GA1UdIwQYMBaAFCM0+NlSRnAK7UD7
 dvuzK7DDNbMPMFQGA1UdHwRNMEswSaBHoEWGQ2h0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2kv
 Y3JsL3Byb2R1Y3RzL01pY3Jvc29mdFRpbWVTdGFtcFBDQS5jcmwwWAYIKwYBBQUHAQEETDBKMEgG
 CCsGAQUFBzAChjxodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpL2NlcnRzL01pY3Jvc29mdFRp
-bWVTdGFtcFBDQS5jcnQwEwYDVR0lBAwwCgYIKwYBBQUHAwgwDQYJKoZIhvcNAQEFBQADggEBAJaV
-lxhREadlaCDXqFbP6lUQVKjx5/JsbwouUz8YgQjPN/Y1ymKKoJBe4u9HzqrHBZj93hq26BKkmrnK
-pWKvyOY+ODJcA9PzaPlgnMeyJdykTGuPBsvYtsFYIn6E1Wu56PE+L3n28vpsaOjKAl8BvrGgbPmP
-Rbm4SwZfxJSO9+3r1yFauFZbeGfcQAl82pKj27zQmh2O5snaz1Iff7+W3owsX20ilqNJ+acaIl7/
-6cpyJUC487hUHlrIV1CyiyLmEOyt7aUQlFLU7VtXgskXVPZ03lGrVDTglUY63lUwGhdwL5f2CgYi
-pvqCjochior3gYxSN0w6jQRbNcvzG4N1vl0=</X509Certificate></X509Data><X509Data><X509Certificate>MIIGBzCCA++gAwIBAgIKYRZoNAAAAAAAHDANBgkqhkiG9w0BAQUFADBfMRMwEQYKCZImiZPyLGQB
+bWVTdGFtcFBDQS5jcnQwEwYDVR0lBAwwCgYIKwYBBQUHAwgwDQYJKoZIhvcNAQEFBQADggEBAFsH
+cVX7PnDXFDRFUmUNen+e7t7n+WMlVp3qsYH318h82rXpTd6wCRG7bLcMMjUSAOCOn7il2jt68y2G
+kZ6QRIz3NGE2UOZoj1wNCED4Cw2r1Q9FSftgR7r5wENBsu5oIGIWtaaf1lNZx7tQoLR8kElP01X2
+7HxYUR7eEtfbfjv8cEa+ZQ6ER/tJWAi7eE2Lx8G2nKhFQiAkwQdyfwhXdZ9SlE8UYzkFzK0xA4EH
+EHqRfzqK2r871svWmnJj/BHgkVIR5Ul/age2xSK+pVTouRQEZLAuWB9H32XIlA0rJTRinaHQhiO1
+6llZ8Oo61VIvwHLHCIUlQPbc4RXEUNTz0uk=</X509Certificate></X509Data><X509Data><X509Certificate>MIIGBzCCA++gAwIBAgIKYRZoNAAAAAAAHDANBgkqhkiG9w0BAQUFADBfMRMwEQYKCZImiZPyLGQB
 GRYDY29tMRkwFwYKCZImiZPyLGQBGRYJbWljcm9zb2Z0MS0wKwYDVQQDEyRNaWNyb3NvZnQgUm9v
 dCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMDcwNDAzMTI1MzA5WhcNMjEwNDAzMTMwMzA5WjB3
 MQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwG
@@ -1803,33 +1771,33 @@ zCzU2DKATCYqSCRfWupW76bemZ3KOm+9gSd0BhHudiG/m4LBJ1S2sWo9iaF2YbRuoROmv6pH8BJv
 /YoybLL+31HIjCPJZr2dHYcSZAI9La9Zj7jkIeW1sMpjtHhUBdRBLlCslLCleKuzoJZ1GtmShxN1
 Ii8yqAhuoFuMJb+g74TKIdbrHk/Jmu5J4PcBZW+JC33Iacjmbuqnl84xKf8OxVtc2E0bodj6L54/
 LlUWa8kTo/0=</X509Certificate></X509Data><CounterSignature xmlns="http://schemas.microsoft.com/xmldsig/timestamp/2003" ts-format="cms-timestamp-message">MIIG0QYJKoZIhvcNAQcCoIIGwjCCBr4CAQMxCzAJBgUrDgMCGgUAMIIBEwYJKoZIhvcNAQcBoIIB
-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
+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
-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
+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
-U291cmNlIE1hc3RlciBDbG9jazANBgkqhkiG9w0BAQUFAAIFANcJJ0cwIhgPMjAxNDA0MjgxOTE1
-MTlaGA8yMDE0MDQyOTE5MTUxOVowdDA6BgorBgEEAYRZCgQBMSwwKjAKAgUA1wknRwIBADAHAgEA
-AgIBvzAHAgEAAgIYcTAKAgUA1wp4xwIBADA2BgorBgEEAYRZCgQCMSgwJjAMBgorBgEEAYRZCgMB
-oAowCAIBAAIDFuNgoQowCAIBAAIDB6EgMA0GCSqGSIb3DQEBBQUAA4IBAQCwbnkoyi3QFkHIHne7
-NSVJv1jl2l+B+9p276i94bEslRbx/4HIwtuGPS1gCoXwGhAQboUiIanwWK+wKD7yz/FCw+7NuTGO
-R12VRohA6CsaO7FajyDr1U4JUOfJN9RAPsTeYESLsF5MXwnhyr0t6CeJf3veO6Jla8nEIq8unlsn
-jSFKwOBEyx+s6XKBbhjlpOv4TRos07HwzIZxHLnTTFfbQx35yQOIInzakqobaN6ueavxl+YxMROd
-9qSv+UoOADSsvvjmOFSylpy8Axyl30K4MO1y0Z+usjnGbouQE+M2ZzGIrikzyG78GU+8zv7g0Pn0
-zfgd+HPmZvjAnDvqXcOcMYICFTCCAhECAQEwgY4wdzELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldh
+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
-bjEhMB8GA1UEAxMYTWljcm9zb2Z0IFRpbWUtU3RhbXAgUENBAhMzAAAANSjuYVOSImGRAAAAAAA1
+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
-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</CounterSignature></Object></Signature></doc>
+MzA5MTMxODQ2MThaMCMGCSqGSIb3DQEJBDEWBBSYChWTo4a3S/gPgfyzEqw9fqBepTANBgkqhkiG
+9w0BAQUFAASCAQAeSh2+hY58zdIyFgbL68ZN5MAF8EzxWNSR6rr3B4L34eNrbroX2FIpPuTKOOOU
+WmQf8fY0RzevVZlfTZM8/PeizABWWzX5KE17nQolLRd2wpvLX4FG48Mc9aph5QKru4VS9GhavRuQ
+8XEwfp0tTf2FGWBzmhIdnNgpWLAk7QbabXpyb76ABoaohWboAq5Slw+46DFCK1HaNFd0RkQno20Y
+WiiKU7Nsd7eNBhZCDx3tlxqa0SoPuqKnJN/lp9gBRstfE5qukuGO2skyHToxp13LalbTKS2QUfiU
+YDhbSU/9kQepzSesXoZDL+Gjbq6DjrisCcCHGkmyMWkfc5ePHut+</CounterSignature></Object></Signature></doc>

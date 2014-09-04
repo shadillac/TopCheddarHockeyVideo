@@ -37,7 +37,7 @@
                 <Button x:Name="btnPause" Width="200" Content="Pause" HorizontalAlignment="Left" Margin="203,412.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnPause_Click" Grid.Row="1"/>
                 <Button x:Name="btnRew" Width="200" Content="Rewind" HorizontalAlignment="Left" Margin="415,412.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnRew_Click" Grid.Row="1"/>
                 <Button x:Name="btnFF" Width="200" Content="Fast Fwd" HorizontalAlignment="Left" Margin="625,412.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnFF_Click" Grid.Row="1"/>
-                <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1096,0,0,0" VerticalAlignment="Top" Width="250"/>
+                <UI:AdControl ApplicationId="4a2094c3-4ab0-412a-b479-f28b2b487275" AdUnitId="188427" HorizontalAlignment="Left" Height="250" Margin="1096,0,0,0" VerticalAlignment="Top" Width="250"/>
                 <Button Content="Back" HorizontalAlignment="Left" Margin="1162,213,0,0" Grid.Row="1" VerticalAlignment="Top" Height="129" Width="131" Click="Button_Click_1"/>
                 <TextBlock x:Name="tbStatus" HorizontalAlignment="Left" Margin="841,416.5,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="200" FontSize="20"/>
 
