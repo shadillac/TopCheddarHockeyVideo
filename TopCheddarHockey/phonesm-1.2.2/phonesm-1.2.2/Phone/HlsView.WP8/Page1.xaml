@@ -38,7 +38,7 @@
             <TextBlock Foreground="#FFF0FB00" HorizontalAlignment="Left" Margin="107,10,0,0" TextWrapping="Wrap" Text="Hockey Video" VerticalAlignment="Top" Height="48" Width="230" FontSize="34" Grid.ColumnSpan="2"/>
             <Button x:Name="btnGo" Content="Get me my Top Cheddar videos!" HorizontalAlignment="Left" Margin="0,405,0,0" VerticalAlignment="Top" Height="124" Click="btnGo_Click" Width="456" Grid.ColumnSpan="2"/>
 
-            <UI:AdControl ApplicationId="f0363032-f18e-41f7-a695-f94cf942cf72" AdUnitId="10809601" HorizontalAlignment="Left" Height="80" Margin="-12,564,-12,0" VerticalAlignment="Top" Width="480" Grid.ColumnSpan="2"/>
+            <UI:AdControl ApplicationId="cb8400dc-fce3-426a-af5e-a77f607d3897" AdUnitId="188405" HorizontalAlignment="Left" Height="80" Margin="-12,564,-12,0" VerticalAlignment="Top" Width="480" Grid.ColumnSpan="2"/>
             <TextBlock HorizontalAlignment="Left" Margin="9,150,0,0" TextWrapping="Wrap" Text="(Remember, hockey season is Oct through Jun.)" VerticalAlignment="Top" Width="422" Grid.ColumnSpan="2" FontSize="14"/>
 
         </Grid>

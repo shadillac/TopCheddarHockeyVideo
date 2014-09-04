@@ -32,6 +32,6 @@
             <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             </Grid>
         </ScrollViewer>
-        <UI:AdControl ApplicationId="f0363032-f18e-41f7-a695-f94cf942cf72" AdUnitId="10809601" HorizontalAlignment="Left" Height="80" Margin="0,596,0,0" Grid.Row="1" VerticalAlignment="Top" Width="480"/>
+        <UI:AdControl ApplicationId="cb8400dc-fce3-426a-af5e-a77f607d3897" AdUnitId="188405" HorizontalAlignment="Left" Height="80" Margin="0,596,0,0" Grid.Row="1" VerticalAlignment="Top" Width="480"/>
     </Grid>
 </phone:PhoneApplicationPage>

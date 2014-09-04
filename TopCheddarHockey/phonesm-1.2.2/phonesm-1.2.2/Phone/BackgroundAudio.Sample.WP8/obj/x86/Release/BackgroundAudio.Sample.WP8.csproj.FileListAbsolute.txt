@@ -23,7 +23,6 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\Bin\x86\Release\System.Net.Http.Primitives.xml
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\Bin\x86\Release\SM.Media.pdb
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\Bin\x86\Release\SM.TsParser.pdb
-C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Release\BackgroundAudio.Sample.WP8.csprojResolveAssemblyReference.cache
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Release\App.g.cs
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Release\MainPage.g.cs
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Release\BackgroundAudio.Sample.WP8.g.resources

@@ -16,6 +16,6 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.MediaPlayer.WP8\Bin\x86\Release\System.Net.Http.Extensions.xml
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.MediaPlayer.WP8\Bin\x86\Release\System.Net.Http.Primitives.xml
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.MediaPlayer.WP8\obj\x86\Release\SM.Media.MediaPlayer.WP8.csproj.App.config
-C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.MediaPlayer.WP8\obj\x86\Release\SM.Media.MediaPlayer.WP8.csprojResolveAssemblyReference.cache
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.MediaPlayer.WP8\obj\x86\Release\SM.Media.MediaPlayer.WP8.dll
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.MediaPlayer.WP8\obj\x86\Release\SM.Media.MediaPlayer.WP8.pdb
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.MediaPlayer.WP8\obj\x86\Release\SM.Media.MediaPlayer.WP8.csprojResolveAssemblyReference.cache

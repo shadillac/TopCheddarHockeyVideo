@@ -31,7 +31,7 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyCompany("Henric Jungheim")]
+//[assembly: AssemblyCompany("Henric Jungheim")]
 [assembly: AssemblyProduct("Streaming Media")]
 [assembly: AssemblyCopyright("Copyright © 2011-2014 Henric Jungheim")]
 [assembly: AssemblyTrademark("")]

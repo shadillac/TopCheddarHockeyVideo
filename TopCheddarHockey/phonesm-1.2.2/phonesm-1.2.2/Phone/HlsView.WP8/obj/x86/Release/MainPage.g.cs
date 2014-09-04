@@ -67,7 +67,7 @@ namespace HlsView {
                 return;
             }
             _contentLoaded = true;
-            System.Windows.Application.LoadComponent(this, new System.Uri("/HlsView8;component/MainPage.xaml", System.UriKind.Relative));
+            System.Windows.Application.LoadComponent(this, new System.Uri("/TopCheddarHockey;component/MainPage.xaml", System.UriKind.Relative));
             this.LayoutRoot = ((System.Windows.Controls.Grid)(this.FindName("LayoutRoot")));
             this.TitlePanel = ((System.Windows.Controls.StackPanel)(this.FindName("TitlePanel")));
             this.wakeButton = ((System.Windows.Controls.Button)(this.FindName("wakeButton")));
