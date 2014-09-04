@@ -180,18 +180,21 @@
     <Reference Include="Autofac">
       <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Autofac.3.3.0\lib\portable-win+net40+sl50+wp8\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="SM.Media">
-      <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\SM.Media.dll</HintPath>
+    <Reference Include="SM.Media, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\SM.Media.dll</HintPath>
     </Reference>
-    <Reference Include="SM.Media.Builder">
-      <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\SM.Media.Builder.dll</HintPath>
+    <Reference Include="SM.Media.Builder, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\SM.Media.Builder.dll</HintPath>
     </Reference>
     <Reference Include="SM.Media.Platform.Win81, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=ARM">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\WinRT\x86\SM.Media.Platform.Win81.dll</HintPath>
     </Reference>
-    <Reference Include="SM.TsParser">
-      <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Debug\SM.TsParser.dll</HintPath>
+    <Reference Include="SM.TsParser, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\SM.TsParser.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Extensions">
       <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Microsoft.Net.Http.2.2.18\lib\win8\System.Net.Http.Extensions.dll</HintPath>
