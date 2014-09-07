@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel;
 using Windows.System;
+using Windows.ApplicationModel.Store;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -105,9 +106,9 @@ namespace TopCheddarHockey_Win8._1
 
         #endregion
 
-        private void hlbReview_Click(object sender, RoutedEventArgs e)
+        private async void hlbReview_Click(object sender, RoutedEventArgs e)
         {
-            //await Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + CurrentApp.AppId));
+            await Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + CurrentApp.AppId));
         }
 
         private async void hlbFeedBack_Click(object sender, RoutedEventArgs e)
