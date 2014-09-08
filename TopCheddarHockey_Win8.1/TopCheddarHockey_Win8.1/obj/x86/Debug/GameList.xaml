@@ -23,7 +23,7 @@
 					IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="571,44,521,0"/>
                 <Image HorizontalAlignment="Left" Height="753" Stretch="Fill" VerticalAlignment="Top" Width="1351" Source="/Assets/hockey-background1.jpg" Opacity="0.15"/>
                 <Button x:ConnectionId='1' Content="Back" HorizontalAlignment="Left" Margin="1177,599,-206,-3" VerticalAlignment="Top" Height="129" Width="131"                     />
-                <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1067,44,0,0" VerticalAlignment="Top" Width="250"/>
+                <UI:AdControl ApplicationId="4a2094c3-4ab0-412a-b479-f28b2b487275" AdUnitId="188426" HorizontalAlignment="Left" Height="600" Margin="34,74,0,0" VerticalAlignment="Top" Width="300"/>
             </Grid>
         </ScrollViewer>
     </Viewbox>

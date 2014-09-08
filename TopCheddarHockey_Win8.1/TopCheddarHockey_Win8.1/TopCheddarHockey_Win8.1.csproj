@@ -17,7 +17,7 @@
     <PackageCertificateKeyFile>TopCheddarHockey_Win8.1_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
-    <AppxPackageDir>C:\Users\shmorris\Pictures\App\TCHV\</AppxPackageDir>
+    <AppxPackageDir>C:\Users\shmorris\Documents\AppBuilds\TCHV\</AppxPackageDir>
     <PackageCertificateThumbprint>69AA69F20D839E789A526735E3D9639D7E9B5713</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

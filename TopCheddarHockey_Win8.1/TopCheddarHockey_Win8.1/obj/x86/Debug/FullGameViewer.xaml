@@ -84,7 +84,7 @@
 				VerticalAlignment="Center" />
             </StackPanel>
             <Button x:ConnectionId='2' Content="Back" HorizontalAlignment="Left" Margin="1177,556,0,0" VerticalAlignment="Top" Height="129" Width="131"                      RenderTransformOrigin="1.117,0.536"/>
-            <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" AdUnitId="10043104" HorizontalAlignment="Left" Height="250" Margin="1111,10,0,0" VerticalAlignment="Top" Width="250"/>
+            <UI:AdControl ApplicationId="4a2094c3-4ab0-412a-b479-f28b2b487275" AdUnitId="188428" HorizontalAlignment="Left" Height="250" Margin="1111,10,0,0" VerticalAlignment="Top" Width="250"/>
             <Grid x:Name="ContentPanel"
 			Grid.Row="0"
 			Margin="4,4,255,0">
