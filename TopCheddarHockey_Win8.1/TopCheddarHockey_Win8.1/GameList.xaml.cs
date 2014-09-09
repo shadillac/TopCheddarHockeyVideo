@@ -163,171 +163,179 @@ namespace TopCheddarHockey_Win8._1
                         element = "vod-continuous";
                         break;
                 }
-
-                foreach (XElement xe in xdoc.Descendants("game"))
+                if (xdoc.Descendants("game").Count() > 0)
                 {
-                    //Set Away Team Image
-                    try
+
+                    foreach (XElement xe in xdoc.Descendants("game"))
                     {
-                        BitmapImage awayBmp = new BitmapImage();
-                        awayBmp.UriSource = new Uri(xe.Element("away-team").Element("logo-40px").Value, UriKind.Absolute);
-                        imgAway[i] = new Image { Source = awayBmp };
-                        imgAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        imgAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
-                        imgAway[i].Height = 30;
-                        imgAway[i].Width = 60;
+                        //Set Away Team Image
                         try
                         {
-                            imgAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
-                            imgAway[i].Tapped += GameList_Click;
+                            BitmapImage awayBmp = new BitmapImage();
+                            awayBmp.UriSource = new Uri(xe.Element("away-team").Element("logo-40px").Value, UriKind.Absolute);
+                            imgAway[i] = new Image { Source = awayBmp };
+                            imgAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            imgAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
+                            imgAway[i].Height = 30;
+                            imgAway[i].Width = 60;
+                            try
+                            {
+                                imgAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
+                                imgAway[i].Tapped += GameList_Click;
+                            }
+                            catch (Exception)
+                            { }
                         }
                         catch (Exception)
-                        { }
-                    }
-                    catch (Exception)
-                    {
-                        BitmapImage awayBmp = new BitmapImage();
-                        imgAway[i] = new Image();
-                        imgAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        imgAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
-                        imgAway[i].Height = 30;
-                        imgAway[i].Width = 60;
-                    }
-                    ContentPanel.Children.Add(imgAway[i]);
-                    
-                    //Set Away Team Properties
-                    try
-                    {
-                        hlinkAway[i] = new Button { Content = xe.Element("away-team").Element("team-abbreviation").Value };
-                        hlinkAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
-                        hlinkAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        hlinkAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        hlinkAway[i].FontSize = 22.667;
-                        hlinkAway[i].Margin = new Thickness(horizMargin + 75, heightMargin - 7, 0, 0);
-                        SolidColorBrush brush = new SolidColorBrush(Windows.UI.Colors.White);
-                        hlinkAway[i].BorderBrush = brush;
-                        hlinkAway[i].BorderThickness = new Thickness(1, 1, 1, 1);
-                        hlinkAway[i].Width = 85;
-                        hlinkAway[i].Click += GameList_Click;
-                        ContentPanel.Children.Add(hlinkAway[i]);
-                    }
-                    catch (Exception)
-                    {
-                        blkAway[i] = new TextBlock { Text = xe.Element("away-team").Element("team-abbreviation").Value };
-                        blkAway[i].FontSize = 22.667;
-                        blkAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        blkAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        blkAway[i].Margin = new Thickness(horizMargin + 100, heightMargin+5, 0, 0);
-                        blkAway[i].FontSize = 22.667;
-                        ContentPanel.Children.Add(blkAway[i]);
-                    }
+                        {
+                            BitmapImage awayBmp = new BitmapImage();
+                            imgAway[i] = new Image();
+                            imgAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            imgAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
+                            imgAway[i].Height = 30;
+                            imgAway[i].Width = 60;
+                        }
+                        ContentPanel.Children.Add(imgAway[i]);
 
-
-                    try
-                    {
-                        scores = localSettings.Values["HideScores"].ToString();
-                    }
-                    catch (NullReferenceException)
-                    {
-                        scores = "0";
-                    }
-
-                    if (scores != "1")
-                    {
+                        //Set Away Team Properties
                         try
                         {
-                            //Set Away Goals
-                            awayGoals[i] = new TextBlock { Text = xe.Element("away-team").Element("goals").Value };
-                            awayGoals[i].FontSize = 22.667;
-                            awayGoals[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                            awayGoals[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                            awayGoals[i].Margin = new Thickness(horizMargin + 170, heightMargin + 5, 0, 0);
-                            ContentPanel.Children.Add(awayGoals[i]);
-
-                            //Set Home Goals
-                            homeGoals[i] = new TextBlock { Text = xe.Element("home-team").Element("goals").Value };
-                            homeGoals[i].FontSize = 22.667;
-                            homeGoals[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                            homeGoals[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                            homeGoals[i].Margin = new Thickness(horizMargin + 195, heightMargin + 5, 0, 0);
-                            ContentPanel.Children.Add(homeGoals[i]);
-                        }
-                        catch(Exception)
-                        {
-
-                        }
-                        
-                    }
-
-                    //Set Home Team Properties
-                    try
-                    {
-                        hlinkHome[i] = new Button { Content = xe.Element("home-team").Element("team-abbreviation").Value };
-                        hlinkHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
-                        hlinkHome[i].FontSize = 22.667;
-                        hlinkHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        hlinkHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        hlinkHome[i].Margin = new Thickness(horizMargin + 218, heightMargin - 7, 0, 0);
-                        SolidColorBrush brush = new SolidColorBrush(Windows.UI.Colors.White);
-                        hlinkHome[i].BorderBrush = brush;
-                        hlinkHome[i].BorderThickness = new Thickness(1, 1, 1, 1);
-                        hlinkHome[i].Width = 85;
-                        hlinkHome[i].Click += GameList_Click;
-                        ContentPanel.Children.Add(hlinkHome[i]);
-                    }
-                    catch (Exception)
-                    {
-                        blkHome[i] = new TextBlock { Text = xe.Element("away-team").Element("team-abbreviation").Value };
-                        blkHome[i].FontSize = 22.667;
-                        blkHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        blkHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        blkHome[i].Margin = new Thickness(horizMargin + 216, heightMargin+5, 0, 0);
-                        blkHome[i].FontSize = 22.667;
-                        ContentPanel.Children.Add(blkHome[i]);
-                    }
-
-                    //Home Team Picture
-                    try
-                    {
-                        BitmapImage homeBmp = new BitmapImage();
-                        homeBmp.UriSource = new Uri(xe.Element("home-team").Element("logo-40px").Value, UriKind.Absolute);
-                        imgHome[i] = new Image { Source = homeBmp };
-                        imgHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        imgHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
-                        imgHome[i].Height = 30;
-                        imgHome[i].Width = 60;                        
-                    }
-                    catch (Exception)
-                    {
-                        BitmapImage homeBmp = new BitmapImage();
-                        
-                        imgHome[i] = new Image();
-                        imgHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        imgHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
-                        imgHome[i].Height = 30;
-                        imgHome[i].Width = 60;
-                        try
-                        {
-                            imgHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
-                            imgHome[i].Tapped += GameList_Click;
+                            hlinkAway[i] = new Button { Content = xe.Element("away-team").Element("team-abbreviation").Value };
+                            hlinkAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
+                            hlinkAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            hlinkAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            hlinkAway[i].FontSize = 22.667;
+                            hlinkAway[i].Margin = new Thickness(horizMargin + 75, heightMargin - 7, 0, 0);
+                            SolidColorBrush brush = new SolidColorBrush(Windows.UI.Colors.White);
+                            hlinkAway[i].BorderBrush = brush;
+                            hlinkAway[i].BorderThickness = new Thickness(1, 1, 1, 1);
+                            hlinkAway[i].Width = 85;
+                            hlinkAway[i].Click += GameList_Click;
+                            ContentPanel.Children.Add(hlinkAway[i]);
                         }
                         catch (Exception)
-                        { }
-                    }
-                    ContentPanel.Children.Add(imgHome[i]);
+                        {
+                            blkAway[i] = new TextBlock { Text = xe.Element("away-team").Element("team-abbreviation").Value };
+                            blkAway[i].FontSize = 22.667;
+                            blkAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            blkAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            blkAway[i].Margin = new Thickness(horizMargin + 100, heightMargin + 5, 0, 0);
+                            blkAway[i].FontSize = 22.667;
+                            ContentPanel.Children.Add(blkAway[i]);
+                        }
 
-                    heightMargin = heightMargin + 42;
-                    i++;
+
+                        try
+                        {
+                            scores = localSettings.Values["HideScores"].ToString();
+                        }
+                        catch (NullReferenceException)
+                        {
+                            scores = "0";
+                        }
+
+                        if (scores != "1")
+                        {
+                            try
+                            {
+                                //Set Away Goals
+                                awayGoals[i] = new TextBlock { Text = xe.Element("away-team").Element("goals").Value };
+                                awayGoals[i].FontSize = 22.667;
+                                awayGoals[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                                awayGoals[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                                awayGoals[i].Margin = new Thickness(horizMargin + 170, heightMargin + 5, 0, 0);
+                                ContentPanel.Children.Add(awayGoals[i]);
+
+                                //Set Home Goals
+                                homeGoals[i] = new TextBlock { Text = xe.Element("home-team").Element("goals").Value };
+                                homeGoals[i].FontSize = 22.667;
+                                homeGoals[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                                homeGoals[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                                homeGoals[i].Margin = new Thickness(horizMargin + 195, heightMargin + 5, 0, 0);
+                                ContentPanel.Children.Add(homeGoals[i]);
+                            }
+                            catch (Exception)
+                            {
+
+                            }
+
+                        }
+
+                        //Set Home Team Properties
+                        try
+                        {
+                            hlinkHome[i] = new Button { Content = xe.Element("home-team").Element("team-abbreviation").Value };
+                            hlinkHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
+                            hlinkHome[i].FontSize = 22.667;
+                            hlinkHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            hlinkHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            hlinkHome[i].Margin = new Thickness(horizMargin + 218, heightMargin - 7, 0, 0);
+                            SolidColorBrush brush = new SolidColorBrush(Windows.UI.Colors.White);
+                            hlinkHome[i].BorderBrush = brush;
+                            hlinkHome[i].BorderThickness = new Thickness(1, 1, 1, 1);
+                            hlinkHome[i].Width = 85;
+                            hlinkHome[i].Click += GameList_Click;
+                            ContentPanel.Children.Add(hlinkHome[i]);
+                        }
+                        catch (Exception)
+                        {
+                            blkHome[i] = new TextBlock { Text = xe.Element("away-team").Element("team-abbreviation").Value };
+                            blkHome[i].FontSize = 22.667;
+                            blkHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            blkHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            blkHome[i].Margin = new Thickness(horizMargin + 216, heightMargin + 5, 0, 0);
+                            blkHome[i].FontSize = 22.667;
+                            ContentPanel.Children.Add(blkHome[i]);
+                        }
+
+                        //Home Team Picture
+                        try
+                        {
+                            BitmapImage homeBmp = new BitmapImage();
+                            homeBmp.UriSource = new Uri(xe.Element("home-team").Element("logo-40px").Value, UriKind.Absolute);
+                            imgHome[i] = new Image { Source = homeBmp };
+                            imgHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            imgHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
+                            imgHome[i].Height = 30;
+                            imgHome[i].Width = 60;
+                        }
+                        catch (Exception)
+                        {
+                            BitmapImage homeBmp = new BitmapImage();
+
+                            imgHome[i] = new Image();
+                            imgHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            imgHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
+                            imgHome[i].Height = 30;
+                            imgHome[i].Width = 60;
+                            try
+                            {
+                                imgHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
+                                imgHome[i].Tapped += GameList_Click;
+                            }
+                            catch (Exception)
+                            { }
+                        }
+                        ContentPanel.Children.Add(imgHome[i]);
+
+                        heightMargin = heightMargin + 42;
+                        i++;
+                    }
+                }
+                else
+                {
+                    ShowMessageBox("No NHL Games found on this day.");
+                    Frame.GoBack();
                 }
             }
             catch (Exception)
             {
                 ShowMessageBox("No NHL Games found on this day.");
-                Frame.Navigate(typeof(MainPage));
+                Frame.GoBack();
             }
 
         }
