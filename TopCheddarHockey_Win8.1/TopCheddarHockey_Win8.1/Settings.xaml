@@ -42,11 +42,11 @@
                 <TextBlock x:Name="pageTitle" Text="Settings..." Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
 					IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
             </Grid>
-            <Image Stretch="Fill" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366" Source="/Assets/hockey-background1.jpg" Opacity="0.15" Grid.RowSpan="2"/>
-            <CheckBox x:Name="chkHideScores" Content="Hide Scores" HorizontalAlignment="Left" Margin="92,84,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="chkHideScores_Checked"/>
-            <RadioButton x:Name="rdoHighlights" Content="Highlights" HorizontalAlignment="Left" Margin="92,204,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoHighlights_Checked"/>
-            <RadioButton x:Name="rdoCondensed" Content="Condensed" HorizontalAlignment="Left" Margin="92,235,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoCondensed_Checked"/>
-            <RadioButton x:Name="rdoFullGames" Content="Full Games" HorizontalAlignment="Left" Margin="92,266,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoFullGames_Checked"/>
+            <Image Stretch="Fill" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366" Source="/Assets/hockey-background1.jpg" Opacity="0.15" Grid.RowSpan="2" Margin="10,0,-10,0"/>
+            <CheckBox x:Name="chkHideScores" Content="Hide Scores" HorizontalAlignment="Left" Margin="92,7,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="chkHideScores_Checked" Height="48" Width="354" FontSize="18"/>
+            <RadioButton x:Name="rdoHighlights" Content="Highlights" HorizontalAlignment="Left" Margin="92,114,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoHighlights_Checked" Height="51" Width="324" FontSize="18"/>
+            <RadioButton x:Name="rdoCondensed" Content="Condensed" HorizontalAlignment="Left" Margin="92,169,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoCondensed_Checked" Height="51" Width="347" FontSize="18"/>
+            <RadioButton x:Name="rdoFullGames" Content="Full Games" HorizontalAlignment="Left" Margin="92,223,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="rdoFullGames_Checked" Height="52" Width="338" FontSize="18"/>
             <Button Click="btnSave_Click" x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="872,286,0,0" Grid.Row="1" VerticalAlignment="Top" Height="150" Width="163" />
             <Button Click="btnCancel_Click" x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="1082,287,0,0" Grid.Row="1" VerticalAlignment="Top" Height="149" Width="163"/>
             <UI:AdControl ApplicationId="4a2094c3-4ab0-412a-b479-f28b2b487275" AdUnitId="188429" HorizontalAlignment="Left" Height="250" Margin="1069,51,0,0" VerticalAlignment="Top" Width="250" Grid.RowSpan="2"/>

@@ -16,6 +16,6 @@
     <UseSimulator>false</UseSimulator>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <UseSimulator>false</UseSimulator>
+    <UseSimulator>true</UseSimulator>
   </PropertyGroup>
 </Project>

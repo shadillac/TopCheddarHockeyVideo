@@ -1,13 +1,13 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey_win8.1\topcheddarhockey_win8.1\obj\x86\debug\intermediatexaml\topcheddarhockey_win8.1.exe" HashGuid="a5a85c0e-4d3e-5e10-6eaa-84df6413c39b" />
+    <LocalAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey_win8.1\topcheddarhockey_win8.1\obj\x86\debug\intermediatexaml\topcheddarhockey_win8.1.exe" HashGuid="ff6a01c2-fb7b-22cd-8d41-a28be35ebd53" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\msadvertisingxaml\8.1\references\commonconfiguration\neutral\microsoft.advertising.winrt.ui.winmd" HashGuid="6588494d-37e3-4bf8-bf82-6a4bc10c0818" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\msadvertisingxaml\8.1\references\commonconfiguration\neutral\microsoftadvertising.winmd" HashGuid="0dde57b7-8c99-5b9a-0771-4cdcca925c59" />
     <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\packages\autofac.3.3.0\lib\portable-win+net40+sl50+wp8\autofac.dll" HashGuid="9fa8d990-209a-d3cb-ddf5-316f77b39637" />
-    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\debug\sm.media.builder.dll" HashGuid="fe4542ef-102d-8957-5084-b5c0b65bb4cc" />
-    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\debug\sm.media.dll" HashGuid="a01cc4e5-3021-690e-a77c-d113cd9d4281" />
-    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\debug\winrt\x86\sm.media.platform.win81.dll" HashGuid="c9085a4b-781c-81f7-073d-bd78d575d02a" />
-    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\debug\sm.tsparser.dll" HashGuid="3d98474a-2a17-b92a-c3a3-2a7449a0b271" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\release\sm.media.builder.dll" HashGuid="fe4542ef-102d-8957-5084-b5c0b65bb4cc" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\release\sm.media.dll" HashGuid="c7c9b07d-3341-fb97-a888-02012964a116" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\release\winrt\x86\sm.media.platform.win81.dll" HashGuid="19ab6dc6-b628-78ff-9f4c-bfd082339061" />
+    <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\bin\release\sm.tsparser.dll" HashGuid="6a77d776-3b06-5dc6-bcc5-dc27421f78ef" />
     <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\packages\microsoft.net.http.2.2.18\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
     <ReferenceAssembly PathName="c:\users\shmorris\documents\github\topcheddarhockeyvideo\topcheddarhockey\phonesm-1.2.2\phonesm-1.2.2\packages\microsoft.net.http.2.2.18\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
   </ReferenceAssemblyList>
