@@ -22,14 +22,32 @@ namespace TopCheddarHockey_Win8._1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+        Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
         public MainPage()
         {
             this.InitializeComponent();
-            
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            localSettings.Values["Date"] = gameDate.Date.Date.ToString();
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DateTimeOffset newDate = DateTimeOffset.Now;
+            try
+            {
+                DateTimeOffset.TryParse(localSettings.Values["Date"].ToString(), out newDate);
+                gameDate.Date = newDate;
+            }
+            catch
+            { }
+            
         }
 
         private void btnGo_Click(object sender, RoutedEventArgs e)

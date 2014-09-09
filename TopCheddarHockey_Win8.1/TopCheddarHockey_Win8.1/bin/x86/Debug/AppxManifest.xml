@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="4477shadnickapps.TopCheddarHockeyVideo" Publisher="CN=D7E1FA67-0430-4EF3-91D8-850F281A5905" Version="1.1.0.1" ProcessorArchitecture="x86" />
+  <Identity Name="4477shadnickapps.TopCheddarHockeyVideo" Publisher="CN=D7E1FA67-0430-4EF3-91D8-850F281A5905" Version="1.1.0.0" ProcessorArchitecture="x86" />
   <Properties>
     <DisplayName>Top Cheddar Hockey Video</DisplayName>
     <PublisherDisplayName>shadnickapps</PublisherDisplayName>
