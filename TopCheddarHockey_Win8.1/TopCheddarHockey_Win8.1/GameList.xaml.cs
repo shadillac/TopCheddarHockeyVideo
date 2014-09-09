@@ -167,24 +167,36 @@ namespace TopCheddarHockey_Win8._1
                 foreach (XElement xe in xdoc.Descendants("game"))
                 {
                     //Set Away Team Image
-                    BitmapImage awayBmp = new BitmapImage();
-                    awayBmp.UriSource = new Uri(xe.Element("away-team").Element("logo-40px").Value, UriKind.Absolute);
-                    imgAway[i] = new Image { Source = awayBmp };
-                    imgAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                    imgAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                    imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
-                    imgAway[i].Height = 30;
-                    imgAway[i].Width = 60;
                     try
                     {
-                        imgAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
-                        imgAway[i].Tapped += GameList_Click;
+                        BitmapImage awayBmp = new BitmapImage();
+                        awayBmp.UriSource = new Uri(xe.Element("away-team").Element("logo-40px").Value, UriKind.Absolute);
+                        imgAway[i] = new Image { Source = awayBmp };
+                        imgAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                        imgAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                        imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
+                        imgAway[i].Height = 30;
+                        imgAway[i].Width = 60;
+                        try
+                        {
+                            imgAway[i].Tag = xe.Element("streams").Element("ipad").Element("away").Element(element).Value;
+                            imgAway[i].Tapped += GameList_Click;
+                        }
+                        catch (Exception)
+                        { }
                     }
                     catch (Exception)
-                    { }
-                    
+                    {
+                        BitmapImage awayBmp = new BitmapImage();
+                        imgAway[i] = new Image();
+                        imgAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                        imgAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                        imgAway[i].Margin = new Thickness(horizMargin + 5, heightMargin, 0, 0);
+                        imgAway[i].Height = 30;
+                        imgAway[i].Width = 60;
+                    }
                     ContentPanel.Children.Add(imgAway[i]);
-
+                    
                     //Set Away Team Properties
                     try
                     {
@@ -224,21 +236,29 @@ namespace TopCheddarHockey_Win8._1
 
                     if (scores != "1")
                     {
-                        //Set Away Goals
-                        awayGoals[i] = new TextBlock { Text = xe.Element("away-team").Element("goals").Value };
-                        awayGoals[i].FontSize = 22.667;
-                        awayGoals[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        awayGoals[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        awayGoals[i].Margin = new Thickness(horizMargin + 170, heightMargin+5, 0, 0);
-                        ContentPanel.Children.Add(awayGoals[i]);
+                        try
+                        {
+                            //Set Away Goals
+                            awayGoals[i] = new TextBlock { Text = xe.Element("away-team").Element("goals").Value };
+                            awayGoals[i].FontSize = 22.667;
+                            awayGoals[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            awayGoals[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            awayGoals[i].Margin = new Thickness(horizMargin + 170, heightMargin + 5, 0, 0);
+                            ContentPanel.Children.Add(awayGoals[i]);
 
-                        //Set Home Goals
-                        homeGoals[i] = new TextBlock { Text = xe.Element("home-team").Element("goals").Value };
-                        homeGoals[i].FontSize = 22.667;
-                        homeGoals[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                        homeGoals[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                        homeGoals[i].Margin = new Thickness(horizMargin + 195, heightMargin+5, 0, 0);
-                        ContentPanel.Children.Add(homeGoals[i]);
+                            //Set Home Goals
+                            homeGoals[i] = new TextBlock { Text = xe.Element("home-team").Element("goals").Value };
+                            homeGoals[i].FontSize = 22.667;
+                            homeGoals[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                            homeGoals[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                            homeGoals[i].Margin = new Thickness(horizMargin + 195, heightMargin + 5, 0, 0);
+                            ContentPanel.Children.Add(homeGoals[i]);
+                        }
+                        catch(Exception)
+                        {
+
+                        }
+                        
                     }
 
                     //Set Home Team Properties
@@ -269,22 +289,35 @@ namespace TopCheddarHockey_Win8._1
                     }
 
                     //Home Team Picture
-                    BitmapImage homeBmp = new BitmapImage();
-                    homeBmp.UriSource = new Uri(xe.Element("home-team").Element("logo-40px").Value, UriKind.Absolute);
-                    imgHome[i] = new Image { Source = homeBmp };
-                    imgHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-                    imgHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                    imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
-                    imgHome[i].Height = 30;
-                    imgHome[i].Width = 60;
                     try
                     {
-                        imgHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
-                        imgHome[i].Tapped += GameList_Click;
+                        BitmapImage homeBmp = new BitmapImage();
+                        homeBmp.UriSource = new Uri(xe.Element("home-team").Element("logo-40px").Value, UriKind.Absolute);
+                        imgHome[i] = new Image { Source = homeBmp };
+                        imgHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                        imgHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                        imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
+                        imgHome[i].Height = 30;
+                        imgHome[i].Width = 60;                        
                     }
                     catch (Exception)
-                    { }
-                    
+                    {
+                        BitmapImage homeBmp = new BitmapImage();
+                        
+                        imgHome[i] = new Image();
+                        imgHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                        imgHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+                        imgHome[i].Margin = new Thickness(horizMargin + 310, heightMargin, 0, 0);
+                        imgHome[i].Height = 30;
+                        imgHome[i].Width = 60;
+                        try
+                        {
+                            imgHome[i].Tag = xe.Element("streams").Element("ipad").Element("home").Element(element).Value;
+                            imgHome[i].Tapped += GameList_Click;
+                        }
+                        catch (Exception)
+                        { }
+                    }
                     ContentPanel.Children.Add(imgHome[i]);
 
                     heightMargin = heightMargin + 42;
