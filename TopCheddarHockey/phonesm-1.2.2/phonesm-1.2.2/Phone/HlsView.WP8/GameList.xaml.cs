@@ -90,14 +90,30 @@ namespace HlsView
                 foreach (XElement xe in xdoc.Descendants("game"))
                 {
                     //Set Away Team Image
-                    imgAway[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(xe.Element("away-team").Element("logo-40px").Value) };
-                    imgAway[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
-                    imgAway[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                    imgAway[i].Margin = new Thickness(horizMargin + 0, heightMargin - 6, 0, 0);
-                    imgAway[i].Height = 45;
-                    imgAway[i].Width = 60;
-                    imgAway[i].Stretch = Stretch.Fill;
-                    ContentPanel.Children.Add(imgAway[i]);
+                    try
+                    {
+                        imgAway[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(xe.Element("away-team").Element("logo-40px").Value) };
+                        imgAway[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                        imgAway[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        imgAway[i].Margin = new Thickness(horizMargin + 0, heightMargin - 6, 0, 0);
+                        imgAway[i].Height = 45;
+                        imgAway[i].Width = 60;
+                        imgAway[i].Stretch = Stretch.Fill;
+                        ContentPanel.Children.Add(imgAway[i]);
+                    }
+                    catch
+                    {
+                        imgAway[i] = new Image();
+                        imgAway[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                        imgAway[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        imgAway[i].Margin = new Thickness(horizMargin + 0, heightMargin - 6, 0, 0);
+                        imgAway[i].Height = 45;
+                        imgAway[i].Width = 60;
+                        imgAway[i].Stretch = Stretch.Fill;
+                        ContentPanel.Children.Add(imgAway[i]);
+                    }
+
+                    
                     //Set Away Team Properties
                     try
                     {
@@ -137,26 +153,34 @@ namespace HlsView
 
                     if (scores != "1")
                     {
-                        //Set Away Goals
-                        awayGoals[i] = new TextBlock { Text = xe.Element("away-team").Element("goals").Value };
-                        awayGoals[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
-                        awayGoals[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                        awayGoals[i].Margin = new Thickness(horizMargin + 160, heightMargin, 0, 0);
-                        ContentPanel.Children.Add(awayGoals[i]);
+                        try
+                        {
+                            //Set Away Goals
+                            awayGoals[i] = new TextBlock { Text = xe.Element("away-team").Element("goals").Value };
+                            awayGoals[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                            awayGoals[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                            awayGoals[i].Margin = new Thickness(horizMargin + 160, heightMargin, 0, 0);
+                            ContentPanel.Children.Add(awayGoals[i]);
 
-                        ////Set @ sign
-                        //at[i] = new TextBlock { Text = "@" };
-                        //at[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
-                        //at[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                        //at[i].Margin = new Thickness(160, heightMargin, 0, 0);
-                        //ContentPanel.Children.Add(at[i]);
+                            ////Set @ sign
+                            //at[i] = new TextBlock { Text = "@" };
+                            //at[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                            //at[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                            //at[i].Margin = new Thickness(160, heightMargin, 0, 0);
+                            //ContentPanel.Children.Add(at[i]);
 
-                        //Set Home Goals
-                        homeGoals[i] = new TextBlock { Text = xe.Element("home-team").Element("goals").Value };
-                        homeGoals[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
-                        homeGoals[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                        homeGoals[i].Margin = new Thickness(horizMargin + 193, heightMargin, 0, 0);
-                        ContentPanel.Children.Add(homeGoals[i]);
+                            //Set Home Goals
+                            homeGoals[i] = new TextBlock { Text = xe.Element("home-team").Element("goals").Value };
+                            homeGoals[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                            homeGoals[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                            homeGoals[i].Margin = new Thickness(horizMargin + 193, heightMargin, 0, 0);
+                            ContentPanel.Children.Add(homeGoals[i]);
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+                        
                     }
 
                     //Set Home Team Properties
@@ -183,14 +207,29 @@ namespace HlsView
                     }
 
                     //Home Team Picture
-                    imgHome[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(xe.Element("home-team").Element("logo-40px").Value) };
-                    imgHome[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
-                    imgHome[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                    imgHome[i].Margin = new Thickness(horizMargin + 308, heightMargin-6, 0, 0);
-                    imgHome[i].Height = 45;
-                    imgHome[i].Width = 60;
-                    imgHome[i].Stretch = Stretch.Fill;
-                    ContentPanel.Children.Add(imgHome[i]);
+                    try
+                    {
+                        imgHome[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(xe.Element("home-team").Element("logo-40px").Value) };
+                        imgHome[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                        imgHome[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        imgHome[i].Margin = new Thickness(horizMargin + 308, heightMargin - 6, 0, 0);
+                        imgHome[i].Height = 45;
+                        imgHome[i].Width = 60;
+                        imgHome[i].Stretch = Stretch.Fill;
+                        ContentPanel.Children.Add(imgHome[i]);
+                    }
+                    catch
+                    {
+                        imgHome[i] = new Image();
+                        imgHome[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                        imgHome[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        imgHome[i].Margin = new Thickness(horizMargin + 308, heightMargin - 6, 0, 0);
+                        imgHome[i].Height = 45;
+                        imgHome[i].Width = 60;
+                        imgHome[i].Stretch = Stretch.Fill;
+                        ContentPanel.Children.Add(imgHome[i]);
+                    }
+                    
 
                     heightMargin = heightMargin + 55;
                     i++;
