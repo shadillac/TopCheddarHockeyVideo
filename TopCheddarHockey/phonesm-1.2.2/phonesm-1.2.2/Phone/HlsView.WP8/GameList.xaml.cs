@@ -31,7 +31,6 @@ namespace HlsView
             string gameDate = "";
             NavigationContext.QueryString.TryGetValue("date", out gameDate);
             string videoPage = "http://feeds.cdnak.neulion.com/fs/nhl/mobile/feeds/data/" + gameDate + ".xml";
-            //string videoPage = @"c:\users\shmorris\desktop\test.xml";
             WebClient wc = new WebClient();
             wc.DownloadStringCompleted += HttpCompleted;
             wc.DownloadStringAsync(new Uri(videoPage));
@@ -92,6 +91,7 @@ namespace HlsView
 
                     foreach (XElement xe in xdoc.Descendants("game"))
                     {
+
                         //Set Away Team Image
                         try
                         {
@@ -123,7 +123,6 @@ namespace HlsView
 
                             hlinkAway[i] = new Button { Content = xe.Element("away-team").Element("team-abbreviation").Value };
                             hlinkAway[i].Tag = xe.Element("streams").Element("iphone").Element("away").Element(element).Value.ToString();
-                            //hlinkAway[i].TargetName = "_blank";
                             hlinkAway[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
                             hlinkAway[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                             hlinkAway[i].Margin = new Thickness(horizMargin + 60, heightMargin - 20, 0, 0);
@@ -184,7 +183,6 @@ namespace HlsView
                         {
                             hlinkHome[i] = new Button { Content = xe.Element("home-team").Element("team-abbreviation").Value };
                             hlinkHome[i].Tag = xe.Element("streams").Element("iphone").Element("home").Element(element).Value.ToString();
-                            //hlinkHome[i].TargetName = "_blank";
                             hlinkHome[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
                             hlinkHome[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                             hlinkHome[i].Margin = new Thickness(horizMargin + 205, heightMargin - 20, 0, 0);
