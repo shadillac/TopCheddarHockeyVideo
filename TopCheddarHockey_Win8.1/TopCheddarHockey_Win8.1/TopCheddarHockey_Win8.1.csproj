@@ -191,8 +191,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\SM.Media.Builder.dll</HintPath>
     </Reference>
-    <Reference Include="SM.Media.Platform.Win81, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SM.Media.Platform.Win81">
       <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\WinRT\x86\SM.Media.Platform.Win81.dll</HintPath>
     </Reference>
     <Reference Include="SM.TsParser, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=MSIL">

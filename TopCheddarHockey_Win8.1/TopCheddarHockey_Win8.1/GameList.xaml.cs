@@ -281,11 +281,11 @@ namespace TopCheddarHockey_Win8._1
                         }
                         catch (Exception)
                         {
-                            blkHome[i] = new TextBlock { Text = xe.Element("away-team").Element("team-abbreviation").Value };
+                            blkHome[i] = new TextBlock { Text = xe.Element("home-team").Element("team-abbreviation").Value };
                             blkHome[i].FontSize = 22.667;
                             blkHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
                             blkHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-                            blkHome[i].Margin = new Thickness(horizMargin + 216, heightMargin + 5, 0, 0);
+                            blkHome[i].Margin = new Thickness(horizMargin + 220, heightMargin + 5, 0, 0);
                             blkHome[i].FontSize = 22.667;
                             ContentPanel.Children.Add(blkHome[i]);
                         }

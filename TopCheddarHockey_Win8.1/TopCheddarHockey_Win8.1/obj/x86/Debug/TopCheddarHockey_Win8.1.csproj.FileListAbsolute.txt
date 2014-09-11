@@ -114,6 +114,7 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\obj\x86\Debug\About.g.cs
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\obj\x86\Debug\About.xaml
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\obj\x86\Debug\About.xbf
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\obj\x86\Debug\TopCheddarHockey_Win8.1.csprojResolveAssemblyReference.cache
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\obj\x86\Debug\Autofac\layout.resfiles
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\obj\x86\Debug\Autofac\layout.resfiles.intermediate
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\obj\x86\Debug\Autofac\Resources.resfiles
