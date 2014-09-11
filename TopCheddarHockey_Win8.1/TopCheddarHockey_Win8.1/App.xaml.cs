@@ -24,6 +24,7 @@ namespace TopCheddarHockey_Win8._1
     /// </summary>
     sealed partial class App : Application
     {
+        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -41,6 +42,7 @@ namespace TopCheddarHockey_Win8._1
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            localSettings.Values["Date"] = "";
 
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)

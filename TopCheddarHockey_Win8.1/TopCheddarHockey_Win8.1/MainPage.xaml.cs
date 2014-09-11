@@ -42,8 +42,12 @@ namespace TopCheddarHockey_Win8._1
             DateTimeOffset newDate = DateTimeOffset.Now;
             try
             {
-                DateTimeOffset.TryParse(localSettings.Values["Date"].ToString(), out newDate);
-                gameDate.Date = newDate;
+                if (localSettings.Values["Date"].ToString() != "")
+                {
+                    DateTimeOffset.TryParse(localSettings.Values["Date"].ToString(), out newDate);
+                    gameDate.Date = newDate;
+                }
+                
             }
             catch
             { }
