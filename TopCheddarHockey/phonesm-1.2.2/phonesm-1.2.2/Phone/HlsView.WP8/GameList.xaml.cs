@@ -165,13 +165,6 @@ namespace HlsView
                                 awayGoals[i].Margin = new Thickness(horizMargin + 160, heightMargin, 0, 0);
                                 ContentPanel.Children.Add(awayGoals[i]);
 
-                                ////Set @ sign
-                                //at[i] = new TextBlock { Text = "@" };
-                                //at[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
-                                //at[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                                //at[i].Margin = new Thickness(160, heightMargin, 0, 0);
-                                //ContentPanel.Children.Add(at[i]);
-
                                 //Set Home Goals
                                 homeGoals[i] = new TextBlock { Text = xe.Element("home-team").Element("goals").Value };
                                 homeGoals[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
@@ -201,7 +194,7 @@ namespace HlsView
                         }
                         catch (Exception)
                         {
-                            blkHome[i] = new TextBlock { Text = xe.Element("away-team").Element("team-abbreviation").Value };
+                            blkHome[i] = new TextBlock { Text = xe.Element("home-team").Element("team-abbreviation").Value };
                             blkHome[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
                             blkHome[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                             blkHome[i].Margin = new Thickness(horizMargin + 222, heightMargin, 0, 0);
