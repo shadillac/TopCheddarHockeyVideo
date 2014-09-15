@@ -172,7 +172,7 @@ namespace TopCheddarHockey_Win8._1
                         try
                         {
                             BitmapImage awayBmp = new BitmapImage();
-                            awayBmp.UriSource = new Uri(xe.Element("away-team").Element("logo-40px").Value, UriKind.Absolute);
+                            awayBmp.UriSource = new Uri(@"ms-appx:///Assets/Logos/" + xe.Element("away-team").Element("team-abbreviation").Value + ".png", UriKind.Absolute);
                             imgAway[i] = new Image { Source = awayBmp };
                             imgAway[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
                             imgAway[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
@@ -294,7 +294,7 @@ namespace TopCheddarHockey_Win8._1
                         try
                         {
                             BitmapImage homeBmp = new BitmapImage();
-                            homeBmp.UriSource = new Uri(xe.Element("home-team").Element("logo-40px").Value, UriKind.Absolute);
+                            homeBmp.UriSource = new Uri(@"ms-appx:///Assets/Logos/" + xe.Element("home-team").Element("team-abbreviation").Value + ".png", UriKind.Absolute);
                             imgHome[i] = new Image { Source = homeBmp };
                             imgHome[i].VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
                             imgHome[i].HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
