@@ -163,6 +163,37 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Logos\ANA.png" />
+    <Content Include="Assets\Logos\ARZ.png" />
+    <Content Include="Assets\Logos\BOS.png" />
+    <Content Include="Assets\Logos\BUF.png" />
+    <Content Include="Assets\Logos\CAR.png" />
+    <Content Include="Assets\Logos\CBJ.png" />
+    <Content Include="Assets\Logos\CGY.png" />
+    <Content Include="Assets\Logos\CHI.png" />
+    <Content Include="Assets\Logos\COL.png" />
+    <Content Include="Assets\Logos\DAL.png" />
+    <Content Include="Assets\Logos\DET.png" />
+    <Content Include="Assets\Logos\EDM.png" />
+    <Content Include="Assets\Logos\FLA.png" />
+    <Content Include="Assets\Logos\LAK.png" />
+    <Content Include="Assets\Logos\MIN.png" />
+    <Content Include="Assets\Logos\MTL.png" />
+    <Content Include="Assets\Logos\NJD.png" />
+    <Content Include="Assets\Logos\NSH.png" />
+    <Content Include="Assets\Logos\NYI.png" />
+    <Content Include="Assets\Logos\NYR.png" />
+    <Content Include="Assets\Logos\OTT.png" />
+    <Content Include="Assets\Logos\PHI.png" />
+    <Content Include="Assets\Logos\PHX.png" />
+    <Content Include="Assets\Logos\PIT.png" />
+    <Content Include="Assets\Logos\SJS.png" />
+    <Content Include="Assets\Logos\STL.png" />
+    <Content Include="Assets\Logos\TBL.png" />
+    <Content Include="Assets\Logos\TOR.png" />
+    <Content Include="Assets\Logos\VAN.png" />
+    <Content Include="Assets\Logos\WPG.png" />
+    <Content Include="Assets\Logos\WSH.png" />
     <Content Include="Assets\SNES.jpg" />
     <Content Include="Assets\SNES.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">

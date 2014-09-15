@@ -91,11 +91,10 @@ namespace HlsView
 
                     foreach (XElement xe in xdoc.Descendants("game"))
                     {
-
                         //Set Away Team Image
                         try
                         {
-                            imgAway[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(xe.Element("away-team").Element("logo-40px").Value) };
+                            imgAway[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"\Assets\Logos\" + xe.Element("away-team").Element("team-abbreviation").Value + ".png") };
                             imgAway[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
                             imgAway[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                             imgAway[i].Margin = new Thickness(horizMargin + 0, heightMargin - 6, 0, 0);
@@ -203,7 +202,7 @@ namespace HlsView
                         //Home Team Picture
                         try
                         {
-                            imgHome[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(xe.Element("home-team").Element("logo-40px").Value) };
+                            imgHome[i] = new Image { Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"\Assets\Logos\" + xe.Element("home-team").Element("team-abbreviation").Value + ".png") };
                             imgHome[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
                             imgHome[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                             imgHome[i].Margin = new Thickness(horizMargin + 308, heightMargin - 6, 0, 0);

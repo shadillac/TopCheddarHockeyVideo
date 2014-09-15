@@ -67,3 +67,4 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\obj\x86\Release\TopCheddarHockey.dll
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\obj\x86\Release\TopCheddarHockey.pdb
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\obj\x86\Release\XapCacheFile.xml
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\HlsView.WP8\obj\x86\Release\TopCheddar.WP8.csprojResolveAssemblyReference.cache
