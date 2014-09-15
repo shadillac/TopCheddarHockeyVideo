@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>SHADHOMEX1</Machine>
+    <Machine>SHADLAPTOP77</Machine>
     <WindowsUser>shmorris</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Release|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>4477shadnickapps.TopCheddarHockeyVideo</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\obj\x86\Release\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>BA2068947DC88EAA00265BC9229A5649D6C97495CCE6D7133A65C66E762128D4</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>AA998A4CBD4914331B524FE76F7BA37C355034E37BC27DD9D807BFC72BC0BDB9</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>4477shadnickapps.TopCheddarHockeyVideo_1.1.0.2_x86__t37n77an3qjnc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>4477shadnickapps.TopCheddarHockeyVideo_t37n77an3qjnc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>4477shadnickapps.TopCheddarHockeyVideo</RegisteredPackageID>
@@ -20,257 +20,253 @@
     <AppXManifest Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-09-15T02:53:21.382</Modified>
+      <Modified>2014-09-15T15:56:00.127</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\TopCheddarHockey_Win8.1.exe">
       <PackagePath>TopCheddarHockey_Win8.1.exe</PackagePath>
-      <Modified>2014-09-15T03:03:26.901</Modified>
+      <Modified>2014-09-15T15:55:52.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\References\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI.winmd">
       <PackagePath>Microsoft.Advertising.WinRT.UI.winmd</PackagePath>
-      <Modified>2014-04-29T00:27:38.000</Modified>
+      <Modified>2013-09-13T18:42:48.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\References\CommonConfiguration\neutral\MicrosoftAdvertising.winmd">
       <PackagePath>MicrosoftAdvertising.winmd</PackagePath>
-      <Modified>2014-04-29T00:27:38.000</Modified>
+      <Modified>2013-09-13T18:42:48.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Autofac.3.3.0\lib\portable-win+net40+sl50+wp8\Autofac.dll">
       <PackagePath>Autofac.dll</PackagePath>
-      <Modified>2014-09-12T23:47:12.145</Modified>
+      <Modified>2014-09-15T15:55:07.194</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\SM.Media.Builder.dll">
       <PackagePath>SM.Media.Builder.dll</PackagePath>
-      <Modified>2014-09-12T23:47:11.920</Modified>
+      <Modified>2014-09-15T15:55:06.865</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\SM.Media.dll">
       <PackagePath>SM.Media.dll</PackagePath>
-      <Modified>2014-09-12T23:47:11.962</Modified>
+      <Modified>2014-09-15T15:55:06.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\WinRT\x86\SM.Media.Platform.Win81.dll">
       <PackagePath>SM.Media.Platform.Win81.dll</PackagePath>
-      <Modified>2014-09-12T23:47:12.090</Modified>
+      <Modified>2014-09-15T15:55:07.125</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\SM.TsParser.dll">
       <PackagePath>SM.TsParser.dll</PackagePath>
-      <Modified>2014-09-12T23:47:11.995</Modified>
+      <Modified>2014-09-15T15:55:06.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Microsoft.Net.Http.2.2.18\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
-      <Modified>2014-09-12T23:47:12.948</Modified>
+      <Modified>2014-09-15T15:55:08.603</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Microsoft.Net.Http.2.2.18\lib\win8\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
-      <Modified>2014-09-12T23:47:12.958</Modified>
+      <Modified>2014-09-15T15:55:08.619</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\AdSettingsFlyout.xbf">
       <PackagePath>Microsoft.Advertising.WinRT.UI\AdSettingsFlyout.xbf</PackagePath>
-      <Modified>2014-04-29T00:27:46.000</Modified>
+      <Modified>2013-09-13T18:42:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\Themes\Generic.xbf">
       <PackagePath>Microsoft.Advertising.WinRT.UI\Themes\Generic.xbf</PackagePath>
-      <Modified>2014-04-29T00:27:46.000</Modified>
+      <Modified>2013-09-13T18:42:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\bootstrap.html">
       <PackagePath>Microsoft.Advertising.WinRT.UI\bootstrap.html</PackagePath>
-      <Modified>2014-04-29T00:27:52.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\mraidApi.html">
-      <PackagePath>Microsoft.Advertising.WinRT.UI\mraidApi.html</PackagePath>
-      <Modified>2014-04-29T00:27:52.000</Modified>
+      <Modified>2013-09-13T18:43:20.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\ormma.js">
       <PackagePath>Microsoft.Advertising.WinRT.UI\ormma.js</PackagePath>
-      <Modified>2014-04-29T00:30:56.000</Modified>
+      <Modified>2013-09-13T18:46:04.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\hockey-background1.jpg">
       <PackagePath>Assets\hockey-background1.jpg</PackagePath>
-      <Modified>2014-09-12T23:47:15.027</Modified>
+      <Modified>2014-09-15T15:55:11.743</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-09-12T23:47:14.978</Modified>
+      <Modified>2014-09-15T15:55:11.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\ANA.png">
       <PackagePath>Assets\Logos\ANA.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.717</Modified>
+      <Modified>2014-09-15T15:55:11.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\ARZ.png">
       <PackagePath>Assets\Logos\ARZ.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.732</Modified>
+      <Modified>2014-09-15T15:55:11.617</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\BOS.png">
       <PackagePath>Assets\Logos\BOS.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.732</Modified>
+      <Modified>2014-09-15T15:55:11.619</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\BUF.png">
       <PackagePath>Assets\Logos\BUF.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.732</Modified>
+      <Modified>2014-09-15T15:55:11.620</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\CAR.png">
       <PackagePath>Assets\Logos\CAR.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.748</Modified>
+      <Modified>2014-09-15T15:55:11.621</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\CBJ.png">
       <PackagePath>Assets\Logos\CBJ.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.748</Modified>
+      <Modified>2014-09-15T15:55:11.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\CGY.png">
       <PackagePath>Assets\Logos\CGY.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.748</Modified>
+      <Modified>2014-09-15T15:55:11.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\CHI.png">
       <PackagePath>Assets\Logos\CHI.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.764</Modified>
+      <Modified>2014-09-15T15:55:11.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\COL.png">
       <PackagePath>Assets\Logos\COL.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.545</Modified>
+      <Modified>2014-09-15T15:55:11.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\DAL.png">
       <PackagePath>Assets\Logos\DAL.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.561</Modified>
+      <Modified>2014-09-15T15:55:11.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\DET.png">
       <PackagePath>Assets\Logos\DET.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.576</Modified>
+      <Modified>2014-09-15T15:55:11.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\EDM.png">
       <PackagePath>Assets\Logos\EDM.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.576</Modified>
+      <Modified>2014-09-15T15:55:11.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\FLA.png">
       <PackagePath>Assets\Logos\FLA.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.592</Modified>
+      <Modified>2014-09-15T15:55:11.638</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\LAK.png">
       <PackagePath>Assets\Logos\LAK.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.607</Modified>
+      <Modified>2014-09-15T15:55:11.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\MIN.png">
       <PackagePath>Assets\Logos\MIN.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.607</Modified>
+      <Modified>2014-09-15T15:55:11.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\MTL.png">
       <PackagePath>Assets\Logos\MTL.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.623</Modified>
+      <Modified>2014-09-15T15:55:11.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\NJD.png">
       <PackagePath>Assets\Logos\NJD.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.623</Modified>
+      <Modified>2014-09-15T15:55:11.647</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\NSH.png">
       <PackagePath>Assets\Logos\NSH.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.639</Modified>
+      <Modified>2014-09-15T15:55:11.649</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\NYI.png">
       <PackagePath>Assets\Logos\NYI.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.639</Modified>
+      <Modified>2014-09-15T15:55:11.651</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\NYR.png">
       <PackagePath>Assets\Logos\NYR.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.654</Modified>
+      <Modified>2014-09-15T15:55:11.653</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\OTT.png">
       <PackagePath>Assets\Logos\OTT.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.654</Modified>
+      <Modified>2014-09-15T15:55:11.655</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\PHI.png">
       <PackagePath>Assets\Logos\PHI.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.670</Modified>
+      <Modified>2014-09-15T15:55:11.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\PHX.png">
       <PackagePath>Assets\Logos\PHX.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.670</Modified>
+      <Modified>2014-09-15T15:55:11.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\PIT.png">
       <PackagePath>Assets\Logos\PIT.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.686</Modified>
+      <Modified>2014-09-15T15:55:11.661</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\SJS.png">
       <PackagePath>Assets\Logos\SJS.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.686</Modified>
+      <Modified>2014-09-15T15:55:11.662</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\STL.png">
       <PackagePath>Assets\Logos\STL.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.686</Modified>
+      <Modified>2014-09-15T15:55:11.665</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\TBL.png">
       <PackagePath>Assets\Logos\TBL.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.701</Modified>
+      <Modified>2014-09-15T15:55:11.668</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\TOR.png">
       <PackagePath>Assets\Logos\TOR.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.701</Modified>
+      <Modified>2014-09-15T15:55:11.670</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\VAN.png">
       <PackagePath>Assets\Logos\VAN.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.701</Modified>
+      <Modified>2014-09-15T15:55:11.672</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\WPG.png">
       <PackagePath>Assets\Logos\WPG.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.717</Modified>
+      <Modified>2014-09-15T15:55:11.677</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\WSH.png">
       <PackagePath>Assets\Logos\WSH.png</PackagePath>
-      <Modified>2014-09-15T02:46:54.717</Modified>
+      <Modified>2014-09-15T15:55:11.678</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-09-12T23:47:14.981</Modified>
+      <Modified>2014-09-15T15:55:11.682</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-09-12T23:47:14.983</Modified>
+      <Modified>2014-09-15T15:55:11.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-09-12T23:47:14.984</Modified>
+      <Modified>2014-09-15T15:55:11.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Background.png">
       <PackagePath>Assets\Background.png</PackagePath>
-      <Modified>2014-09-12T23:47:14.977</Modified>
+      <Modified>2014-09-15T15:55:11.611</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-09-15T02:53:16.315</Modified>
+      <Modified>2014-09-15T15:55:51.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\About.xbf">
       <PackagePath>About.xbf</PackagePath>
-      <Modified>2014-09-15T02:53:16.315</Modified>
+      <Modified>2014-09-15T15:55:51.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\FullGameViewer.xbf">
       <PackagePath>FullGameViewer.xbf</PackagePath>
-      <Modified>2014-09-15T02:53:16.315</Modified>
+      <Modified>2014-09-15T15:55:51.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\GameList.xbf">
       <PackagePath>GameList.xbf</PackagePath>
-      <Modified>2014-09-15T02:53:16.315</Modified>
+      <Modified>2014-09-15T15:55:51.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\HighLightViewer.xbf">
       <PackagePath>HighLightViewer.xbf</PackagePath>
-      <Modified>2014-09-15T02:53:16.315</Modified>
+      <Modified>2014-09-15T15:55:51.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-09-15T02:53:16.331</Modified>
+      <Modified>2014-09-15T15:55:51.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\Settings.xbf">
       <PackagePath>Settings.xbf</PackagePath>
-      <Modified>2014-09-15T02:53:16.331</Modified>
+      <Modified>2014-09-15T15:55:51.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\TopCheddarHockey_Win8.1.xr.xml">
       <PackagePath>TopCheddarHockey_Win8.1.xr.xml</PackagePath>
-      <Modified>2014-09-12T23:47:17.849</Modified>
+      <Modified>2014-09-15T15:55:15.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\bin\x86\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-09-15T03:03:27.292</Modified>
+      <Modified>2014-09-15T15:55:53.051</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
