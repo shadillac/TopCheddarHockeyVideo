@@ -71,9 +71,9 @@
 				VerticalAlignment="Center"
 				BorderThickness="2"
 				Click="wakeButton_Click" />
-                <Button Content="-"
+                <Button Content="Rewind"
 				Click="minusButton_Click" />
-                <Button Content="+"
+                <Button Content="Fast Fwd"
 				Click="plusButton_Click" />
                 <TextBlock x:Name="PositionBox"
 				HorizontalAlignment="Left"
