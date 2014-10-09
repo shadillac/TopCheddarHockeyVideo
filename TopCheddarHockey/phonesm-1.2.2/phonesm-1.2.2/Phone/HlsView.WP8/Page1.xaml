@@ -34,7 +34,7 @@
             <Image HorizontalAlignment="Left" Height="749" VerticalAlignment="Top" Width="490" Source="/Assets/SNES.jpg" Opacity="0.15" Margin="-6,-36,-28,0" Grid.ColumnSpan="2"/>
             <TextBlock Foreground="#FFF0FB00" Text="Top Cheddar" Margin="111,-36,100,624" FontFamily="Segoe WP Semibold" FontSize="34" Grid.ColumnSpan="2"/>
             <TextBlock HorizontalAlignment="Left" Margin="9,120,0,0" TextWrapping="Wrap" Text="Choose the game date:" VerticalAlignment="Top" Height="40" Width="282" Foreground="White" FontSize="24" Grid.ColumnSpan="2"/>
-            <toolkit:DatePicker x:Name="gameDate" Margin="0,165,0,370" Width="456" Grid.ColumnSpan="2"/>
+            <toolkit:DatePicker x:Name="gameDate" Margin="0,165,0,370" Width="456" Grid.ColumnSpan="2" ValueChanged="gameDate_ValueChanged"/>
             <TextBlock Foreground="#FFF0FB00" HorizontalAlignment="Left" Margin="107,10,0,0" TextWrapping="Wrap" Text="Hockey Video" VerticalAlignment="Top" Height="48" Width="230" FontSize="34" Grid.ColumnSpan="2"/>
             <Button x:Name="btnGo" Content="Get me my Top Cheddar videos!" HorizontalAlignment="Left" Margin="0,405,0,0" VerticalAlignment="Top" Height="124" Click="btnGo_Click" Width="456" Grid.ColumnSpan="2"/>
 

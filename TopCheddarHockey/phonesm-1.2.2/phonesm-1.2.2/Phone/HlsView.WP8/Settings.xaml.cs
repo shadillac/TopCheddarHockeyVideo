@@ -20,29 +20,18 @@ namespace HlsView
             InitializeComponent();
         }
 
-        private void chkHideScores_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            string hideScores = "";
+            
             string gameType = "";
             try
             {
-                hideScores = (string)userSettings["HideScores"];
                 gameType = (string)userSettings["GameType"];
             }
             catch
             {
-                hideScores = "null";
                 gameType = "null";
-            }
-
-            if (hideScores == "1")
-            {
-                chkHideScores.IsChecked = true;
             }
             
             switch (gameType)
@@ -73,29 +62,6 @@ namespace HlsView
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            if (chkHideScores.IsChecked == true)
-            {
-                try
-                {
-                    userSettings.Add("HideScores", "1");
-                }
-                catch(ArgumentException)
-                {
-                    userSettings["HideScores"] = "1";
-                }
-                
-            }
-            else
-            {
-                try
-                {
-                    userSettings.Add("HideScores", "0");
-                }
-                catch (ArgumentException)
-                {
-                    userSettings["HideScores"] = "0";
-                }
-            }
             if (rdoHighlights.IsChecked == true)
             {
                 try

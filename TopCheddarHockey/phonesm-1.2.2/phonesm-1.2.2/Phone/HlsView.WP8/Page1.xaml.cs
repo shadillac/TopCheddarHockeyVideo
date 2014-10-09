@@ -62,5 +62,14 @@ namespace HlsView
         {
             NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
         }
+
+        private void gameDate_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+            if (gameDate.Value.Value.Date >= DateTime.Now.Date)
+            {
+                gameDate.Value = DateTime.Now.AddDays(-1);
+                MessageBox.Show("You can only look up games on past days.");
+            }
+        }
     }
 }

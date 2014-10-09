@@ -278,8 +278,7 @@ namespace HlsView
             }
             catch (Exception)
             {
-                MessageBox.Show("No games found for this day.");
-                NavigationService.GoBack();
+                
             }
             try
             {
