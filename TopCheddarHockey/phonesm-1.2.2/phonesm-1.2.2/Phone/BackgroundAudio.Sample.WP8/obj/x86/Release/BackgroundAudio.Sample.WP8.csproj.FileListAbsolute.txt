@@ -31,3 +31,4 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Release\BackgroundAudio.Sample.WP8.dll
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Release\BackgroundAudio.Sample.WP8.pdb
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Release\XapCacheFile.xml
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Phone\BackgroundAudio.Sample.WP8\obj\x86\Release\BackgroundAudio.Sample.WP8.csprojResolveAssemblyReference.cache

@@ -14,3 +14,4 @@ C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phones
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\Bin\x86\Release\System.Net.Http.Primitives.xml
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Release\SM.Media.BackgroundAudioStreamingAgent.WP8.dll
 C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Release\SM.Media.BackgroundAudioStreamingAgent.WP8.pdb
+C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\Libraries\SM.Media.BackgroundAudioStreamingAgent.WP8\obj\x86\Release\SM.Media.BackgroundAudioStreamingAgent.WP8.csprojResolveAssemblyReference.cache
