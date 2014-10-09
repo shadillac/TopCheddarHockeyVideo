@@ -150,7 +150,14 @@ namespace HlsView
                     hlinkAway.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                     hlinkAway.Margin = new Thickness(horizMargin + 60, heightMargin - 20, 0, 0);
                     hlinkAway.Width = 100;
-                    hlinkAway.Tag = awaytagdata;
+                    if ((awaytagdata.EndsWith(".mp4")) || (awaytagdata.EndsWith(".m3u8")))
+                    {
+                        hlinkAway.Tag = awaytagdata;
+                    }
+                    else
+                    {
+                        hlinkAway.IsEnabled = false;
+                    }
                     hlinkAway.Click += GameList_Click;
                     ContentPanel.Children.Add(hlinkAway);
                 }
@@ -169,7 +176,15 @@ namespace HlsView
                     hlinkHome.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                     hlinkHome.Margin = new Thickness(horizMargin + 205, heightMargin - 20, 0, 0);
                     hlinkHome.Width = 100;
-                    hlinkHome.Tag = hometagData;
+                    if ((hometagData.EndsWith(".mp4")) || (hometagData.EndsWith(".m3u8")))
+                    {
+                        hlinkHome.Tag = hometagData;
+                    }
+                    else
+                    {
+                        hlinkHome.IsEnabled = false;
+                    }
+                    
                     hlinkHome.Click += GameList_Click;
                     ContentPanel.Children.Add(hlinkHome);
                 }
@@ -277,7 +292,7 @@ namespace HlsView
 
             try
             {
-                awayTagUrl = o["gameStreams"]["iphone"]["home"][element]["bitrate0"].ToString();
+                awayTagUrl = o["gameStreams"]["iphone"]["away"][element]["bitrate0"].ToString();
             }
             catch
             {
