@@ -164,6 +164,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Logos\ANA.png" />
+    <Content Include="Assets\Logos\ARI.png" />
     <Content Include="Assets\Logos\ARZ.png" />
     <Content Include="Assets\Logos\BOS.png" />
     <Content Include="Assets\Logos\BUF.png" />
