@@ -26,7 +26,7 @@
                         <TextBlock Name="tbTitle" Text="Top Cheddar Hockey Videos" Margin="10,0,109,567" Foreground="#FFE6FD00" FontFamily="Sitka Small" FontSize="24" HorizontalAlignment="Center" />
                         <TextBox Text="By ShadNick (Shad Morris and Nick Ciaravella)" Margin="91,10,0,534" TextChanged="TextBox_TextChanged" FontSize="16" SelectionBackground="{x:Null}" SelectionForeground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"/>
                         <HyperlinkButton Name="hlbReview" Content="Review Us!" Margin="10,62,10,495" Foreground="#FFE8FF00" FontFamily="Sitka Subheading" FontSize="20" Click="hlbReview_Click" />
-                        <TextBlock HorizontalAlignment="Left" Margin="10,126,0,0" TextWrapping="Wrap" Text="Version 1.0.0.0" VerticalAlignment="Top" FontFamily="Sitka Subheading" Foreground="#FFF0FB00"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="10,126,0,0" TextWrapping="Wrap" Text="Version 1.0.0.1" VerticalAlignment="Top" FontFamily="Sitka Subheading" Foreground="#FFF0FB00"/>
                         <HyperlinkButton Name="hlbFeedBack" Content="Feedback?  Issues?" Margin="-2,178,0,0" Foreground="#FFE8FF00" FontFamily="Sitka Subheading" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" Click="hlbFeedBack_Click" />
                         <TextBlock Foreground="White" Margin="10,243,10,114" Opacity="0.8" FontSize="16" TextWrapping="Wrap">
                     	<Run Text="This application has been created by two hockey lovers to help and aid in sharing the sport with others.  We both hope that you enjoy the great game of NHL hockey."/>

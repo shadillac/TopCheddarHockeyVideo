@@ -1,11 +1,12 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="HlsView.HighlightViewer"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="HlsView.HighlightViewer"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -15,36 +16,41 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid Grid.Row="1" x:Name="ContentRoot" Margin="10,5,10,-1">
-        <MediaElement x:Name="mdaHighView" HorizontalAlignment="Left" Height="399.593" VerticalAlignment="Top" Width="754.913" Margin="-117.181,177.711,-177.732,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" CurrentStateChanged="mdaHighView_CurrentStateChanged">
+        <MediaElement x:Name="mdaHighView" HorizontalAlignment="Left" Height="381.683" VerticalAlignment="Top" Width="754.913" Margin="-108.226,186.666,-186.687,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" CurrentStateChanged="mdaHighView_CurrentStateChanged">
             <MediaElement.RenderTransform>
                 <CompositeTransform Rotation="90"/>
             </MediaElement.RenderTransform>
         </MediaElement>
-        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="-16.194,4.853,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="Button_Click">
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="-17.687,4.853,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="Button_Click">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="90"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="-24.837,91.136,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="btnPause_Click">
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="-24.837,89.64,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="btnPause_Click">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="90"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btnRew" Content="Rewind" HorizontalAlignment="Left" Margin="-32.818,192.965,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="btnRew_Click">
+        <Button x:Name="btnRew" Content="R" HorizontalAlignment="Left" Margin="-1.477,160.12,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="btnRew_Click">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="90"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btnFF" Content="Fast Fwd" HorizontalAlignment="Left" Margin="-39.518,307.912,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="btnFF_Click">
+        <Button x:Name="btnFF" Content="F" HorizontalAlignment="Left" Margin="0.78,206.416,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="btnFF_Click">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="90"/>
             </Button.RenderTransform>
         </Button>
-        <TextBlock x:Name="tbStatus" HorizontalAlignment="Left" Margin="-59.394,480.985,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="41.41" Width="173.367" FontSize="22">
+        <TextBlock Visibility="Collapsed" x:Name="tbStatus" HorizontalAlignment="Left" Margin="-59.394,480.985,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="41.41" Width="173.367" FontSize="22">
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="90"/>
             </TextBlock.RenderTransform>
         </TextBlock>
+        <UI:AdControl ApplicationId="cb8400dc-fce3-426a-af5e-a77f607d3897" AdUnitId="188405" HorizontalAlignment="Left" Height="80" Margin="-205.748,473.642,0,0" VerticalAlignment="Top" Width="480" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <UI:AdControl.RenderTransform>
+                <CompositeTransform Rotation="90"/>
+            </UI:AdControl.RenderTransform>
+        </UI:AdControl>
     </Grid>
 
 </phone:PhoneApplicationPage>
