@@ -219,7 +219,14 @@ namespace HlsView
                 heightMargin = heightMargin + 55;
             }
 
-
+            if (ContentPanel.Children.Count == 0)
+            {
+                txtNoGames.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                txtNoGames.Visibility = Visibility.Collapsed;
+            }
 
         }
 

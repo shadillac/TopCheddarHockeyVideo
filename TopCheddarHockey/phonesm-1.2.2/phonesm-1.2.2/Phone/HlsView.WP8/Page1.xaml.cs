@@ -16,7 +16,7 @@ namespace HlsView
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
-            gameDate.Value = DateTime.Now.AddDays(-1);
+            gameDate.Value = DateTime.Now.Date;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -65,10 +65,10 @@ namespace HlsView
 
         private void gameDate_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
         {
-            if (gameDate.Value.Value.Date >= DateTime.Now.Date)
+            if (gameDate.Value.Value.Date > DateTime.Now.Date)
             {
-                gameDate.Value = DateTime.Now.AddDays(-1);
-                MessageBox.Show("You can only look up games on past days.");
+                gameDate.Value = DateTime.Now.Date;
+                MessageBox.Show("You can only look up games on past or current days.");
             }
         }
     }

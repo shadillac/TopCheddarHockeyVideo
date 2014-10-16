@@ -31,7 +31,9 @@
         <ScrollViewer HorizontalAlignment="Left" Height="591" Grid.Row="1" VerticalAlignment="Top" Width="480">
             <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             </Grid>
+            
         </ScrollViewer>
+        <TextBlock Name="txtNoGames" Visibility="Collapsed" TextAlignment="Center" TextWrapping="Wrap" Margin="83,169,82,318" Grid.Row="1" Text="There are no games available for this day." />
         <UI:AdControl ApplicationId="cb8400dc-fce3-426a-af5e-a77f607d3897" AdUnitId="188405" HorizontalAlignment="Left" Height="80" Margin="0,596,0,0" Grid.Row="1" VerticalAlignment="Top" Width="480"/>
     </Grid>
 </phone:PhoneApplicationPage>
