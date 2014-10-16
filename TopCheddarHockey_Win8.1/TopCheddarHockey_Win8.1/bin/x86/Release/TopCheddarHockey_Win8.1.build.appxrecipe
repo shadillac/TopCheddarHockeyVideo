@@ -28,6 +28,9 @@
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Autofac.3.3.0\lib\portable-win+net40+sl50+wp8\Autofac.dll">
       <PackagePath>Autofac.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\packages\Newtonsoft.Json.6.0.5\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\bin\Release\SM.Media.Builder.dll">
       <PackagePath>SM.Media.Builder.dll</PackagePath>
     </AppxPackagedFile>
@@ -68,8 +71,8 @@
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\ANA.png">
       <PackagePath>Assets\Logos\ANA.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\ARZ.png">
-      <PackagePath>Assets\Logos\ARZ.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\ARI.png">
+      <PackagePath>Assets\Logos\ARI.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shmorris\Documents\GitHub\TopCheddarHockeyVideo\TopCheddarHockey_Win8.1\TopCheddarHockey_Win8.1\Assets\Logos\BOS.png">
       <PackagePath>Assets\Logos\BOS.png</PackagePath>

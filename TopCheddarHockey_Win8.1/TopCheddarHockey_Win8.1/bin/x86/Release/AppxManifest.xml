@@ -42,13 +42,13 @@
         <ActivatableClass ActivatableClassId="Microsoft.Advertising.WinRT.UI.AdControl" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Advertising.WinRT.UI.AdSettingsFlyout" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.JSONWrapper" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.AdEventArgs" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.AdErrorEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.RendererOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.UserInfoProvider" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.Advertisement" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.AdPlacement" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.AdEventArgs" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.UserInfoProvider" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.SdkInfoProvider" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="MicrosoftAdvertising.Shared.WinRT.RendererOptions" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>

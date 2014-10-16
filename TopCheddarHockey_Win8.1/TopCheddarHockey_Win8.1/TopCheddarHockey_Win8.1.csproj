@@ -137,6 +137,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="packages.config" />
     <None Include="TopCheddarHockey_Win8.1_StoreKey.pfx" />
     <None Include="TopCheddarHockey_Win8.1_TemporaryKey.pfx" />
   </ItemGroup>
@@ -144,7 +145,7 @@
     <Content Include="Assets\hockey-background1.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\Logos\ANA.png" />
-    <Content Include="Assets\Logos\ARZ.png" />
+    <Content Include="Assets\Logos\ARI.png" />
     <Content Include="Assets\Logos\BOS.png" />
     <Content Include="Assets\Logos\BUF.png" />
     <Content Include="Assets\Logos\CAR.png" />
@@ -213,6 +214,9 @@
   <ItemGroup>
     <Reference Include="Autofac">
       <HintPath>..\..\TopCheddarHockey\phonesm-1.2.2\phonesm-1.2.2\packages\Autofac.3.3.0\lib\portable-win+net40+sl50+wp8\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\netcore45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SM.Media, Version=1.2.2.0, Culture=neutral, PublicKeyToken=a8a96d0f02112ebc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
