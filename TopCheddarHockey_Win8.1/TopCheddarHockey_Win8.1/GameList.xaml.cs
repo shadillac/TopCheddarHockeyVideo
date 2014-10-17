@@ -110,6 +110,7 @@ namespace TopCheddarHockey_Win8._1
             string gameYearPlus = gameDate[0].ToString() + gameDate[1].ToString() + gameDate[2].ToString() + (Convert.ToInt32(gameDate[3].ToString()) + 1).ToString();
             string videoPage = "http://live.nhl.com/GameData/SeasonSchedule-" + gameYear + gameYearPlus + ".json";
             GetXML(videoPage);
+            GetScores();
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -150,7 +151,7 @@ namespace TopCheddarHockey_Win8._1
                     if (gameID["est"].ToString().Split(new Char[] { ' ' })[0] == gameDate)
                     {
                         string gameDetailID = gameID["id"].ToString()[4].ToString() + gameID["id"].ToString()[5].ToString() + "_" + gameID["id"].ToString()[6].ToString() + gameID["id"].ToString()[7].ToString() + gameID["id"].ToString()[8].ToString() + gameID["id"].ToString()[9].ToString();
-                        string gameDetailPage = "http://smb.cdnak.neulion.com/fs/nhl/mobile/feed_new/data/streams/" + gameYear + "/iphone/" + gameDetailID + ".json";
+                        string gameDetailPage = "http://smb.cdnak.neulion.com/fs/nhl/mobile/feed_new/data/streams/" + gameYear + "/ipad/" + gameDetailID + ".json";
                         HttpClient wClient = new HttpClient();
                         try
                         {
@@ -245,6 +246,27 @@ namespace TopCheddarHockey_Win8._1
             {
                 ShowMessageBox("No NHL Games found on this day.");
                 Frame.GoBack();
+            }
+
+        }
+
+        private async void GetScores()
+        {
+            string dateString = gameDate[4].ToString()+gameDate[5].ToString()+"/"+gameDate[6].ToString()+gameDate[7].ToString()+"/" + gameYear;
+            HttpClient hc = new HttpClient();
+            string response = await hc.GetStringAsync("https://api.hockeystreams.com/Scores?key=15d6fae8d55253b4789439bcccbdc206&date="+dateString);
+            try
+            {
+                JObject o = new JObject();
+                o = JObject.Parse(response);
+                foreach (JToken score in o["scores"])
+                {
+
+                }
+            }
+            catch (Exception)
+            {
+
             }
 
         }
