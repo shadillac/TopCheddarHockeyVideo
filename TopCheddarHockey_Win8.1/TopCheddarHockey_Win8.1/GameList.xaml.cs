@@ -201,7 +201,7 @@ namespace TopCheddarHockey_Win8._1
                             }
                             try
                             {
-                                homeTagUrl = o["gameStreams"]["iphone"]["home"][element]["bitrate0"].ToString();
+                                homeTagUrl = o["gameStreams"]["ipad"]["home"][element]["bitrate0"].ToString();
                             }
                             catch
                             {
@@ -210,7 +210,7 @@ namespace TopCheddarHockey_Win8._1
 
                             try
                             {
-                                awayTagUrl = o["gameStreams"]["iphone"]["away"][element]["bitrate0"].ToString();
+                                awayTagUrl = o["gameStreams"]["ipad"]["away"][element]["bitrate0"].ToString();
                             }
                             catch
                             {
@@ -223,7 +223,7 @@ namespace TopCheddarHockey_Win8._1
                             try
                             {
 
-                                string contURL = o["gameStreams"]["iphone"]["home"]["vod-continuous"]["bitrate0"].ToString();
+                                string contURL = o["gameStreams"]["ipad"]["home"]["vod-continuous"]["bitrate0"].ToString();
                                 homeTeam = contURL.Split(new Char[] { '_' })[3].ToString();
                                 awayTeam = contURL.Split(new Char[] { '_' })[2].ToString();
                             }

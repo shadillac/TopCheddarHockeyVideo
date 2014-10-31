@@ -49,6 +49,8 @@ var ORMMA_API_VERSION = "1.1.0";
 var MRAID_API_VERSION = "1.0";
 var MAPLE_MAX_STATE_DATA_SIZE = 65536;
 
+//used by getPlacementType() for now we will always return Inline
+var _placementType = "inline";
 
 // These are callbacks which will be used by the C# client when information
 // is requested by rich media.
@@ -262,9 +264,10 @@ function fireClickEvent() {
 
         // Stores properties used during expanding.
         // Supported properties are width, height, useCustomClose, isModal, lockOrientation.
+        // Default sizes to 0 -- will get updated once the screen size is determined
         _expandProperties: {
-            width: 480,
-            height: 800,
+            width: 0,
+            height: 0,
             useCustomClose: false,
             lockOrientation: false,
             isModal: true
@@ -492,7 +495,7 @@ function fireClickEvent() {
             _logme("[not impl] createEvent called: " + date + ", " + title + ", " + body);
         },
 
-        expand: function (url) {
+        expand: function (url, isLegacy) {
             /// <summary>
             /// Opens a new web view/iframe in the expanded state
             /// </summary>
@@ -506,27 +509,20 @@ function fireClickEvent() {
                 url = "";
             }
 
+            if (typeof (isLegacy) === "undefined" || isLegacy === null) {
+                isLegacy = true;
+            }
+
             // Send expandProperties to the ad control first
             if (typeof (this._expandProperties) === "object") {
-                /// <disable>JS2045.ReviewEmptyBlocks</disable>
-                if (_isEmbeddedBrowser()) {
-                    // Do nothing, should already be set
-                } else {
-                    var propStr = JSON.stringify(this._expandProperties);
-                    _notify("setexpandproperties:" + propStr);
-                }
-                /// <enable>JS2045.ReviewEmptyBlocks</enable>
+                var propStr = JSON.stringify(this._expandProperties);
+                _notify("setexpandproperties:" + propStr);
             }
 
             _logme("sending expand request");
 
-            if (_isEmbeddedBrowser()) {
-                _notify("expand:url=" + encodeURIComponent(url));
-            } else {
-                // For WWAs we want to send the payload as JSON since it's easy to parse in JavaScript.
-                var msg = { url: url };
-                _notify("expand:" + JSON.stringify(msg));
-            }
+            var msg = { "url": url, "islegacy": isLegacy };
+            _notify("expand:" + JSON.stringify(msg));
         },
 
         getDefaultPosition: function () {
@@ -546,7 +542,13 @@ function fireClickEvent() {
             /// <returns type="Object">the current expand properties in the format:
             /// { width : "nn", height : "nn", useCustomClose : "true|false", isModal : "true|false", lockOrientation : "true|false", useBackground : "true|false (deprecated)", backgroundColor : "#rrggbb (deprecated)", backgroundOpacity : "n.n (deprecated)" }
             /// </returns>
-            return this._expandProperties;
+
+            if (this._expandProperties) {
+                return this._expandProperties;
+            }
+            else {
+                return Ormma._expandProperties;
+            }
         },
 
         getHeading: function () {
@@ -606,11 +608,9 @@ function fireClickEvent() {
 
         getPlacementType: function (none) {
             /// <summary>
-            /// Currently not supported
+            /// for now we are always returning Inline, later we will return other types
             /// </summary>
-            /// <returns type="String"/>
-            _logme("[not impl] getPlacementType called");
-            return "unknown";
+            return _placementType;
         },
 
         getScreenSize: function () {
@@ -719,13 +719,7 @@ function fireClickEvent() {
             /// <param name="url" type="String">The url to navigate to</param>
             /// <param name="controls" type="Object">this parameter is not supported</param>
             _logme("sending website request: " + url);
-            var msg;
-            if (_isEmbeddedBrowser()) {
-                msg = "url=" + encodeURIComponent(url);
-            } else {
-                msg = JSON.stringify({ url: url });
-            }
-
+            var msg = JSON.stringify({ url: url });
             _notify("web:" + msg);
         },
 
@@ -761,20 +755,15 @@ function fireClickEvent() {
                 return;
             }
 
-            if (height > this._maxSize.height || width < 0) {
+            if (height > this._maxSize.height || height < 0) {
                 this._throwError("resize", "height is greater than max allowed height  (" + this._maxSize.height + ") or less than zero.");
                 return;
             }
 
             _logme("calling resize:width=" + width + "&height=" + height);
 
-            if (_isEmbeddedBrowser()) {
-                _notify("resize:width=" + width + "&height=" + height);
-            } else {
-                // For WWAs we want to send the payload as JSON since it's easy to parse in JavaScript.
-                var msg = { width: width, height: height };
-                _notify("resize:" + JSON.stringify(msg));
-            }
+            var msg = { width: width, height: height };
+            _notify("resize:" + JSON.stringify(msg));
         },
 
         sendMail: function (recipient, subject, body) {
@@ -812,22 +801,16 @@ function fireClickEvent() {
             // MRAID doesn't have getScreenSize so borrowing from Ormma object is needed
             var screenSize = (typeof (this.getScreenSize) === "function" ? this.getScreenSize() : window.ormma.getScreenSize());
 
-            this._expandProperties.width = _isValidExpandPropertiesDimension(this._expandProperties.width) ? this._expandProperties.width : screenSize.width;
-            this._expandProperties.height = _isValidExpandPropertiesDimension(this._expandProperties.height) ? this._expandProperties.height : screenSize.height;
+            this._expandProperties.width = (_isValidExpandPropertiesDimension(this._expandProperties.width) && this._expandProperties.width < screenSize.width) ? this._expandProperties.width : screenSize.width;
+            this._expandProperties.height = (_isValidExpandPropertiesDimension(this._expandProperties.height) && this._expandProperties.height < screenSize.height) ? this._expandProperties.height : screenSize.height;
             this._expandProperties.useCustomClose = typeof (this._expandProperties.useCustomClose) === "undefined" ? false : this._expandProperties.useCustomClose;
             this._expandProperties.lockOrientation = typeof (this._expandProperties.lockOrientation) === "undefined" ? false : this._expandProperties.lockOrientation;
             this._expandProperties.isModal = true;
 
-            if (_isEmbeddedBrowser()) {
-                // Send as name/value pairs
-                _logme("setting expand properties: width=" + this._expandProperties.width + "&height=" + this._expandProperties.height + "&usecustomclose=" + this._expandProperties.useCustomClose + "&lockorientation=" + this._expandProperties.lockOrientation);
-                _notify("setexpandproperties:width=" + this._expandProperties.width + "&height=" + this._expandProperties.height + "&usecustomclose=" + this._expandProperties.useCustomClose + "&lockorientation=" + this._expandProperties.lockOrientation);
-            } else {
-                // Send as JSON
-                var propStr = JSON.stringify(this._expandProperties);
-                _logme("setting expand properties: " + propStr);
-                _notify("setexpandproperties:" + propStr);
-            }
+
+            var propStr = JSON.stringify(this._expandProperties);
+            _logme("setting expand properties: " + propStr);
+            _notify("setexpandproperties:" + propStr);
         },
 
         setResizeProperties: function (properties) {
@@ -1027,6 +1010,7 @@ function fireClickEvent() {
             /// <summary>
             /// Fires the viewable event.
             /// </summary>
+            window.mraid._isViewable = data;
             _fireEvent(ORMMA_EVENT_VIEWABLE_CHANGE, data);
         },
 
@@ -1211,6 +1195,13 @@ function fireClickEvent() {
             this._screenSize.width = width;
             this._screenSize.height = height;
 
+            // Change expand properties to account for screen size.  setExpandProperties checks for valid sizes, otherwise defaults to screen size 
+            // We assume that if the expand properties match the previous screen size, that the new expand properties should adjust for the new screen size as well (eg. if device is rotated)
+            if (this._expandProperties.width === currWidth) this._expandProperties.width = width;
+            if (this._expandProperties.height === currHeight) this._expandProperties.height = height;
+
+            this.setExpandProperties(this._expandProperties);
+
             if (currWidth !== this._screenSize.width || currHeight !== this._screenSize.height) {
                 _fireEvent(ORMMA_EVENT_SCREEN_CHANGE, this._screenSize);
             }
@@ -1268,9 +1259,8 @@ function fireClickEvent() {
         /// </summary>
         /// <param name="msg" type="String">the width of the screen</param>
 
-        //if (_isEmbeddedBrowser()) {
-        //    window.external.notify("$log - " + msg);
-        //} 
+
+        //window.external.notify("$log - " + msg);
     }
 
     function _isValidExpandPropertiesDimension(val) {
@@ -1286,10 +1276,6 @@ function fireClickEvent() {
         }
     }
 
-    function _isEmbeddedBrowser() {
-        return (typeof (window.external) === "object" && typeof (window.external.notify) !== "undefined");
-    }
-
     function _notify(msg) {
         /// <summary>
         /// Sends a message to the ad control.
@@ -1299,11 +1285,7 @@ function fireClickEvent() {
         // Embedded browsers (WebBrowser on Windows Phone and WebView in Windows 8) use the
         // notify mechanism for sending messages to the ad control.
         // WWAs use the postToLocal function to post the message to the outer iframe.
-        if (_isEmbeddedBrowser()) {
-            window.external.notify(msg);
-        } else {
-            postToLocal(msg);
-        }
+        window.external.notify(msg);
     }
 
     function _fireEvent(eventType, data) {
@@ -1399,6 +1381,8 @@ function fireClickEvent() {
 
     window.mraid = window.MRAID = {
 
+        _isViewable: false,
+
         // MRAID 1.0 methods
         addEventListener: function (evt, callback) {
             if (this._mraidSupportedEvts === null) {
@@ -1410,13 +1394,22 @@ function fireClickEvent() {
                 window.ormma.addEventListener(evt, callback);
             }
         },
-        close: window.ormma.close,
-        expand: window.ormma.expand,
-        getExpandProperties: window.ormma.getExpandProperties,
-        getPlacementType: window.ormma.getPlacementType,
+        close: function () { return window.ormma.close(); },
+        expand: function (url) {
+            if (typeof (url) === "undefined" || url === null) {
+                window.ormma.expand("", false);
+            }
+            else {
+                window.ormma.expand(url, false);
+            }
+        },
+        getExpandProperties: function () { return window.ormma.getExpandProperties(); },
+        getPlacementType: function () { return window.ormma.getPlacementType(); },
         getState: function () { return window.ormma._state; },
         getVersion: function () { return MRAID_API_VERSION; },
-        isViewable: window.ormma.isViewable,
+        isViewable: function () {
+            return window.mraid._isViewable;
+        },
         open: window.ormma.open,
         removeEventListener: function (evt, callback) {
             if (this._mraidSupportedEvts === null) {
@@ -1428,8 +1421,8 @@ function fireClickEvent() {
                 window.ormma.removeEventListener(evt, callback);
             }
         },
-        setExpandProperties: window.ormma.setExpandProperties,
-        useCustomClose: window.ormma.useCustomClose,
+        setExpandProperties: function (properties) { return window.ormma.setExpandProperties(properties); },
+        useCustomClose: function (flag) { return window.ormma.useCustomClose(flag); },
 
         // MRAID 1.0 events are "error", "ready", "stateChange" and "viewableChange"
         _mraidSupportedEvts: null,
@@ -1450,83 +1443,83 @@ function fireClickEvent() {
 // SIG // MIIanwYJKoZIhvcNAQcCoIIakDCCGowCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
 // SIG // gjcCAR4wJAIBAQQQEODJBs441BGiowAQS9NQkAIBAAIB
-// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFMCb4g+MNbNF
-// SIG // RWQ58oB7hxlOUQieoIIVgjCCBMMwggOroAMCAQICEzMA
-// SIG // AAArOTJIwbLJSPMAAAAAACswDQYJKoZIhvcNAQEFBQAw
+// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFHrcHePOS1K0
+// SIG // wYOIIA0ARN4ebuVqoIIVgjCCBMMwggOroAMCAQICEzMA
+// SIG // AAAz5SeGow5KKoAAAAAAADMwDQYJKoZIhvcNAQEFBQAw
 // SIG // dzELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0
 // SIG // b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1p
 // SIG // Y3Jvc29mdCBDb3Jwb3JhdGlvbjEhMB8GA1UEAxMYTWlj
-// SIG // cm9zb2Z0IFRpbWUtU3RhbXAgUENBMB4XDTEyMDkwNDIx
-// SIG // MTIzNFoXDTEzMTIwNDIxMTIzNFowgbMxCzAJBgNVBAYT
+// SIG // cm9zb2Z0IFRpbWUtU3RhbXAgUENBMB4XDTEzMDMyNzIw
+// SIG // MDgyM1oXDTE0MDYyNzIwMDgyM1owgbMxCzAJBgNVBAYT
 // SIG // AlVTMRMwEQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQH
 // SIG // EwdSZWRtb25kMR4wHAYDVQQKExVNaWNyb3NvZnQgQ29y
 // SIG // cG9yYXRpb24xDTALBgNVBAsTBE1PUFIxJzAlBgNVBAsT
-// SIG // Hm5DaXBoZXIgRFNFIEVTTjpDMEY0LTMwODYtREVGODEl
+// SIG // Hm5DaXBoZXIgRFNFIEVTTjpGNTI4LTM3NzctOEE3NjEl
 // SIG // MCMGA1UEAxMcTWljcm9zb2Z0IFRpbWUtU3RhbXAgU2Vy
 // SIG // dmljZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
-// SIG // ggEBAKa2MA4DZa5QWoZrhZ9IoR7JwO5eSQeF4HCWfL65
-// SIG // X2JfBibTizm7GCKlLpKt2EuIOhqvm4OuyF45jMIyexZ4
-// SIG // 7Tc4OvFi+2iCAmjs67tAirH+oSw2YmBwOWBiDvvGGDhv
-// SIG // sJLWQA2Apg14izZrhoomFxj/sOtNurspE+ZcSI5wRjYm
-// SIG // /jQ1qzTh99rYXOqZfTG3TR9X63zWlQ1mDB4OMhc+LNWA
-// SIG // oc7r95iRAtzBX/04gPg5f11kyjdcO1FbXYVfzh4c+zS+
-// SIG // X+UoVXBUnLjsfABVRlsomChWTOHxugkZloFIKjDI9zMg
-// SIG // bOdpw7PUw07PMB431JhS1KkjRbKuXEFJT7RiaJMCAwEA
-// SIG // AaOCAQkwggEFMB0GA1UdDgQWBBSlGDNTP5VgoUMW747G
-// SIG // r9Irup5Y0DAfBgNVHSMEGDAWgBQjNPjZUkZwCu1A+3b7
+// SIG // ggEBAMreyhkPH5ZWgl/YQjLUCG22ncDC7Xw4q1gzrWuB
+// SIG // ULiIIQpdr5ctkFrHwy6yTNRjdFj938WJVNALzP2chBF5
+// SIG // rKMhIm0z4K7eJUBFkk4NYwgrizfdTwdq3CrPEFqPV12d
+// SIG // PfoXYwLGcD67Iu1bsfcyuuRxvHn/+MvpVz90e+byfXxX
+// SIG // WC+s0g6o2YjZQB86IkHiCSYCoMzlJc6MZ4PfRviFTcPa
+// SIG // Zh7Hc347tHYXpqWgoHRVqOVgGEFiOMdlRqsEFmZW6vmm
+// SIG // y0LPXVRkL4H4zzgADxBr4YMujT5I7ElWSuyaafTLDxD7
+// SIG // BzRKYmwBjW7HIITKXNFjmR6OXewPpRZIqmveIS8CAwEA
+// SIG // AaOCAQkwggEFMB0GA1UdDgQWBBQAWBs+7cXxBpO+MT02
+// SIG // tKwLXTLwgTAfBgNVHSMEGDAWgBQjNPjZUkZwCu1A+3b7
 // SIG // syuwwzWzDzBUBgNVHR8ETTBLMEmgR6BFhkNodHRwOi8v
 // SIG // Y3JsLm1pY3Jvc29mdC5jb20vcGtpL2NybC9wcm9kdWN0
 // SIG // cy9NaWNyb3NvZnRUaW1lU3RhbXBQQ0EuY3JsMFgGCCsG
 // SIG // AQUFBwEBBEwwSjBIBggrBgEFBQcwAoY8aHR0cDovL3d3
 // SIG // dy5taWNyb3NvZnQuY29tL3BraS9jZXJ0cy9NaWNyb3Nv
 // SIG // ZnRUaW1lU3RhbXBQQ0EuY3J0MBMGA1UdJQQMMAoGCCsG
-// SIG // AQUFBwMIMA0GCSqGSIb3DQEBBQUAA4IBAQB+zLB75S++
-// SIG // 51a1z3PbqlLRFjnGtM361/4eZbXnSPObRogFZmomhl7+
-// SIG // h1jcxmOOOID0CEZ8K3OxDr9BqsvHqpSkN/BkOeHF1fnO
-// SIG // B86r5CXwaa7URuL+ZjI815fFMiH67holoF4MQiwRMzqC
-// SIG // g/3tHbO+zpGkkSVxuatysJ6v5M8AYolwqbhKUIzuLyJk
-// SIG // pajmTWuVLBx57KejMdqQYJCkbv6TAg0/LCQNxmomgVGD
-// SIG // ShC7dWNEqmkIxgPr4s8L7VY67O9ypwoM9ADTIrivInKz
-// SIG // 58ScCyiggMrj4dc5ZjDnRhcY5/qC+lkLeryoDf4c/wOL
-// SIG // Y7JNEgIjTy2zhYQ74qFH6M8VMIIE7DCCA9SgAwIBAgIT
-// SIG // MwAAALARrwqL0Duf3QABAAAAsDANBgkqhkiG9w0BAQUF
+// SIG // AQUFBwMIMA0GCSqGSIb3DQEBBQUAA4IBAQAC/+OMA+rv
+// SIG // fji5uXyfO1KDpPojONQDuGpZtergb4gD9G9RapU6dYXo
+// SIG // HNwHxU6dG6jOJEcUJE81d7GcvCd7j11P/AaLl5f5KZv3
+// SIG // QB1SgY52SAN+8psXt67ZWyKRYzsyXzX7xpE8zO8OmYA+
+// SIG // BpE4E3oMTL4z27/trUHGfBskfBPcCvxLiiAFHQmJkTkH
+// SIG // TiFO3mx8cLur8SCO+Jh4YNyLlM9lvpaQD6CchO1ctXxB
+// SIG // oGEtvUNnZRoqgtSniln3MuOj58WNsiK7kijYsIxTj2hH
+// SIG // R6HYAbDxYRXEF6Et4zpsT2+vPe7eKbBEy8OSZ7oAzg+O
+// SIG // Ee/RAoIxSZSYnVFIeK0d1kC2MIIE7DCCA9SgAwIBAgIT
+// SIG // MwAAAMps1TISNcThVQABAAAAyjANBgkqhkiG9w0BAQUF
 // SIG // ADB5MQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGlu
 // SIG // Z3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMV
 // SIG // TWljcm9zb2Z0IENvcnBvcmF0aW9uMSMwIQYDVQQDExpN
-// SIG // aWNyb3NvZnQgQ29kZSBTaWduaW5nIFBDQTAeFw0xMzAx
-// SIG // MjQyMjMzMzlaFw0xNDA0MjQyMjMzMzlaMIGDMQswCQYD
+// SIG // aWNyb3NvZnQgQ29kZSBTaWduaW5nIFBDQTAeFw0xNDA0
+// SIG // MjIxNzM5MDBaFw0xNTA3MjIxNzM5MDBaMIGDMQswCQYD
 // SIG // VQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4G
 // SIG // A1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0
 // SIG // IENvcnBvcmF0aW9uMQ0wCwYDVQQLEwRNT1BSMR4wHAYD
 // SIG // VQQDExVNaWNyb3NvZnQgQ29ycG9yYXRpb24wggEiMA0G
-// SIG // CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDor1yiIA34
-// SIG // KHy8BXt/re7rdqwoUz8620B9s44z5lc/pVEVNFSlz7SL
-// SIG // qT+oN+EtUO01Fk7vTXrbE3aIsCzwWVyp6+HXKXXkG4Un
-// SIG // m/P4LZ5BNisLQPu+O7q5XHWTFlJLyjPFN7Dz636o9UEV
-// SIG // XAhlHSE38Cy6IgsQsRCddyKFhHxPuRuQsPWj/ov0DJpO
-// SIG // oPXJCiHiquMBNkf9L4JqgQP1qTXclFed+0vUDoLbOI8S
-// SIG // /uPWenSIZOFixCUuKq6dGB8OHrbCryS0DlC83hyTXEmm
-// SIG // ebW22875cHsoAYS4KinPv6kFBeHgD3FN/a1cI4Mp68fF
-// SIG // SsjoJ4TTfsZDC5UABbFPZXHFAgMBAAGjggFgMIIBXDAT
-// SIG // BgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUWXGm
-// SIG // WjNN2pgHgP+EHr6H+XIyQfIwUQYDVR0RBEowSKRGMEQx
-// SIG // DTALBgNVBAsTBE1PUFIxMzAxBgNVBAUTKjMxNTk1KzRm
-// SIG // YWYwYjcxLWFkMzctNGFhMy1hNjcxLTc2YmMwNTIzNDRh
-// SIG // ZDAfBgNVHSMEGDAWgBTLEejK0rQWWAHJNy4zFha5TJoK
+// SIG // CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCWcV3tBkb6
+// SIG // hMudW7dGx7DhtBE5A62xFXNgnOuntm4aPD//ZeM08aal
+// SIG // IV5WmWxY5JKhClzC09xSLwxlmiBhQFMxnGyPIX26+f4T
+// SIG // UFJglTpbuVildGFBqZTgrSZOTKGXcEknXnxnyk8ecYRG
+// SIG // vB1LtuIPxcYnyQfmegqlFwAZTHBFOC2BtFCqxWfR+nm8
+// SIG // xcyhcpv0JTSY+FTfEjk4Ei+ka6Wafsdi0dzP7T00+Lnf
+// SIG // NTC67HkyqeGprFVNTH9MVsMTC3bxB/nMR6z7iNVSpR4o
+// SIG // +j0tz8+EmIZxZRHPhckJRIbhb+ex/KxARKWpiyM/gkmd
+// SIG // 1ZZZUBNZGHP/QwytK9R/MEBnAgMBAAGjggFgMIIBXDAT
+// SIG // BgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUH17i
+// SIG // XVCNVoa+SjzPBOinh7XLv4MwUQYDVR0RBEowSKRGMEQx
+// SIG // DTALBgNVBAsTBE1PUFIxMzAxBgNVBAUTKjMxNTk1K2I0
+// SIG // MjE4ZjEzLTZmY2EtNDkwZi05YzQ3LTNmYzU1N2RmYzQ0
+// SIG // MDAfBgNVHSMEGDAWgBTLEejK0rQWWAHJNy4zFha5TJoK
 // SIG // HzBWBgNVHR8ETzBNMEugSaBHhkVodHRwOi8vY3JsLm1p
 // SIG // Y3Jvc29mdC5jb20vcGtpL2NybC9wcm9kdWN0cy9NaWND
 // SIG // b2RTaWdQQ0FfMDgtMzEtMjAxMC5jcmwwWgYIKwYBBQUH
 // SIG // AQEETjBMMEoGCCsGAQUFBzAChj5odHRwOi8vd3d3Lm1p
 // SIG // Y3Jvc29mdC5jb20vcGtpL2NlcnRzL01pY0NvZFNpZ1BD
 // SIG // QV8wOC0zMS0yMDEwLmNydDANBgkqhkiG9w0BAQUFAAOC
-// SIG // AQEAMdduKhJXM4HVncbr+TrURE0Inu5e32pbt3nPApy8
-// SIG // dmiekKGcC8N/oozxTbqVOfsN4OGb9F0kDxuNiBU6fNut
-// SIG // zrPJbLo5LEV9JBFUJjANDf9H6gMH5eRmXSx7nR2pEPoc
-// SIG // sHTyT2lrnqkkhNrtlqDfc6TvahqsS2Ke8XzAFH9IzU2y
-// SIG // RPnwPJNtQtjofOYXoJtoaAko+QKX7xEDumdSrcHps3Om
-// SIG // 0mPNSuI+5PNO/f+h4LsCEztdIN5VP6OukEAxOHUoXgSp
-// SIG // Rm3m9Xp5QL0fzehF1a7iXT71dcfmZmNgzNWahIeNJDD3
-// SIG // 7zTQYx2xQmdKDku/Og7vtpU6pzjkJZIIpohmgjCCBbww
+// SIG // AQEAd1zr15E9zb17g9mFqbBDnXN8F8kP7Tbbx7UsG177
+// SIG // VAU6g3FAgQmit3EmXtZ9tmw7yapfXQMYKh0nfgfpxWUf
+// SIG // tc8Nt1THKDhaiOd7wRm2VjK64szLk9uvbg9dRPXUsO8b
+// SIG // 1U7Brw7vIJvy4f4nXejF/2H2GdIoCiKd381wgp4Yctgj
+// SIG // zHosQ+7/6sDg5h2qnpczAFJvB7jTiGzepAY1p8JThmUR
+// SIG // dwmPNVm52IaoAP74MX0s9IwFncDB1XdybOlNWSaD8cKy
+// SIG // iFeTNQB8UCu8Wfz+HCk4gtPeUpdFKRhOlludul8bo/En
+// SIG // UOoHlehtNA04V9w3KDWVOjic1O1qhV0OIhFeezCCBbww
 // SIG // ggOkoAMCAQICCmEzJhoAAAAAADEwDQYJKoZIhvcNAQEF
 // SIG // BQAwXzETMBEGCgmSJomT8ixkARkWA2NvbTEZMBcGCgmS
 // SIG // JomT8ixkARkWCW1pY3Jvc29mdDEtMCsGA1UEAxMkTWlj
@@ -1622,36 +1615,36 @@ function fireClickEvent() {
 // SIG // VQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4G
 // SIG // A1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0
 // SIG // IENvcnBvcmF0aW9uMSMwIQYDVQQDExpNaWNyb3NvZnQg
-// SIG // Q29kZSBTaWduaW5nIFBDQQITMwAAALARrwqL0Duf3QAB
-// SIG // AAAAsDAJBgUrDgMCGgUAoIGiMBkGCSqGSIb3DQEJAzEM
+// SIG // Q29kZSBTaWduaW5nIFBDQQITMwAAAMps1TISNcThVQAB
+// SIG // AAAAyjAJBgUrDgMCGgUAoIGiMBkGCSqGSIb3DQEJAzEM
 // SIG // BgorBgEEAYI3AgEEMBwGCisGAQQBgjcCAQsxDjAMBgor
-// SIG // BgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBRUynaOkFYx
-// SIG // qscGxrKzMZKrORiB2TBCBgorBgEEAYI3AgEMMTQwMqAS
+// SIG // BgEEAYI3AgEVMCMGCSqGSIb3DQEJBDEWBBRvqJzRw8Ur
+// SIG // hvad6bAgNgbZpZOLQjBCBgorBgEEAYI3AgEMMTQwMqAS
 // SIG // gBAAbwByAG0AbQBhAC4AagBzoRyAGmh0dHA6Ly93d3cu
 // SIG // bWljcm9zb2Z0LmNvbS8gMA0GCSqGSIb3DQEBAQUABIIB
-// SIG // AFNskA1qHBm5sMtNaU1TaiYeXlOqPuQEkvLplOEsWjNA
-// SIG // Fpq0cHS6wPh3zy/qKLOhTKn04lUljtp/VWTS/ZUXbhHl
-// SIG // omfDzybiNxE/tGlpERgVO3iqQ0Q4SAY7EJWweMusd1Fv
-// SIG // 30IpbUL5L+s+M+MYGPx9MLj28SHgVdGXpXnHDCVcxZiC
-// SIG // svJxXPNoJ7mxQEzpNg3QIBeCvDlGQQjxzi8wiRLxvNv5
-// SIG // 7IX2FLVLRzsncG5QgY47OecGDFcj6Kziw2gCQi1CPc7O
-// SIG // guy5cp/vgCuqYCJIzGXZlPHvpevXfnMw26VENHZ9jgg7
-// SIG // XTyU97EoyyXywas91Qei1qhhjs0pIT+qSFuhggIoMIIC
+// SIG // AES24yMT917Vf6E6z5uko48sgnM7lZTYpHsZuPq9LTiN
+// SIG // rX6Kc614tY9tpj7jIZfPE9O+v+9U643Jl8I5Um0sL7WA
+// SIG // Hvb101G+xeRvNeGUq4Xnb/bbcqmO88QyHsvTC9E4Hbxz
+// SIG // dp+6Dq+fmgZKvFDbPCxGnMUIQCmZspZ7XvJ9nCg+nK+1
+// SIG // lB5HAextdcJUat8yoTimHBTu1w3LhH8myrd4I6rR4rpp
+// SIG // Mw1tSA3Lykg/kd/Xy1P2hairOrMJSLRpATL9TYpuz/32
+// SIG // F+0lwo5r0avSsePIhrPdgBQptdNYDFvGrp2TS3tdlIUF
+// SIG // aQzJfm6zbl9zeBi9F9wxUGuM+HNVb93iV12hggIoMIIC
 // SIG // JAYJKoZIhvcNAQkGMYICFTCCAhECAQEwgY4wdzELMAkG
 // SIG // A1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAO
 // SIG // BgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29m
 // SIG // dCBDb3Jwb3JhdGlvbjEhMB8GA1UEAxMYTWljcm9zb2Z0
-// SIG // IFRpbWUtU3RhbXAgUENBAhMzAAAAKzkySMGyyUjzAAAA
-// SIG // AAArMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJ
-// SIG // KoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzA5MTMx
-// SIG // ODQ3NTdaMCMGCSqGSIb3DQEJBDEWBBQ4NqmUoVkMlfPh
-// SIG // FMtMTS1wz3sZ6DANBgkqhkiG9w0BAQUFAASCAQA2v+aA
-// SIG // u1sD3TFdmTq4w1/uWbSFzNhHHrrEtQe4FbpUaCf35Que
-// SIG // wtTAw1OseM5NO3Kp/2S12imVNVXPrO6V7T0gd5/3Y+1t
-// SIG // 1IhI+5vF3DxOOc1IvJpCIGpJJakLgsJYYLZrIcuZ9x3n
-// SIG // OyJ0JGhccOHuRlEV6ES+89nGSliG8we+9EeGRs1CNY+x
-// SIG // 6wexJiC8akX0JVhV0rLBL/CY9lGdFS/eH5haTOXw3FrW
-// SIG // SJ+wDlnZ6NacM70ExcHPiMqpZD1U1eZOUtxWpWKReWCO
-// SIG // yFzL5UNg8Q1O1Bs7sAq97pr0sOM36ZKDq5fRYbgQ5cWt
-// SIG // jlachYikkMPXvaTV7vU3nAVv2r7U
+// SIG // IFRpbWUtU3RhbXAgUENBAhMzAAAAM+UnhqMOSiqAAAAA
+// SIG // AAAzMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJ
+// SIG // KoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xNDA0Mjkw
+// SIG // MDMxNTVaMCMGCSqGSIb3DQEJBDEWBBTGcDTrVGt+ysvu
+// SIG // lsIjZpnez88jQTANBgkqhkiG9w0BAQUFAASCAQBGCKij
+// SIG // EAxbgzJjj3Jnw4CvS/UG7MoxvJUQ5MERZSBFCrEtNjN3
+// SIG // Y8Q4tVWPRF9mX+bV/QjxwbLtZ7eWBvJw8vcH14hgDqWK
+// SIG // x2EZICELHDRcEpNs4ZqGtLEKGvUszM7g1ur2FF3n1+Vg
+// SIG // EDrez7hu2LeFO0OcVFJHloFOwQfHRJP68rDoqYWGz0LB
+// SIG // ipuxABA2KZkC9mAl6SnTV3gkb7ZRlvzgQRFNjwyWKbt7
+// SIG // 8p0iq7lOpbCO8cjbK+L67cEJ6657W4gNtNGXrWOUe8V9
+// SIG // lsdmjUcbBNg6ZlzJ3dmUHO2dTESPdy3ZhOmksGLgTmIh
+// SIG // hjlwIwlIGliQUqzHmS30AdBekGu9
 // SIG // End signature block
